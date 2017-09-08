@@ -8,9 +8,10 @@
 
 ***
 
-![Stan](assets/img/README/developerReadme.png) ** Web-разработчик **
+![Stan](assets/img/README/developerReadme.png) **Web-разработчик**
 
 ***
+
 ### Дорогой наставник,
 
  в этом репозитории я буду выкладывать свои домашние задания.
