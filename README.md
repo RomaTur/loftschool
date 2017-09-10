@@ -2,7 +2,7 @@
 
 ***
 
-  [9c9db2ab]: http://loftschool "loftschool"
+  [9c9db2ab]: http://loftschool.ru "loftschool"
 
 ![Student](assets/img/README/studentReadme.png)
 
