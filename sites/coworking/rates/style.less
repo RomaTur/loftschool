@@ -17,8 +17,6 @@
 @themeSecondColor: #27273e;
 @themeThirdColor: #5dd1f8;
 
-
-
 body,
 html {
     margin: 0;
@@ -51,9 +49,10 @@ html {
     line-height: 26px;
     color: white;
     float: right;
+    cursor: default;
 }
 
-.header-contact__time {
+.header-contact__text {
     font-family: 'Open Sans', sans-serif;
     float: right;
     color: darken(@themeColor, 10%);
@@ -61,6 +60,58 @@ html {
     line-height: 15px;
     margin-right: 1px;
     text-decoration: underline;
+
+    > div {
+        display: none;
+        width: 162px;
+        height: 70px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border-radius: 2px;
+        position: absolute;
+        right: 30px;
+        top: 75px;
+
+        &::before {
+            content: "";
+            background-color: white;
+            width: 16px;
+            height: 16px;
+            transform: rotate(45deg);
+            float: right;
+            margin-top: -8px;
+            margin-right: 18px;
+        }
+
+        > div {
+            line-height: 18px;
+            padding-left: 12px;
+            padding-top: 14px;
+            > span {
+                font-size: 13px;
+                // padding-left: 5px;
+                // padding-top: 28px;
+
+                &:first-of-type {
+                    font-family: GothamProBol, sans-serif;
+                    color: @themeColor;
+                }
+
+                &:last-of-type {
+                    font-family: GothamProLig, sans-serif;
+                    color: @themeSecondColor;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        > div {
+            display: block;
+        }
+        cursor: pointer;
+        color: @themeThirdColor;
+    }
 }
 
 .main {
@@ -122,19 +173,24 @@ html {
 
     li {
         display: inline-block;
-        color: @themeColor;
-
-        &:hover {
-            color: @themeSecondColor;
-        }
     }
 }
 
 .breadcrumbs__item-home {
-    &::after {
-        content: " /";
-    }
+    color: @themeColor; // text-decoration: underline;
     text-decoration: none;
+
+    &:hover {
+        color: @themeSecondColor;
+    }
+}
+
+.breadcrumbs__item-current {
+    &::before {
+        content: "/";
+    }
+    cursor: default;
+    color: @themeSecondColor;
 }
 
 .content__title {
@@ -142,6 +198,7 @@ html {
         font-family: GothamProBol, sans-serif;
         font-size: 49px;
         margin: 0;
+        cursor: default;
     }
 }
 
@@ -150,7 +207,7 @@ html {
     margin: 0;
     padding-top: 41px;
     list-style: none;
-    // display: inline-flex;
+    cursor: default;
 }
 
 .schedule__item {
@@ -178,12 +235,14 @@ html {
     color: @themeThirdColor;
     font-size: 24px;
     font-family: GothamProBol, sans-serif;
+    border-radius: 5px;
 
     > div {
         width: 100%;
         height: 100%;
         background-color: @themeSecondColor;
         opacity: 0.85;
+        border-radius: 5px;
 
         &::before {
             content: "";
@@ -275,8 +334,8 @@ html {
     background-color: @themeSecondColor;
     float: left;
     overflow: hidden;
+    cursor: default;
 }
-
 
 .footer__logo,
 .footer__postscript,
@@ -297,7 +356,8 @@ html {
         font-family: GothamProBol, sans-serif;
         color: white;
     }
-    a{
+
+    a {
         color: white;
     }
 }
@@ -318,8 +378,7 @@ html {
 
 .footer__social-icons {
     margin: 0;
-    padding: 8px 0 0;
-    padding-left: 3px;
+    padding: 8px 0 0 3px;
 }
 @themeFourthColor: #d4d4d8;
 
