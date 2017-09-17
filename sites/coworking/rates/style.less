@@ -17,9 +17,7 @@
 @themeSecondColor: #27273e;
 @themeThirdColor: #5dd1f8;
 
-*{
-    transition: 0.2s;
-}
+
 body,
 html {
     margin: 0;
@@ -63,6 +61,8 @@ html {
     line-height: 15px;
     margin-right: 1px;
     text-decoration: underline;
+    transition: 0.2s;
+
 
     > div {
         display: none;
@@ -118,7 +118,7 @@ html {
     }
 }
 
-.main {
+.container {
     margin: 0 auto;
     width: 1100px;
 }
@@ -129,16 +129,19 @@ html {
     padding-left: 20px;
     padding-top: 29px;
     margin: 0;
-    width: 170px;
+    width: 110px;
+    padding-right: 60px;
 }
 
 .navigation__item {
     li > * {
         display: inline-block;
     }
+    transition: 0.3s;
+
     text-decoration: none;
     // text-align: justify;
-    width: 100px;
+
     color: @themeColor;
 
     &:hover {
@@ -183,6 +186,7 @@ html {
 .breadcrumbs__item-home {
     color: @themeColor; // text-decoration: underline;
     text-decoration: none;
+    transition: 0.3s;
 
     &:hover {
         color: @themeSecondColor;
@@ -396,6 +400,7 @@ html {
     background-color: @themeFourthColor;
     border-radius: 10px;
     margin-right: 5px;
+    transition: 0.3s;
 
     &:hover {
         cursor: pointer;
