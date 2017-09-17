@@ -65,27 +65,27 @@ html {
 
 
     > div {
-        display: none;
-        width: 162px;
-        height: 70px;
+
         background-color: white;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
         border-radius: 2px;
-        position: absolute;
-        
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        display: none;
+        height: 70px;
         margin-left: -50px;
+        position: absolute;
         top: 75px;
+        width: 162px;
 
         &::before {
-            content: "";
             background-color: white;
-            width: 16px;
-            height: 16px;
-            transform: rotate(45deg);
-            float: right;
-            margin-top: -7px;
-            margin-right: 3px;
             border-radius: 2px;
+            content: "";
+            float: right;
+            height: 16px;
+            margin-right: 3px;
+            margin-top: -7px;
+            transform: rotate(45deg);
+            width: 16px;
         }
 
         > div {
@@ -94,17 +94,14 @@ html {
             padding-top: 14px;
             > span {
                 font-size: 13px;
-                // padding-left: 5px;
-                // padding-top: 28px;
-
                 &:first-of-type {
-                    font-family: GothamProBol, sans-serif;
                     color: @themeColor;
+                    font-family: GothamProBol, sans-serif;
                 }
 
                 &:last-of-type {
-                    font-family: GothamProLig, sans-serif;
                     color: @themeSecondColor;
+                    font-family: GothamProLig, sans-serif;
                 }
             }
         }
@@ -127,11 +124,11 @@ html {
 .navigation {
     float: left;
     list-style: none;
-    padding-left: 20px;
-    padding-top: 29px;
     margin: 0;
-    width: 110px;
+    padding-left: 20px;
     padding-right: 60px;
+    padding-top: 29px;
+    width: 110px;
 }
 
 .navigation__item {
@@ -139,31 +136,27 @@ html {
         display: inline-block;
     }
     transition: 0.3s;
-
     text-decoration: none;
-    // text-align: justify;
-
     color: @themeColor;
-
     &:hover {
         color: @themeSecondColor;
     }
 }
 
 .navigation__item-icon {
-    width: 1ch;
     font-size: 20px;
-    padding-right: 22px;
-    padding-left: 1px;
     line-height: 48px;
+    padding-left: 1px;
+    padding-right: 22px;
+    width: 1ch;
 }
 
 .navigation__item-label {
-    font-size: 12px;
     font-family: GothamProBol, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
     line-height: 48px;
     vertical-align: middle;
-    letter-spacing: 1px;
 }
 
 .content {
@@ -388,6 +381,9 @@ html {
 .footer__social-icons {
     margin: 0;
     padding: 8px 0 0 3px;
+    >a{
+        text-decoration: none;
+    }
 }
 @themeFourthColor: #d4d4d8;
 
