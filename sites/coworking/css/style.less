@@ -17,7 +17,6 @@
 @themeSecondColor: #27273e;
 @themeThirdColor: #5dd1f8;
 
-
 body,
 html {
     margin: 0;
@@ -54,24 +53,22 @@ html {
 }
 
 .header-contact__text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: GothamProBol, sans-serif;
     float: right;
     color: darken(@themeColor, 10%);
     font-size: 14px;
-    line-height: 15px;
+    line-height: 18px;
     margin-right: 1px;
     text-decoration: underline;
     transition: 0.2s;
 
-
     > div {
-
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
         display: none;
         height: 70px;
-        margin-left: -50px;
+        margin-left: -46px;
         position: absolute;
         top: 75px;
         width: 162px;
@@ -89,11 +86,13 @@ html {
         }
 
         > div {
-            line-height: 18px;
+            line-height: 22px;
             padding-left: 12px;
-            padding-top: 14px;
+            padding-top: 13px;
+
             > span {
-                font-size: 13px;
+                font-size: 14px;
+
                 &:first-of-type {
                     color: @themeColor;
                     font-family: GothamProBol, sans-serif;
@@ -138,6 +137,7 @@ html {
     transition: 0.3s;
     text-decoration: none;
     color: @themeColor;
+
     &:hover {
         color: @themeSecondColor;
     }
@@ -158,6 +158,92 @@ html {
     line-height: 48px;
     vertical-align: middle;
 }
+
+.footer {
+    width: 100%;
+    height: 76px;
+    background-color: @themeSecondColor;
+    float: left;
+    overflow: hidden;
+    cursor: default;
+}
+
+.footer__logo,
+.footer__postscript,
+.footer__social {
+    display: inline-block;
+    color: white;
+}
+
+.footer__postscript {
+    width: 268px;
+    padding-left: 19px;
+    font-family: GothamProLig, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 11px;
+
+    span {
+        font-family: GothamProBol, sans-serif;
+        color: white;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.footer__social {
+    li {
+        display: inline-block;
+    }
+    font-family: GothamProBol, sans-serif;
+    float: right;
+    padding-right: 21px;
+    padding-top: 20px;
+}
+
+.footer__social-title {
+    font-size: 14px;
+}
+
+.footer__social-icons {
+    margin: 0;
+    padding: 8px 0 0 3px;
+
+    > a {
+        text-decoration: none;
+    }
+}
+@themeFourthColor: #d4d4d8;
+
+.footer__social-icons__item {
+    font-size: 12px;
+    height: 20px;
+    line-height: 22px;
+    width: 20px;
+    text-align: center;
+    color: @themeSecondColor;
+    background-color: @themeFourthColor;
+    border-radius: 10px;
+    margin-right: 5px;
+    transition: 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: @themeColor;
+    }
+}
+
+.footer__logo {
+    position: absolute;
+    left: 50%;
+    padding-top: 14px;
+    // padding-left: 1px;
+    padding-right: 3px;
+    transform: translate(-50%);
+}
+/////////rates/////////
 
 .content {
     float: left;
@@ -244,7 +330,6 @@ html {
         height: 100%;
         background-color: @themeSecondColor;
         opacity: 0.85;
-
         border-radius: 5px;
 
         &::before {
@@ -273,37 +358,37 @@ html {
     li {
         &:nth-of-type(1) {
             .schedule__item-title {
-                background-image: url("img/one.jpg");
+                background-image: url("../rates/img/one.jpg");
             }
         }
 
         &:nth-of-type(2) {
             .schedule__item-title {
-                background-image: url("img/three.jpg");
+                background-image: url("../rates/img/three.jpg");
             }
         }
 
         &:nth-of-type(3) {
             .schedule__item-title {
-                background-image: url("img/ten-ten.jpg");
+                background-image: url("../rates/img/ten-ten.jpg");
             }
         }
 
         &:nth-of-type(4) {
             .schedule__item-title {
-                background-image: url("img/unlimOne.jpg");
+                background-image: url("../rates/img/unlimOne.jpg");
             }
         }
 
         &:nth-of-type(5) {
             .schedule__item-title {
-                background-image: url("img/allEnclusive.jpg");
+                background-image: url("../rates/img/allEnclusive.jpg");
             }
         }
 
         &:nth-of-type(6) {
             .schedule__item-title {
-                background-image: url("img/meetingRoom.jpg");
+                background-image: url("../rates/img/meetingRoom.jpg");
             }
         }
     }
@@ -330,89 +415,41 @@ html {
     padding-top: 12px;
     font-family: GothamProLig, sans-serif;
 }
+/////////main///////
 
-.footer {
+.content-header {
+    width: 880px;
+    box-sizing: border-box;
+    margin-left: 8px;
+    // height: 200px;
+}
+.content-header__image{
     width: 100%;
-    height: 76px;
-    background-color: @themeSecondColor;
-    float: left;
-    overflow: hidden;
-    cursor: default;
+    height: 360px;
+    background-image: url('../main/img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(23, 59, 189, 0.56);
 }
-
-.footer__logo,
-.footer__postscript,
-.footer__social {
-    display: inline-block;
-    color: white;
-}
-
-.footer__postscript {
-    width: 268px;
-    padding-left: 19px;
-    font-family: GothamProLig, sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    padding-top: 11px;
-
-    span {
-        font-family: GothamProBol, sans-serif;
-        color: white;
-    }
-
-    a {
-        color: white;
-    }
-}
-
-.footer__social {
-    li {
+.content-header__title {
+    &::before {
+        content: "";
         display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle;
     }
-    font-family: GothamProBol, sans-serif;
-    float: right;
-    padding-right: 21px;
-    padding-top: 20px;
-}
-
-.footer__social-title {
-    font-size: 14px;
-}
-
-.footer__social-icons {
-    margin: 0;
-    padding: 8px 0 0 3px;
-    >a{
-        text-decoration: none;
+    height: 360px;
+    width: 100%;
+    > h1 {
+        text-transform: uppercase;
+        font-family: GothamProBol, sans-serif;
+        font-size: 50px;
+        vertical-align: middle;
+        display: inline-block;
+        color: white;
     }
-}
-@themeFourthColor: #d4d4d8;
-
-.footer__social-icons__item {
-    font-size: 12px;
-    height: 20px;
-    line-height: 22px;
-    width: 20px;
-    text-align: center;
-    color: @themeSecondColor;
-    background-color: @themeFourthColor;
-    border-radius: 10px;
-    margin-right: 5px;
-    transition: 0.3s;
-
-    &:hover {
-        cursor: pointer;
-        background-color: @themeColor;
-    }
-}
-
-.footer__logo {
-    position: absolute;
-    left: 50%;
-    padding-top: 14px;
-    // padding-left: 1px;
-    padding-right: 3px;
-    transform: translate(-50%);
 }
 //////////////////////////////////
 //////////////////////////////////
