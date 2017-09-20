@@ -417,22 +417,23 @@ html {
 }
 /////////main///////
 
-.content-header {
-    width: 880px;
+.main-content__header {
+    width: 879px;
     box-sizing: border-box;
     margin-left: 8px;
+    margin-bottom: 10px;
     // height: 200px;
 }
-.content-header__image{
+.main-content__header-image{
     width: 100%;
-    height: 360px;
+    height: 354px;
     background-image: url('../main/img/about.jpg');
     background-position: center;
     background-size: cover;
-    background-blend-mode: overlay;
-    background-color: rgba(23, 59, 189, 0.56);
+    background-blend-mode: multiply;
+    background-color: #26728c;
 }
-.content-header__title {
+.main-content__header-title {
     &::before {
         content: "";
         display: inline-block;
@@ -440,16 +441,80 @@ html {
         height: 100%;
         vertical-align: middle;
     }
-    height: 360px;
+    height: 354px;
     width: 100%;
+    padding-left: 60px;
+    padding-top: 5px;
+
     > h1 {
         text-transform: uppercase;
         font-family: GothamProBol, sans-serif;
-        font-size: 50px;
+        font-size: 48px;
         vertical-align: middle;
         display: inline-block;
         color: white;
     }
+}
+
+.main-content__text{
+    line-height: 30px;
+    width: 690px;
+    box-sizing: border-box;
+    margin-left: 7px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    font-family: GothamProLig, sans-serif;
+}
+
+.main-content__text-paragraph{
+    font-size: 18px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.main__list-title{
+    font-size: 18px;
+    font-family: GothamProBol, sans-serif;
+}
+.main__list-items{
+    margin: 0;
+    padding-left: 33px;
+    padding-top: 5px;
+    line-height: 33px;
+    font-size: 18px;
+    li{
+        color: @themeColor;
+
+        span{
+            color: black;
+        }
+    }
+}
+
+.main-content__discount{
+    font-family: GothamProLig, sans-serif;
+    font-size: 18px;
+    margin-left: 7px;
+    line-height: 30px;
+    box-sizing: border-box;
+    width: 700px;
+    background-color: @themeSecondColor;
+    color: white;
+    padding: 12px 30px;
+    margin-bottom: 66px;
+    span{
+        color: @themeColor;
+    }
+}
+
+.main-content__partners-title{
+    font-size: 48px;
+    font-family: GothamProBol, sans-serif;
+    padding-left: 8px;
+    text-transform: uppercase;
+}
+
+.main-content__partners-logos{
+    width: 700px;
 }
 //////////////////////////////////
 //////////////////////////////////
