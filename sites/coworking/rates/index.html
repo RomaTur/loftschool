@@ -16,20 +16,17 @@
     <div class="wrapper">
         <div class="header">
             <div class="container">
-                <div class="header-logo">
-                    <a href="../main" title="Главная"><img src="img/logo.png" alt="logo"></a>
-                </div>
+                <a href="../main" title="Главная" class="header-logo"><img src="img/logo.png" alt="logo"></a>
                 <div class="header-contact">
-                    <div class="header-contact__number">
+                    <a href="tel:8(800)00-392-10" class="header-contact__number">
                         8 (800) 00-392-10
-                    </div>
-                    <br>
+                    </a>
                     <div class="header-contact__text">
                         График работы
-                        <div>
-                            <div>
-                                <span>пн-вс: 09:00-20:00</span><br>
-                                <span>обед: 14:00-14:30</span>
+                        <div class="header-contact__text-time">
+                            <div class="time-text">
+                                <span class="time-text_red">пн-вс: 09:00-20:00</span>
+                                <span class="time-text_black">обед: 14:00-14:30</span>
                             </div>
                         </div>
                     </div>
@@ -39,149 +36,147 @@
 
         <div class="container">
             <ul class="navigation">
-                <a href="../main" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                        </div>
+
+                <li class="navigation__item">
+                    <a href="../main" class="navigation__item-link">
+                            <i class="fa fa-home navigation__item-icon" aria-hidden="true"></i>
+
                         <div class="navigation__item-label">
                             ГЛАВНАЯ
                         </div>
-                    </li>
-                </a>
-                <a href="#" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        </div>
+                    </a>
+                </li>
+
+
+                <li class="navigation__item">
+                    <a href="../rates" class="navigation__item-link">
+                            <i class="fa fa-credit-card navigation__item-icon" aria-hidden="true"></i>
                         <div class="navigation__item-label">
                             ТАРИФЫ
                         </div>
-                    </li>
-                </a>
-                <a href="#" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                        </div>
+                    </a>
+                </li>
+
+
+                <li class="navigation__item">
+                    <a href="../comments" class="navigation__item-link">
+                            <i class="fa fa-star-o navigation__item-icon" aria-hidden="true"></i>
                         <div class="navigation__item-label">
                             ОТЗЫВЫ
                         </div>
-                    </li>
-                </a>
+                    </a>
+                </li>
+
             </ul>
 
             <div class="content">
-                <div class="content__row">
-                    <ul class="breadcrumbs">
-                        <a href="../main" class="breadcrumbs__item-home ">
-                            <li>Главная</li>
-                        </a>
+
+                <ul class="breadcrumbs">
+                        <li><a href="../main" class=" breadcrumbs__item breadcrumbs__item-home ">Главная</a></li>
+
+
                         <li class="breadcrumbs__item breadcrumbs__item-current">
                             Тарифы</li>
 
-                    </ul>
-                </div>
-                <div class="content__row">
-                    <div class="content__title">
-                        <h1>Тарифы</h1></div>
-                </div>
-                <div class="content__row">
-                    <ul class="schedule">
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div> <span>&laquo;ОДИН&raquo;</span>
-                                </div>
-                            </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">
-                                    800 руб/мес<br>или 100 руб/сутки
-                                </div>
-                                <div class="schedule__item-desc__spec">
+                </ul>
 
-                                    Оплачивается рабочее место на 1 человека. Есть возможность оплаты с привязкой к определенному физическому месту. При оплате за год, скидка 30%.
+                    <h1 class="content__title">Тарифы</h1>
 
-                                </div>
+                <ul class="schedule">
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div> <span>&laquo;ОДИН&raquo;</span>
                             </div>
-                        </li>
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div><span>&laquo;ТРОЕ&raquo;</span></div>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">
+                                800 руб/мес<br>или 100 руб/сутки
                             </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">
-                                    1 500 руб/мес<br>или 200 руб/сутки
-                                </div>
-                                <div class="schedule__item-desc__spec">
+                            <div class="schedule__item-desc__spec">
 
-                                    Оплачивается стол на 3 рабочих места. При этом можно ими пользоваться как одновременно, так и поочередно. Можно пользоваться офисной техникой и выделенным шкафом для документов.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div>
-                                    <span>&laquo;10-10&raquo;</span></div>
-                            </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">
-                                    10 000 руб/мес
-                                </div>
-                                <div class="schedule__item-desc__spec">
-                                    Оплачивается 10 рабочих мест на любые 10 дней месяца. Отлично подходит для периодической работы команды сотрудников без строгой привязки к рабочему месту. При оплате на год вперед скидка 25%</div>
-                            </div>
-                        </li>
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div>
-                                    <span><span>VIP</span><br>&laquo;БЕЗЛИМИТ<br>НА ОДНОГО&raquo;</span>
-                                </div>
-
+                                Оплачивается рабочее место на 1 человека. Есть возможность оплаты с привязкой к определенному физическому месту. При оплате за год, скидка 30%.
 
                             </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">2 500 руб/мес</div>
-                                <div class="schedule__item-desc__spec">
+                        </div>
+                    </li>
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div><span>&laquo;ТРОЕ&raquo;</span></div>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">
+                                1 500 руб/мес<br>или 200 руб/сутки
+                            </div>
+                            <div class="schedule__item-desc__spec">
 
-                                    В стоимость включена не только оплата рабочего места, но и пользование копировальной техникой, бесплатный кофе или чай в течение дня, возможность использования зала для переговоров при предварительном бронировании 1 раз в месяц.
-                                </div>
+                                Оплачивается стол на 3 рабочих места. При этом можно ими пользоваться как одновременно, так и поочередно. Можно пользоваться офисной техникой и выделенным шкафом для документов.
                             </div>
-                        </li>
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div>
-                                    <span><span>VIP</span><br>&laquo;ВСЕ<br>ВКЛЮЧЕНО&raquo;</span>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div>
+                                <span>&laquo;10-10&raquo;</span></div>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">
+                                10 000 руб/мес
                             </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">
-                                    Цена рассчитывается индивидуально
-                                </div>
-                                <div class="schedule__item-desc__spec">
+                            <div class="schedule__item-desc__spec">
+                                Оплачивается 10 рабочих мест на любые 10 дней месяца. Отлично подходит для периодической работы команды сотрудников без строгой привязки к рабочему месту. При оплате на год вперед скидка 25%</div>
+                        </div>
+                    </li>
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div>
+                                <span><span>VIP</span><br>&laquo;БЕЗЛИМИТ<br>НА ОДНОГО&raquo;</span>
+                            </div>
 
-                                    Оплачивается необходимое число рабочих мест с привязкой к фактическому местонахождению. В стоимость включены рабочие столы, мебель для хранения документов, отдельный принтер и копировальный автомат.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="schedule__item">
-                            <div class="schedule__item-title">
-                                <div>
-                                    <span>&laquo;ПЕРЕГОВОРЫ&raquo;</span>
-                                </div>
-                            </div>
-                            <div class="schedule__item-desc">
-                                <div class="schedule__item-desc__price">
-                                    2 500 руб/час &mdash;
-                                </div>
-                                <div class="schedule__item-desc__spec">
 
-                                    Аренда среднего зала. Есть возможность раннего бронирования конференц-залов со скидкой до 30% при полной предоплате.
-                                </div>
-                            </div>
-                        </li>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">2 500 руб/мес</div>
+                            <div class="schedule__item-desc__spec">
 
-                    </ul>
-                </div>
+                                В стоимость включена не только оплата рабочего места, но и пользование копировальной техникой, бесплатный кофе или чай в течение дня, возможность использования зала для переговоров при предварительном бронировании 1 раз в месяц.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div>
+                                <span><span>VIP</span><br>&laquo;ВСЕ<br>ВКЛЮЧЕНО&raquo;</span>
+                            </div>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">
+                                Цена рассчитывается индивидуально
+                            </div>
+                            <div class="schedule__item-desc__spec">
+
+                                Оплачивается необходимое число рабочих мест с привязкой к фактическому местонахождению. В стоимость включены рабочие столы, мебель для хранения документов, отдельный принтер и копировальный автомат.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="schedule__item">
+                        <div class="schedule__item-title">
+                            <div>
+                                <span>&laquo;ПЕРЕГОВОРЫ&raquo;</span>
+                            </div>
+                        </div>
+                        <div class="schedule__item-desc">
+                            <div class="schedule__item-desc__price">
+                                2 500 руб/час &mdash;
+                            </div>
+                            <div class="schedule__item-desc__spec">
+
+                                Аренда среднего зала. Есть возможность раннего бронирования конференц-залов со скидкой до 30% при полной предоплате.
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
             </div>
 
         </div>
@@ -189,39 +184,39 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__postscript">
-                    Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <span><a href="http://loftschool.ru">LoftSchool</a></span>. Автор работы: <a href="https://github.com/RomaTur"><span>Турусов Роман</span></a>
+                    Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <a href="http://loftschool.ru" style="font-family: GothamProBol;color: white;">LoftSchool</a>. Автор работы: <a href="https://github.com/RomaTur" style="font-family: GothamProBol;color: white;">Турусов Роман</a>
                 </div>
-                <div class="footer__logo">
-                    <a href="../main" title="Главная">
+
+                    <a href="../main" title="Главная" class="footer__logo">
                 <img src="img/logo.png" alt="logo">
                 </a>
-                </div>
+
                 <div class="footer__social">
                     <div class="footer__social-title">
                         Наши социальные сети
                     </div>
 
                     <ul class="footer__social-icons">
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-vk" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-facebook" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-google-plus" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-twitter" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-envelope" aria-hidden="true"></i>
-                            </li>
-                        </a>
+                        <li class="footer__social-icons__item">
+                            <a href="" ><i class="fa fa-vk" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
 
                     </ul>
 

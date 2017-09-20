@@ -39,6 +39,7 @@ html {
 }
 
 .header-contact {
+    width: 250px;
     float: right;
     margin: 12px 20px 0 0;
 }
@@ -49,7 +50,7 @@ html {
     line-height: 26px;
     color: white;
     float: right;
-    cursor: default;
+    text-decoration: none;
 }
 
 .header-contact__text {
@@ -61,8 +62,9 @@ html {
     margin-right: 1px;
     text-decoration: underline;
     transition: 0.2s;
+    display: block;
 
-    > div {
+    > .header-contact__text-time {
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -85,34 +87,32 @@ html {
             width: 16px;
         }
 
-        > div {
+        > .time-text {
             line-height: 22px;
             padding-left: 12px;
             padding-top: 13px;
-
-            > span {
-                font-size: 14px;
-
-                &:first-of-type {
-                    color: @themeColor;
-                    font-family: GothamProBol, sans-serif;
-                }
-
-                &:last-of-type {
-                    color: @themeSecondColor;
-                    font-family: GothamProLig, sans-serif;
-                }
-            }
         }
     }
 
     &:hover {
-        > div {
+        > .header-contact__text-time {
             display: block;
         }
         cursor: pointer;
         color: @themeThirdColor;
     }
+}
+
+.time-text_red {
+    font-size: 14px;
+    color: @themeColor;
+    font-family: GothamProBol, sans-serif;
+}
+
+.time-text_black {
+    font-size: 14px;
+    color: @themeSecondColor;
+    font-family: GothamProLig, sans-serif;
 }
 
 .container {
@@ -130,12 +130,9 @@ html {
     width: 110px;
 }
 
-.navigation__item {
-    li > * {
-        display: inline-block;
-    }
-    transition: 0.3s;
+.navigation__item-link {
     text-decoration: none;
+    transition: 0.3s;
     color: @themeColor;
 
     &:hover {
@@ -144,6 +141,7 @@ html {
 }
 
 .navigation__item-icon {
+    display: inline-block;
     font-size: 20px;
     line-height: 48px;
     padding-left: 1px;
@@ -152,6 +150,7 @@ html {
 }
 
 .navigation__item-label {
+    display: inline-block;
     font-family: GothamProBol, sans-serif;
     font-size: 12px;
     letter-spacing: 1px;
@@ -166,6 +165,7 @@ html {
     float: left;
     overflow: hidden;
     cursor: default;
+    position: relative;
 }
 
 .footer__logo,
@@ -182,21 +182,9 @@ html {
     font-size: 14px;
     line-height: 18px;
     padding-top: 11px;
-
-    span {
-        font-family: GothamProBol, sans-serif;
-        color: white;
-    }
-
-    a {
-        color: white;
-    }
 }
 
 .footer__social {
-    li {
-        display: inline-block;
-    }
     font-family: GothamProBol, sans-serif;
     float: right;
     padding-right: 21px;
@@ -208,12 +196,11 @@ html {
 }
 
 .footer__social-icons {
+    > * {
+        display: inline-block;
+    }
     margin: 0;
     padding: 8px 0 0 3px;
-
-    > a {
-        text-decoration: none;
-    }
 }
 @themeFourthColor: #d4d4d8;
 
@@ -223,25 +210,32 @@ html {
     line-height: 22px;
     width: 20px;
     text-align: center;
-    color: @themeSecondColor;
     background-color: @themeFourthColor;
     border-radius: 10px;
     margin-right: 5px;
     transition: 0.3s;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
         background-color: @themeColor;
     }
+
+    > * {
+        text-decoration: none;
+        color: @themeSecondColor;
+    }
 }
 
 .footer__logo {
     position: absolute;
-    left: 50%;
-    padding-top: 14px;
-    // padding-left: 1px;
-    padding-right: 3px;
-    transform: translate(-50%);
+    left: 46.49%;
+    top: 14px;
+    // padding-top: 14px;
+    // // padding-left: 1px;
+    // padding-right: 3px;
+    // transform: translate(-50%);
+    display: block;
 }
 /////////rates/////////
 
@@ -258,17 +252,27 @@ html {
     font-family: GothamProLigIta, sans-serif;
     font-size: 14px;
 
-    li {
+    > * {
         display: inline-block;
     }
 }
 
-.breadcrumbs__item-home {
-    color: @themeColor; // text-decoration: underline;
+.breadcrumbs__item {
+    &::before {
+        content: "/ ";
+    }
+    color: @themeColor;
     text-decoration: none;
     transition: 0.3s;
 
     &:hover {
+        color: @themeSecondColor;
+    }
+}
+
+.breadcrumbs__item-home {
+    &::before {
+        content: '';
         color: @themeSecondColor;
     }
 }
@@ -282,12 +286,10 @@ html {
 }
 
 .content__title {
-    h1 {
-        font-family: GothamProBol, sans-serif;
-        font-size: 49px;
-        margin: 0;
-        cursor: default;
-    }
+    font-family: GothamProBol, sans-serif;
+    font-size: 49px;
+    margin: 0;
+    cursor: default;
 }
 
 .schedule {
@@ -424,39 +426,38 @@ html {
     margin-bottom: 10px;
     // height: 200px;
 }
-.main-content__header-image{
+
+.main-content__header-image {
     width: 100%;
     height: 354px;
-    background-image: url('../main/img/about.jpg');
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: #26728c;
+    position: relative;
+    overflow: hidden;
 }
+
 .main-content__header-title {
-    &::before {
-        content: "";
-        display: inline-block;
-        min-height: inherit;
-        height: 100%;
-        vertical-align: middle;
-    }
-    height: 354px;
-    width: 100%;
-    padding-left: 60px;
-    padding-top: 5px;
-
-    > h1 {
-        text-transform: uppercase;
-        font-family: GothamProBol, sans-serif;
-        font-size: 48px;
-        vertical-align: middle;
-        display: inline-block;
-        color: white;
-    }
+    margin: 0;
+    text-transform: uppercase;
+    font-family: GothamProBol, sans-serif;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 159px;
+    left: 65px;
 }
 
-.main-content__text{
+.header-image_dir{
+    width: 100%;
+    filter: grayscale(100%);
+}
+// .header-image_overlay{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: darken(fade(@themeThirdColor, 70%), 30%);
+// }
+.main-content__text {
     line-height: 30px;
     width: 690px;
     box-sizing: border-box;
@@ -466,31 +467,34 @@ html {
     font-family: GothamProLig, sans-serif;
 }
 
-.main-content__text-paragraph{
+.main-content__text-paragraph {
     font-size: 18px;
     margin-top: 6px;
     margin-bottom: 10px;
 }
-.main__list-title{
+
+.main__list-title {
     font-size: 18px;
     font-family: GothamProBol, sans-serif;
 }
-.main__list-items{
+
+.main__list-items {
     margin: 0;
     padding-left: 33px;
     padding-top: 5px;
     line-height: 33px;
     font-size: 18px;
-    li{
+
+    li {
         color: @themeColor;
 
-        span{
+        span {
             color: black;
         }
     }
 }
 
-.main-content__discount{
+.main-content__discount {
     font-family: GothamProLig, sans-serif;
     font-size: 18px;
     margin-left: 7px;
@@ -501,20 +505,25 @@ html {
     color: white;
     padding: 12px 30px;
     margin-bottom: 66px;
-    span{
+
+    span {
         color: @themeColor;
     }
 }
 
-.main-content__partners-title{
+.main-content__partners-title {
     font-size: 48px;
     font-family: GothamProBol, sans-serif;
     padding-left: 8px;
     text-transform: uppercase;
 }
 
-.main-content__partners-logos{
+.main-content__partners-logos {
     width: 700px;
+}
+
+.partners-logo{
+    display: inline-block;
 }
 //////////////////////////////////
 //////////////////////////////////

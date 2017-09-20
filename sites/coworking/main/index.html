@@ -16,20 +16,17 @@
     <div class="wrapper">
         <div class="header">
             <div class="container">
-                <div class="header-logo">
-                    <a href="../main" title="Главная"><img src="img/logo.png" alt="logo"></a>
-                </div>
+                <a href="../main" title="Главная" class="header-logo"><img src="img/logo.png" alt="logo"></a>
                 <div class="header-contact">
-                    <div class="header-contact__number">
+                    <a href="tel:8(800)00-392-10" class="header-contact__number">
                         8 (800) 00-392-10
-                    </div>
-                    <br>
+                    </a>
                     <div class="header-contact__text">
                         График работы
-                        <div>
-                            <div>
-                                <span>пн-вс: 09:00-20:00</span><br>
-                                <span>обед: 14:00-14:30</span>
+                        <div class="header-contact__text-time">
+                            <div class="time-text">
+                                <span class="time-text_red">пн-вс: 09:00-20:00</span>
+                                <span class="time-text_black">обед: 14:00-14:30</span>
                             </div>
                         </div>
                     </div>
@@ -39,46 +36,49 @@
 
         <div class="container">
             <ul class="navigation">
-                <a href="../main" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                        </div>
+
+                <li class="navigation__item">
+                    <a href="../main" class="navigation__item-link">
+                            <i class="fa fa-home navigation__item-icon" aria-hidden="true"></i>
+
                         <div class="navigation__item-label">
                             ГЛАВНАЯ
                         </div>
-                    </li>
-                </a>
-                <a href="../rates" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        </div>
+                    </a>
+                </li>
+
+
+                <li class="navigation__item">
+                    <a href="../rates" class="navigation__item-link">
+                            <i class="fa fa-credit-card navigation__item-icon" aria-hidden="true"></i>
                         <div class="navigation__item-label">
                             ТАРИФЫ
                         </div>
-                    </li>
-                </a>
-                <a href="#" class="navigation__item">
-                    <li>
-                        <div class="navigation__item-icon">
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                        </div>
+                    </a>
+                </li>
+
+
+                <li class="navigation__item">
+                    <a href="../comments" class="navigation__item-link">
+                            <i class="fa fa-star-o navigation__item-icon" aria-hidden="true"></i>
                         <div class="navigation__item-label">
                             ОТЗЫВЫ
                         </div>
-                    </li>
-                </a>
+                    </a>
+                </li>
+
             </ul>
 
             <div class="content">
                 <div class="main-content__header">
                     <div class="main-content__header-image">
-                        <div class="main-content__header-title">
-                            <h1>о компании</h1>
-                        </div>
-
+                        <img src="../main/img/about.jpg" alt="" class="header-image_dir">
+                        <div class="header-image_overlay"></div>
+                        <!-- <div class="header-image_overlay"></div> -->
+                        <h1 class="main-content__header-title">о компании</h1>
                     </div>
+
+
                 </div>
                 <div class="main-content__text">
                     <div class="main-content__text-paragraph">
@@ -112,13 +112,12 @@
                 <div class="main-content__partners">
                     <div class="main-content__partners-title">партнёры</div>
                     <ul class="main-content__partners-logos">
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
-                        <br>
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
-                        <li><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
+                        <li class="partners-logo"><img src="img/logos/logo-1.png" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -128,39 +127,39 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__postscript">
-                    Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <span><a href="http://loftschool.ru">LoftSchool</a></span>. Автор работы: <a href="https://github.com/RomaTur"><span>Турусов Роман</span></a>
+                    Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <a href="http://loftschool.ru" style="font-family: GothamProBol;color: white;">LoftSchool</a>. Автор работы: <a href="https://github.com/RomaTur" style="font-family: GothamProBol;color: white;">Турусов Роман</a>
                 </div>
-                <div class="footer__logo">
-                    <a href="../main" title="Главная">
+
+                <a href="../main" title="Главная" class="footer__logo">
                 <img src="img/logo.png" alt="logo">
                 </a>
-                </div>
+
                 <div class="footer__social">
                     <div class="footer__social-title">
                         Наши социальные сети
                     </div>
 
                     <ul class="footer__social-icons">
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-vk" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-facebook" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-google-plus" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-twitter" aria-hidden="true"></i>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="footer__social-icons__item"><i class="fa fa-envelope" aria-hidden="true"></i>
-                            </li>
-                        </a>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-vk" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-icons__item">
+                            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
 
                     </ul>
 
