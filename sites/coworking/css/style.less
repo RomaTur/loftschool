@@ -74,6 +74,7 @@ html {
         position: absolute;
         top: 75px;
         width: 162px;
+        z-index: 100;
 
         &::before {
             background-color: white;
@@ -154,13 +155,13 @@ html {
     font-family: GothamProBol, sans-serif;
     font-size: 12px;
     letter-spacing: 1px;
-    line-height: 48px;
+    line-height: 39px;
     vertical-align: middle;
 }
 
 .footer {
     width: 100%;
-    height: 76px;
+    height: 77px;
     background-color: @themeSecondColor;
     float: left;
     overflow: hidden;
@@ -237,15 +238,13 @@ html {
     // transform: translate(-50%);
     display: block;
 }
-/////////rates/////////
 
 .content {
     float: left;
     width: 900px;
     padding-left: 3px;
-    padding-bottom: 55px;
 }
-
+/////////rates/////////
 .breadcrumbs {
     margin: 0;
     padding: 44px 0 26px 7px;
@@ -298,6 +297,7 @@ html {
     padding-top: 41px;
     list-style: none;
     cursor: default;
+    padding-bottom: 55px;
 }
 
 .schedule__item {
@@ -445,20 +445,12 @@ html {
     left: 65px;
 }
 
-.content-header__image-dir{
+.content-header__image-dir {
     width: 100%;
-    filter: grayscale(100%);
-    background-color: @themeThirdColor;
-    background-blend-mode: overlay;
+
 }
-// .header-image_overlay{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: darken(fade(@themeThirdColor, 50%), 30%);
-// }
+
+
 .main-content__text {
     line-height: 30px;
     width: 690px;
@@ -482,7 +474,7 @@ html {
 
 .main__list-items {
     margin: 0;
-    padding-left: 33px;
+    padding-left: 26px;
     padding-top: 5px;
     line-height: 33px;
     font-size: 18px;
@@ -490,15 +482,16 @@ html {
     li {
         list-style: none;
         color: black;
-        &:before{
-            content:'\2022';
-	        color: #ec1e79;
-	        padding: 0 14px 0 0;
+        padding-left: 15px;
+        text-indent: -5px;
 
+        &:before {
+            content: '\2022';
+            color: #ec1e79;
+            // padding: 0 14px 0 0;
+            position: absolute;
+            margin-left: -15px;
         }
-        // span {
-        //     color: black;
-        // }
     }
 }
 
@@ -519,6 +512,10 @@ html {
     }
 }
 
+.main-content__partners {
+    width: 780px;
+}
+
 .main-content__partners-title {
     font-size: 48px;
     font-family: GothamProBol, sans-serif;
@@ -530,16 +527,26 @@ html {
     // width: 700px;
     margin: 0;
     padding: 0;
-    margin-left: -103px;
-    li{
-        display: inline-block;
-        width: 160px;
-        margin-left: 108px;
-    }
+    margin-left: -173px;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 22px;
 }
 
-.partners-logo{
+.partners-logo {
     display: inline-block;
+    display: inline-block;
+    width: 160px;
+    margin-left: 105px;
+    margin-bottom: 47px;
+    filter: grayscale(100%);
+    opacity: 0.55;
+    transition: 0.3s;
+
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
 }
 //////////////////////////////////
 //////////////////////////////////
