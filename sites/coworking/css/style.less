@@ -445,9 +445,11 @@ html {
     left: 65px;
 }
 
-.header-image_dir{
+.content-header__image-dir{
     width: 100%;
     filter: grayscale(100%);
+    background-color: @themeThirdColor;
+    background-blend-mode: overlay;
 }
 // .header-image_overlay{
 //     position: absolute;
@@ -455,7 +457,7 @@ html {
 //     left: 0;
 //     width: 100%;
 //     height: 100%;
-//     background-color: darken(fade(@themeThirdColor, 70%), 30%);
+//     background-color: darken(fade(@themeThirdColor, 50%), 30%);
 // }
 .main-content__text {
     line-height: 30px;
@@ -486,11 +488,17 @@ html {
     font-size: 18px;
 
     li {
-        color: @themeColor;
+        list-style: none;
+        color: black;
+        &:before{
+            content:'\2022';
+	        color: #ec1e79;
+	        padding: 0 14px 0 0;
 
-        span {
-            color: black;
         }
+        // span {
+        //     color: black;
+        // }
     }
 }
 
@@ -519,7 +527,15 @@ html {
 }
 
 .main-content__partners-logos {
-    width: 700px;
+    // width: 700px;
+    margin: 0;
+    padding: 0;
+    margin-left: -103px;
+    li{
+        display: inline-block;
+        width: 160px;
+        margin-left: 108px;
+    }
 }
 
 .partners-logo{
