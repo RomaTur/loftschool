@@ -30,22 +30,23 @@ html {
     position: relative;
     min-height: 100%;
     overflow: hidden;
-    &::after{
+
+    &::after {
         content: "";
         width: 100%;
         height: 77px;
         display: block;
     }
-
 }
 
-.clearfix{
-    &::after{
+.clearfix {
+    &::after {
         content: "";
         display: block;
         clear: both;
     }
 }
+
 .header {
     width: 100%;
     height: 71px;
@@ -106,12 +107,6 @@ html {
             transform: rotate(45deg);
             width: 16px;
         }
-
-        > .time-text {
-            line-height: 22px;
-            padding-left: 12px;
-            padding-top: 13px;
-        }
     }
 
     &:hover {
@@ -121,6 +116,12 @@ html {
         cursor: pointer;
         color: @themeThirdColor;
     }
+}
+
+.time-text {
+    line-height: 22px;
+    padding-left: 12px;
+    padding-top: 13px;
 }
 
 .time-text_red {
@@ -333,6 +334,42 @@ html {
     &:nth-of-type(6) {
         padding-right: 0;
     }
+
+    &:nth-of-type(1) {
+        .schedule__item-title {
+            background-image: url("../rates/img/one.jpg");
+        }
+    }
+
+    &:nth-of-type(2) {
+        .schedule__item-title {
+            background-image: url("../rates/img/three.jpg");
+        }
+    }
+
+    &:nth-of-type(3) {
+        .schedule__item-title {
+            background-image: url("../rates/img/ten-ten.jpg");
+        }
+    }
+
+    &:nth-of-type(4) {
+        .schedule__item-title {
+            background-image: url("../rates/img/unlimOne.jpg");
+        }
+    }
+
+    &:nth-of-type(5) {
+        .schedule__item-title {
+            background-image: url("../rates/img/allEnclusive.jpg");
+        }
+    }
+
+    &:nth-of-type(6) {
+        .schedule__item-title {
+            background-image: url("../rates/img/meetingRoom.jpg");
+        }
+    }
 }
 
 .schedule__item-title {
@@ -348,72 +385,34 @@ html {
     font-family: GothamProBol, sans-serif;
     border-radius: 5px;
 
-    > div {
-        width: 100%;
-        height: 100%;
-        background-color: @themeSecondColor;
-        opacity: 0.85;
-        border-radius: 5px;
-
-        &::before {
-            content: "";
-            display: inline-block;
-            min-height: inherit;
-            height: 100%;
-            vertical-align: middle;
-        }
-
-        > span {
-            display: inline-block;
-            vertical-align: middle;
-            padding-top: 3px;
-            padding-right: 7px;
-            line-height: 32px;
-
-            > span {
-                color: @themeColor;
-            }
-        }
-    }
 }
 
-.schedule {
-    li {
-        &:nth-of-type(1) {
-            .schedule__item-title {
-                background-image: url("../rates/img/one.jpg");
-            }
-        }
+.title__overlay{
+    width: 100%;
+    height: 100%;
+    background-color: @themeSecondColor;
+    opacity: 0.85;
+    border-radius: 5px;
 
-        &:nth-of-type(2) {
-            .schedule__item-title {
-                background-image: url("../rates/img/three.jpg");
-            }
-        }
+    &::before {
+        content: "";
+        display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle;
+    }
 
-        &:nth-of-type(3) {
-            .schedule__item-title {
-                background-image: url("../rates/img/ten-ten.jpg");
-            }
-        }
+}
 
-        &:nth-of-type(4) {
-            .schedule__item-title {
-                background-image: url("../rates/img/unlimOne.jpg");
-            }
-        }
+.schedule__title-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-right: 7px;
+    line-height: 32px;
 
-        &:nth-of-type(5) {
-            .schedule__item-title {
-                background-image: url("../rates/img/allEnclusive.jpg");
-            }
-        }
-
-        &:nth-of-type(6) {
-            .schedule__item-title {
-                background-image: url("../rates/img/meetingRoom.jpg");
-            }
-        }
+    >* {
+        color: @themeColor;
     }
 }
 
@@ -497,20 +496,20 @@ html {
     padding-top: 5px;
     line-height: 33px;
     font-size: 18px;
+}
 
-    li {
-        list-style: none;
-        color: black;
-        padding-left: 15px;
-        text-indent: -5px;
+.main__list-item {
+    list-style: none;
+    color: black;
+    padding-left: 15px;
+    text-indent: -5px;
 
-        &:before {
-            content: '\2022';
-            color: #ec1e79;
-            // padding: 0 14px 0 0;
-            position: absolute;
-            margin-left: -15px;
-        }
+    &:before {
+        content: '\2022';
+        color: #ec1e79;
+        // padding: 0 14px 0 0;
+        position: absolute;
+        margin-left: -15px;
     }
 }
 
@@ -525,10 +524,10 @@ html {
     color: white;
     padding: 12px 30px;
     margin-bottom: 66px;
+}
 
-    span {
-        color: @themeColor;
-    }
+.main-content__discount--red {
+    color: @themeColor;
 }
 
 .main-content__partners {
