@@ -125,20 +125,64 @@
 
 
             </div>
-            <div class="content-pages">
+            <div class="comments-pages">
                 <div class="pages__label">Страница 1 из 7</div>
                 <a href="#" class="pages__arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
                 <ul class="pages__numbers">
-                    <li class="pages__numbers-item"><a href="#" class="number__link">1</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">2</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">3</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">4</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">5</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">6</a></li>
-                    <li class="pages__numbers-item"><a href="#" class="number__link">7</a></li>
+                    <li class="pages__numbers-item"><a href="#1" class="number__link">1</a></li>
+                    <li class="pages__numbers-item"><a href="#2" class="number__link">2</a></li>
+                    <li class="pages__numbers-item"><a href="#3" class="number__link">3</a></li>
+                    <li class="pages__numbers-item"><a href="#4" class="number__link">4</a></li>
+                    <li class="pages__numbers-item"><a href="#5" class="number__link">5</a></li>
+                    <li class="pages__numbers-item"><a href="#6" class="number__link">6</a></li>
+                    <li class="pages__numbers-item"><a href="#7" class="number__link">7</a></li>
                 </ul>
                 <a href="#" class="pages__arrow"><i class="fa fa-chevron-right " aria-hidden="true"></i></a>
             </div>
+
+                <form action="#" method="post" class="comments__form">
+                    <div class="comments__form-container">
+
+
+                        <h2 class="form__title">Оставить отзыв</h2>
+
+                        <div class="form__person">
+                            <div class="form__person-name">
+                                Ваше имя
+                                <input type="text" name="" value="" placeholder="Роман" class="person__input">
+                            </div>
+                            <div class="form__person-vk">
+                                Ссылка на профиль VK
+                                <input type="text" name="" value="" placeholder="vk.com/id_r0mashka" class="person__input">
+                            </div>
+                        </div>
+
+                        <div class="form__message">
+                            Текст отзыва
+                            <textarea name="name" class="message__input">Мне понравилось</textarea>
+                        </div>
+                        <div class="form__submit">
+                            <div class="form__submit-radio">
+                                Отображать фото в отзыве?
+
+                                <label class="submit-radio__input">
+                                    <input type="radio" name="display-photo" value="">
+                                    <div class="submit-radio__circle"><span></span></div>
+                                    <div class="submit-radio__text">Да</div>
+                                </label>
+                                <label class="submit-radio__input">
+                                    <input type="radio" name="display-photo" value="">
+                                    <div class="submit-radio__circle"><span></span></div>
+                                    <div class="submit-radio__text">Нет</div>
+                                </label>
+                            </div>
+                            <input type="submit" name="" value="Отправить" class="form__submit-button">
+                        </div>
+
+                    </div>
+
+                </form>
+
 
         </div>
 
