@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1100, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <title>Тарифы</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../fonts/fontAwesome/css/font-awesome.min.css">
@@ -16,7 +16,7 @@
 <body>
     <div class="wrapper ">
         <div class="header">
-            <div class="container">
+            <div class="container clearfix">
                 <a href="../main" title="Главная" class="header-logo"><img src="img/logo.png" alt="logo"></a>
                 <div class="header-contact">
                     <a href="tel:8(800)00-392-10" class="header-contact__number">
@@ -50,12 +50,12 @@
 
 
                 <li class="navigation__item">
-                    <!-- <a href="../rates" class="navigation__item-link"> -->
-                            <i class="fa fa-credit-card navigation__item-icon" aria-hidden="true"></i>
-                        <div class="navigation__item-label">
-                            ТАРИФЫ
-                        </div>
-                    <!-- </a> -->
+
+                    <i class="fa fa-credit-card navigation__item-icon" aria-hidden="true"></i>
+                    <div class="navigation__item-label">
+                        ТАРИФЫ
+                    </div>
+
                 </li>
 
 
@@ -73,15 +73,15 @@
             <div class="content">
 
                 <ul class="breadcrumbs">
-                        <li><a href="../main" class=" breadcrumbs__item breadcrumbs__item-home ">Главная</a></li>
+                    <li class="breadcrumbs__item breadcrumbs__item--home"><a href="../main" class=" breadcrumbs__link">Главная</a></li>
 
 
-                        <li class="breadcrumbs__item breadcrumbs__item-current">
-                            Тарифы</li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        Тарифы</li>
 
                 </ul>
 
-                    <h1 class="content__title">Тарифы</h1>
+                <h1 class="content__title">Тарифы</h1>
 
                 <ul class="schedule">
                     <li class="schedule__item">
@@ -130,7 +130,7 @@
                     <li class="schedule__item">
                         <div class="schedule__item-title">
                             <div class="title__overlay">
-                                <span class="schedule__title-text"><span>VIP</span><br>&laquo;БЕЗЛИМИТ<br>НА ОДНОГО&raquo;</span>
+                                <span class="schedule__title-text"><span class="color--red">VIP</span><br>&laquo;БЕЗЛИМИТ<br>НА ОДНОГО&raquo;</span>
                             </div>
 
 
@@ -146,7 +146,7 @@
                     <li class="schedule__item">
                         <div class="schedule__item-title">
                             <div class="title__overlay">
-                                <span class="schedule__title-text"><span>VIP</span><br>&laquo;ВСЕ<br>ВКЛЮЧЕНО&raquo;</span>
+                                <span class="schedule__title-text"><span class="color--red">VIP</span><br>&laquo;ВСЕ<br>ВКЛЮЧЕНО&raquo;</span>
                             </div>
                         </div>
                         <div class="schedule__item-desc">
@@ -185,46 +185,47 @@
     </div>
     <footer class="footer">
 
-            <div class="container">
-                <div class="footer__postscript">
-                    Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <a href="http://loftschool.ru" style="font-family: GothamProBol;color: white;">LoftSchool</a>. Автор работы: <a href="https://github.com/RomaTur" style="font-family: GothamProBol;color: white;">Турусов Роман</a>
-                </div>
+        <div class="container">
+            <div class="footer__postscript">
+                Сделано с любовью и старанием <br>на курсе «HTML + CSS» в <a href="http://loftschool.ru" class="postscript__link">LoftSchool</a>. Автор работы: <a href="https://github.com/RomaTur"  class="postscript__link">Турусов Роман</a>
+            </div>
 
-                    <a href="../main" title="Главная" class="footer__logo">
+
+            <a href="../main" title="Главная" class="footer__logo">
                 <img src="img/logo.png" alt="logo">
                 </a>
 
-                <div class="footer__social">
-                    <div class="footer__social-title">
-                        Наши социальные сети
-                    </div>
-
-                    <ul class="footer__social-icons">
-                        <li class="footer__social-icons__item">
-                            <a href="" ><i class="fa fa-vk" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-icons__item">
-                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-icons__item">
-                            <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-icons__item">
-                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-icons__item">
-                            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-
+            <div class="footer__social">
+                <div class="footer__social-title">
+                    Наши социальные сети
                 </div>
+
+                <ul class="footer__social-icons">
+                    <li class="footer__social-icons__item">
+                        <a href="" class="social-icons__link"><i class="fa fa-vk" aria-hidden="true"></i>
+                            </a>
+                    </li>
+                    <li class="footer__social-icons__item">
+                        <a href="" class="social-icons__link"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                    </li>
+                    <li class="footer__social-icons__item">
+                        <a href="" class="social-icons__link"><i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                    </li>
+                    <li class="footer__social-icons__item">
+                        <a href="" class="social-icons__link"><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                    </li>
+                    <li class="footer__social-icons__item">
+                        <a href="" class="social-icons__link"><i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                    </li>
+
+                </ul>
+
             </div>
+        </div>
 
     </footer>
 </body>

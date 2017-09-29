@@ -18,9 +18,14 @@
 @themeThirdColor: #5dd1f8;
 @themeFourthColor: #b1aeae;
 
-*{
+* {
     box-sizing: border-box;
 }
+
+a {
+    display: block;
+}
+
 body,
 html {
     margin: 0;
@@ -50,15 +55,9 @@ html {
         clear: both;
     }
 }
-
-
-
-
-
 ///////intro/////////
 
-
-.intro{
+.intro {
     width: 100vw;
     height: 100vh;
     background-image: url("../intro-back.jpg");
@@ -69,21 +68,19 @@ html {
     background-blend-mode: overlay;
 }
 
-.intro__content{
+.intro__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.intro__content-logo{
+.intro__content-logo {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-
+    margin: 0 auto 30px;
 }
 
-.intro__content-button{
+.intro__content-button {
     display: block;
     text-align: center;
     font-family: GothamProBol, sans-serif;
@@ -92,20 +89,18 @@ html {
     letter-spacing: 1px;
     line-height: 33px;
     border: 2px solid @themeColor;
-    padding: 6px 20px 0 20px;
+    padding: 6px 20px 0;
     color: @themeColor;
     text-decoration: none;
     transition: 0.2s;
-    &:hover{
+
+    &:hover {
         color: white;
         background-color: @themeColor;
     }
 }
-
-
-
-
 ////////other pages///////
+
 .header {
     width: 100%;
     height: 71px;
@@ -154,7 +149,6 @@ html {
         top: 75px;
         width: 162px;
         z-index: 100;
-
 
         &::before {
             background-color: white;
@@ -226,7 +220,6 @@ html {
     }
 }
 
-
 .navigation__item-icon {
     display: inline-block;
     vertical-align: middle;
@@ -272,7 +265,12 @@ html {
     margin-top: 11px;
     margin-left: 19px;
     padding: 0;
+}
 
+.postscript__link {
+    font-family: GothamProBol;
+    color: white;
+    display: inline-block;
 }
 
 .footer__social {
@@ -287,10 +285,6 @@ html {
 }
 
 .footer__social-icons {
-    > * {
-        display: inline-block;
-    }
-
     padding: 0;
     margin: 8px 0 0 3px;
 }
@@ -307,26 +301,23 @@ html {
     margin-right: 5px;
     transition: 0.3s;
     text-decoration: none;
+    display: inline-block;
 
     &:hover {
         cursor: pointer;
         background-color: @themeColor;
     }
+}
 
-    > * {
-        text-decoration: none;
-        color: @themeSecondColor;
-    }
+.social-icons__link {
+    text-decoration: none;
+    color: @themeSecondColor;
 }
 
 .footer__logo {
     position: absolute;
     left: 46.49%;
     top: 14px;
-    // padding-top: 14px;
-    // // padding-left: 1px;
-    // padding-right: 3px;
-    // transform: translate(-50%);
     display: block;
 }
 
@@ -341,10 +332,6 @@ html {
     padding: 44px 0 20px 7px;
     font-family: GothamProLigIta, sans-serif;
     font-size: 14px;
-
-    > * {
-        display: inline-block;
-    }
 }
 
 .breadcrumbs__item {
@@ -352,22 +339,29 @@ html {
         content: "/ ";
     }
     color: @themeColor;
-    text-decoration: none;
-    transition: 0.3s;
-
-    &:hover {
-        color: @themeSecondColor;
-    }
+    display: inline-block;
 }
 
-.breadcrumbs__item-home {
+.breadcrumbs__item--home {
     &::before {
         content: '';
         color: @themeSecondColor;
     }
 }
 
-.breadcrumbs__item-current {
+.breadcrumbs__link {
+    content: '';
+    // color: @themeSecondColor;
+    color: @themeColor;
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+        color: @themeSecondColor;
+    }
+}
+
+.breadcrumbs__item--current {
     &::before {
         content: "/";
     }
@@ -378,19 +372,17 @@ html {
 .content__title {
     font-family: GothamProBol, sans-serif;
     font-size: 49px;
-    margin: 0;
-    margin-left: 5px;
+    margin: 0 0 0 5px;
     cursor: default;
 }
 /////////rates/////////
 
 .schedule {
     padding-left: 7px;
-    margin: 0;
-    padding-top: 36px;
+    margin: 36px 0 0;
     list-style: none;
     cursor: default;
-    padding-bottom: 53px;
+    margin-bottom: 33px;
     margin-left: -52px;
 }
 
@@ -399,7 +391,7 @@ html {
     vertical-align: top;
     width: 250px;
     margin-left: 52px;
-    margin-bottom: 26px;
+    margin-bottom: 37px;
 
     &:nth-of-type(1) {
         .schedule__item-title {
@@ -445,11 +437,11 @@ html {
     background-position: center;
     background-size: cover;
     text-align: center;
-    // line-height: 153px;
     color: @themeThirdColor;
     font-size: 24px;
     font-family: GothamProBol, sans-serif;
     border-radius: 5px;
+    margin-bottom: 26px;
 }
 
 .title__overlay {
@@ -473,16 +465,6 @@ html {
     vertical-align: middle;
     padding-right: 7px;
     line-height: 35px;
-
-    > * {
-        color: @themeColor;
-    }
-}
-
-.schedule__item-desc {
-    // height: 100px;
-    padding: 26px 0 0;
-    height: 237px;
 }
 
 .schedule__item-desc__price {
@@ -491,13 +473,13 @@ html {
     font-family: GothamProBol, sans-serif;
     text-align: center;
     line-height: 20px;
+    margin-bottom: 12px;
 }
 
 .schedule__item-desc__spec {
     font-size: 14px;
     text-align: center;
     line-height: 21px;
-    padding-top: 12px;
     font-family: GothamProLig, sans-serif;
 }
 /////////main///////
@@ -589,9 +571,7 @@ html {
     margin-bottom: 61px;
 }
 
-.main-content__discount--red {
-    color: @themeColor;
-}
+
 
 .main-content__partners {
     width: 780px;
@@ -736,21 +716,18 @@ html {
     width: 25px;
     height: 25px;
     font-size: 0;
-border-radius: 3px;
+    border-radius: 3px;
     transition: 0.2s;
     margin: 0 -2px;
 
-    &:first-child{
-        >*{
-        background-color: @themeSecondColor;
-        border-radius: 3px;
-        color: @themeColor;
-        }
+    &:first-child {
+
+            background-color: @themeSecondColor;
+            border-radius: 3px;
+
+
     }
 
-    &:hover {
-        // background-color: @themeSecondColor;
-    }
 }
 
 .number__link {
@@ -762,57 +739,55 @@ border-radius: 3px;
     display: block;
     transition: 0.2s;
 
-
     &:hover {
         color: @themeColor;
     }
 }
 
-.comments__form{
+.comments__form {
     width: 1100px;
     float: left;
 }
 
-.comments__form-container{
+.comments__form-container {
     box-sizing: border-box;
-    margin: 71px auto 70px auto;
+    margin: 71px auto 70px;
     width: 700px;
     height: 425px;
     background-color: @themeFourthColor;
     padding: 44px 69px;
-    *{
+
+    * {
         font-family: GothamProLig, sans-serif;
         font-size: 14px;
-        display: block;
-        box-sizing: border-box;
     }
 }
 
-.form__title{
+.form__title {
     font-family: GothamProBol , sans-serif;
     font-size: 48px;
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
     padding: 0;
 }
 
-.form__person{
+.form__person {
     margin-bottom: 20px;
     height: 66px;
-    >*{
-        display: inline-block;
-        width: 270px;
-        // height: 65px;
-        // background-color: red;
-    }
 }
-.form__person-name{
+
+.form__person-name {
     float: left;
+    display: inline-block;
+    width: 270px;
 }
-.form__person-vk{
+
+.form__person-vk {
     float: right;
+    display: inline-block;
+    width: 270px;
 }
-.person__input{
+
+.person__input {
     width: 269px;
     height: 40px;
     margin-top: 7px;
@@ -822,10 +797,11 @@ border-radius: 3px;
     transition: 0.2s;
 }
 
-.form__message{
+.form__message {
     height: 115px;
 }
-.message__input{
+
+.message__input {
     transition: 0.2s;
     box-sizing: border-box;
     margin-top: 6px;
@@ -837,52 +813,54 @@ border-radius: 3px;
     resize: none;
 }
 
-.person__input:focus, .message__input:focus{
+.message__input:focus,
+.person__input:focus {
     outline: none;
     border: 1px solid @themeColor;
 }
 
-.form__submit{
+.form__submit {
     width: 100%;
     margin-top: 10px;
 }
 
-.form__submit-radio{
+.form__submit-radio {
     float: left;
     width: 210px;
     line-height: 26px;
     margin-left: -1px;
-    *{
-        display: inline-block;
-        vertical-align: middle;
-    }
 }
-.submit-radio__input{
+
+.submit-radio__input {
     line-height: 20px;
     height: 20px;
-    >input{
+    display: inline-block;
+
+    > input {
         position: absolute;
         left: -9999px;
     }
 }
 
-.submit-radio__input>input:checked + .submit-radio__circle>span{
+.submit-radio__input > input:checked + .submit-radio__circle > span {
     width: 8px;
     height: 8px;
 }
 
-.submit-radio__text{
+.submit-radio__text {
     margin-right: 12px;
     margin-left: 1px;
     color: @themeSecondColor;
     transition: 0.2s;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.submit-radio__input>input:checked + .submit-radio__circle + .submit-radio__text{
+.submit-radio__input > input:checked + .submit-radio__circle + .submit-radio__text {
     color: @themeColor;
 }
 
-.submit-radio__circle{
+.submit-radio__circle {
     box-sizing: border-box;
     width: 20px;
     height: 20px;
@@ -890,21 +868,25 @@ border-radius: 3px;
     border-radius: 50%;
     margin-left: 2px;
     position: relative;
-    >span{
-        transition: 0.2s;
-        width: 0px;
-        height: 0px;
-        background-color: @themeColor;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
-    }
+    display: inline-block;
+    vertical-align: middle;
+
+
 }
 
+.radio__circle-inner {
+    transition: 0.2s;
+    width: 0;
+    height: 0;
+    background-color: @themeColor;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
 
-.form__submit-button{
+.form__submit-button {
     float: right;
     width: 139px;
     height: 45px;
@@ -922,11 +904,23 @@ border-radius: 3px;
     font-family: GothamProBol, sans-serif;
     cursor: pointer;
     transition: 0.2s;
-    &:hover{
+
+    &:hover {
         background-color: @themeColor;
         color: white;
     }
 }
+
+
+
+
+.color--red {
+    color: @themeColor;
+}
+
+
+
+
 //////////////////////////////////
 //////////////////////////////////
 //////////////////////////////////
