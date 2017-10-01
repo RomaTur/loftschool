@@ -16,7 +16,7 @@
 @themeColor: #ec1e79;
 @themeSecondColor: #27273e;
 @themeThirdColor: #5dd1f8;
-@themeFourthColor: #b1aeae;
+@themeFourthColor: #F5F5F5;
 
 * {
     box-sizing: border-box;
@@ -733,6 +733,15 @@ html {
 
 }
 
+.pages__arrow--left{
+    color: rgb(200,200,200);
+    cursor: default;
+    &:hover{
+        color: rgb(200,200,200);
+    }
+}
+
+
 .number__link {
     text-decoration: none;
     color: @themeSecondColor;
@@ -757,7 +766,7 @@ html {
     margin: 71px auto 70px;
     width: 700px;
     height: 425px;
-    background-color: @themeFourthColor;
+    background-color: #F5F5F5;
     padding: 44px 69px;
 
     * {
@@ -908,6 +917,7 @@ html {
     font-family: GothamProBol, sans-serif;
     cursor: pointer;
     transition: 0.2s;
+    outline: none;
 
     &:hover {
         background-color: @themeColor;
