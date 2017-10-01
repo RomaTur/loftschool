@@ -137,18 +137,20 @@ html {
     text-decoration: underline;
     transition: 0.2s;
     display: block;
+    position: relative;
 
     > .header-contact__time {
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
         display: none;
-        height: 70px;
-        margin-left: -46px;
+
+        right: 0;
         position: absolute;
-        top: 80px;
+        top: 37px;
         width: 162px;
         z-index: 100;
+        position: absolute;
 
         &::before {
             background-color: white;
@@ -174,18 +176,18 @@ html {
 
 .time-text {
     line-height: 22px;
-    padding-left: 12px;
-    padding-top: 13px;
+    padding: 12px 0 12px 13px;
+    font-size: 14px;
 }
 
 .time-text_red {
-    font-size: 14px;
+
     color: @themeColor;
     font-family: GothamProBol, sans-serif;
 }
 
 .time-text_black {
-    font-size: 14px;
+
     color: @themeSecondColor;
     font-family: GothamProLig, sans-serif;
 }
