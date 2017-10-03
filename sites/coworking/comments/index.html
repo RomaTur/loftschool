@@ -22,12 +22,14 @@
                     <a href="tel:8(800)00-392-10" class="header-contact__number">
                         8 (800) 00-392-10
                     </a>
-                    <div class="header-contact__text">
-                        График работы
-                        <div class="header-contact__time">
-                            <div class="time-text">
-                                <span class="time-text_red">пн-вс: 09:00-20:00</span>
-                                <span class="time-text_black">обед: 14:00-14:30</span>
+                    <div class="header-contact__schedule">
+                        <span class="schedule__text">
+                            График работы
+                        </span>
+                        <div class="schedule__time">
+                            <div class="schedule__time-text">
+                                <span class="schedule__time-text_red">пн-вс: 09:00-20:00</span>
+                                <span class="schedule__time-text_black">обед: 14:00-14:30</span>
                             </div>
                         </div>
                     </div>
@@ -148,39 +150,49 @@
 
 
                     <h2 class="form__title">Оставить отзыв</h2>
-
-                    <div class="form__person">
-                        <div class="form__person-name">
-                            Ваше имя
-                            <input type="text" name="" value="" placeholder="Роман" class="person__input">
+                    <div class="form__inputs">
+                        <div class="form__person">
+                            <label class="form__person-name">
+                                <span class="person__desc">
+                                    Ваше имя
+                                </span>
+                                <input type="text" name="" value="" placeholder="Роман" class="person__input">
+                            </label>
+                            <label class="form__person-vk">
+                                <span class="person__desc">
+                                    Ссылка на профиль VK
+                                </span>
+                                <input type="text" name="" value="" placeholder="vk.com/id_r0mashka" class="person__input">
+                            </label>
                         </div>
-                        <div class="form__person-vk">
-                            Ссылка на профиль VK
-                            <input type="text" name="" value="" placeholder="vk.com/id_r0mashka" class="person__input">
+
+                        <div class="form__message">
+                            <span class="message_desc">
+                                Текст отзыва
+                            </span>
+                            <textarea name="name" class="message__input">Мне понравилось</textarea>
+                        </div>
+                        <div class="form__submit clearfix">
+                            <div class="form__submit-radio">
+                                <span class="submit__desc">
+                                    Отображать фото в отзыве?
+
+                                </span>
+                                <label class="submit-radio__input">
+                                        <input type="radio" name="display-photo" value="" checked>
+                                        <div class="submit-radio__circle"><span class="radio__circle-inner"></span></div>
+                                        <div class="submit-radio__text">Да</div>
+                                    </label>
+                                <label class="submit-radio__input">
+                                        <input type="radio" name="display-photo" value="">
+                                        <div class="submit-radio__circle"><span class="radio__circle-inner"></span></div>
+                                        <div class="submit-radio__text">Нет</div>
+                                    </label>
+                            </div>
+                            <input type="submit" name="" value="Отправить" class="form__submit-button">
                         </div>
                     </div>
 
-                    <div class="form__message">
-                        Текст отзыва
-                        <textarea name="name" class="message__input">Мне понравилось</textarea>
-                    </div>
-                    <div class="form__submit">
-                        <div class="form__submit-radio">
-                            Отображать фото в отзыве?
-
-                            <label class="submit-radio__input">
-                                    <input type="radio" name="display-photo" value="" checked>
-                                    <div class="submit-radio__circle"><span class="radio__circle-inner"></span></div>
-                                    <div class="submit-radio__text">Да</div>
-                                </label>
-                            <label class="submit-radio__input">
-                                    <input type="radio" name="display-photo" value="">
-                                    <div class="submit-radio__circle"><span class="radio__circle-inner"></span></div>
-                                    <div class="submit-radio__text">Нет</div>
-                                </label>
-                        </div>
-                        <input type="submit" name="" value="Отправить" class="form__submit-button">
-                    </div>
 
                 </div>
 
