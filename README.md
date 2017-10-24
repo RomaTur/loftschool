@@ -1,14 +1,14 @@
-![logo](assets/img/README/logoReadme.png)  [*Loftschool*][9c9db2ab] - школа онлайн-образования
+![logo](img/README/logoReadme.png)  [*Loftschool*][9c9db2ab] - школа онлайн-образования
 
 ***
 
   [9c9db2ab]: http://loftschool.ru "loftschool"
 
-![Student](assets/img/README/studentReadme.png)
+![Student](img/README/studentReadme.png)
 
 ***
 
-![Stan](assets/img/README/developerReadme.png) **Web-разработчик**
+![Stan](img/README/developerReadme.png) **Web-разработчик**
 
 ***
 
@@ -22,4 +22,4 @@
 
 ***
 
-![hands](assets/img/README/handsReadme.png)
+![hands](img/README/handsReadme.png)

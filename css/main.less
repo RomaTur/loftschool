@@ -1,0 +1,87 @@
+// out: main.css, compress: true
+@phone: ~"(max-width: 767px)";
+@tablet: ~"(min-width: 768px) and (max-width: 1024px)";
+@desktop: ~"(min-width: 1025px)";
+@main-color: #fb7070;
+@font-face {
+    font-family: GothamProLig;
+    src: url("../fonts/GothamProLig.otf");
+}
+
+html {
+    font-family: GothamProLig, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/intro.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    // background-color: fade(#000, 30%);
+}
+
+.content__list {
+    // height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+
+    &::after {
+        content: "";
+        height: 100px;
+        width: 100%;
+        display: block;
+    }
+}
+
+.list-item {
+    border-right: 1px solid @main-color;
+    border-top: 1px solid @main-color;
+    border-bottom: 1px solid @main-color;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: @main-color;
+    transition: 0.2s;
+    padding: 25px;
+
+    &:last-of-type {
+        border-right: none;
+    }
+
+    &:hover {
+        color: white;
+        background-color: @main-color;
+    }
+}
+@media @phone, @tablet {
+    .content__list {
+        border: none;
+    }
+
+    .list-item {
+        margin: 15px;
+        padding: 15px;
+        color: white;
+        background-color: @main-color;
+    }
+}
+@media @tablet {
+    font-size: 4rem;
+}
