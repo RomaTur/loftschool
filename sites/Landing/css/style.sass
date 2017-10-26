@@ -5,6 +5,10 @@
     font-family: Ubuntu-Medium
     src: url("../fonts/Ubuntu/Ubuntu-Medium.ttf")
 
+@font-face
+    font-family: Ubuntu-Light
+    src: url("../fonts/Ubuntu/Ubuntu-Light.ttf")
+
 
 @font-face
     font-family: lifehack
@@ -31,47 +35,47 @@ html
 
 
 body
+    margin: auto
     width: $viewport-width
-    // margin: auto
-    // height: 1100px
     background-color: #000
 
 section
     width: $viewport-width
     height: $viewport-height
+    min-height: 650px
 
 
-.section-nav
+.page-nav
     position: fixed
-    top: 95px
-    right: 54px
+    top: $viewport-width*0.08636363636
+    right: $viewport-width*0.04909090909
 
-.section-nav__list
+.page-nav__list
     list-style: none
 
-.section-nav__point
+.page-nav__point
 
     position: relative
-    width: 6px
-    height: 6px
+    width: $viewport-width*0.0054545
+    height: $viewport-width*0.0054545
     border-radius: 50%
     background-color: #fff
-    margin-bottom: 15px
+    margin-bottom: $viewport-width*0.01363636364
     &:hover
-        .section-nav__link
-            width: 17px
-            height: 17px
+        .page-nav__link
+            width: $viewport-width*0.01545
+            height: $viewport-width*0.01545
 
 
-.section-nav__link
+.page-nav__link
     &::after
         content: ""
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        width: 18px
-        height: 18px
+        width: $viewport-width*0.016363636
+        height: $viewport-width*0.016363636
         border-radius: 50%
     transition: 0.2s
     position: absolute
@@ -85,15 +89,21 @@ section
     // background-color: #fff
     // margin: 10px
 
-.section-nav__link--active
-    width: 17px
-    height: 17px
+.page-nav__link--active
+    width: $viewport-width*0.01545
+    height: $viewport-width*0.01545
+
+
+/////////////////////////////////
+///////////ПРИВЕТСТВИЕ///////////
+/////////////////////////////////
+
 
 
 .welcome
 
     // background-color: #999
-    background-image: url("../img/welcome-bg.jpg")
+    background-image: url("../img/welcome/welcome-bg.jpg")
     background-repeat: no-repeat
     background-position: center
     background-size: cover
@@ -114,8 +124,8 @@ section
     padding: 8px 80px 0 74px
     z-index: 1
 
-
-
+.welcome__logo
+    width: 10.3%
 
 .nav-list
     display: inline-block
@@ -132,7 +142,8 @@ section
 
 
 .nav__link
-    font-size: 13px
+    // font-size: 13px
+    font-size: $viewport-width*0.01181818
     display: inline-block
     padding: 11px 11px 11px 16px
     // height: 100%
@@ -143,9 +154,11 @@ section
 
 
 .button__buy
-    font-size: 13px
+    // font-size: 13px
+    font-size: $viewport-width*0.01181818
     transition: 0.2s
     padding: 10px 16px 11px 15px
+
     background-color: $button__buy
     border-radius: 5px
     font-family: Ubuntu-Medium, monospace
@@ -166,12 +179,12 @@ section
     left: 50%
     transform: translate(-50%, -50%)
     width: $viewport-width
-    height: 650px
+    // height: 650px
 
 
 .welcome-content__burger
     // display: inline-block
-    max-width: 600px
+    // max-width: 650px
     width: 41%
     margin: -80px 0 0 -18px
 
@@ -213,8 +226,179 @@ section
 
 
 
-.welcome-arrow__link
+.page-arrow__link
     position: absolute
     bottom: 30px
     left: 50%
     transform: translate(-50%, -50%)
+
+
+
+/////////////////////////////////
+///////////МЫ ЛУЧШИЕ/////////////
+/////////////////////////////////
+
+.best
+
+    background-image: url("../img/best/best-bg.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    padding: 59px 0
+
+
+.best__title
+    font-family: Gagalin, monospace
+    text-align: center
+    font-size: 5.14rem
+    font-size: $viewport-width*0.0655
+
+
+
+.best__choice-list
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    align-items: center
+    width: $viewport-width * 0.97272727
+
+
+.best__choice-item
+    text-align: center
+    width: 28%
+    margin: 46px 1% 0 1%
+
+
+.choice__logo
+    margin-bottom: 25px
+    width: 26%
+
+.choice__logo--up
+    margin-top: -21px
+    width: 33%
+
+
+
+
+.choice__title
+    font-family: Lifehack, monospace
+    font-size: 1.714rem
+    font-size: $viewport-width*0.023
+    margin-bottom: 18px
+    // line-height: 28.11px
+    // line-height:
+    letter-spacing: -0.6px
+
+
+
+.choice__desc
+    font-family: Ubuntu-Light, monospace
+    // font-size: 1rem
+    font-size: $viewport-width*0.01272727
+    line-height: 24px
+    line-height: $viewport-width*0.021818
+
+
+/////////////////////////////////
+///////////ОТЗЫВЫ////////////////
+/////////////////////////////////
+
+
+
+.comments
+
+
+.comments__list
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+
+.comment
+    width: 25%
+    height: $viewport-height/2
+    position: relative
+    overflow: hidden
+    &:hover
+        .comment__text
+            opacity: 1
+
+
+
+
+
+.comment__img
+    filter: grayscale(100)
+    min-width: 101%
+    min-height: 101%
+    object-fit: cover
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+
+
+.comment__text
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: fade-out(#000, 0.3)
+    color: #fff
+    // padding: 41px 20px 0 20px
+    padding:  $viewport-width*0.03727272727 $viewport-width*0.01818181818 0 $viewport-width*0.01818181818
+    transition: 0.2s
+    opacity: 0
+
+.comment__text-name
+    font-family: Gagalin, monospace
+    text-transform: uppercase
+    line-height: 28px
+    margin-bottom: $viewport-width*0.012727272727
+    font-size: $viewport-width*0.012727272727
+
+
+.comment__text-desc
+    font-family: Ubuntu-Light, monospace
+    line-height: $viewport-width*0.02181818182
+    margin-bottom: $viewport-width*0.01181818182
+    font-size: $viewport-width*0.012727272727
+
+
+.comment__text-more
+    font-family: Ubuntu-Medium, monospace
+    font-size: $viewport-width*0.01181818182
+    text-transform: uppercase
+    background-color: #333
+    // padding: 10px 15px 9px 15px
+    padding: $viewport-width*0.009090909091 $viewport-width*0.01363636364 $viewport-width*0.008181818182 $viewport-width*0.01363636364
+    width: 47%
+    border-radius: 6px
+    text-align: center
+    &:hover
+        background-color: #222
+
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
+////////////////////////////
