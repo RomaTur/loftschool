@@ -1,0 +1,119 @@
+
+.welcome
+
+    // background-color: #999
+    background-image: url("../img/welcome/welcome-bg.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    position: relative
+
+.welcome__texture
+    // background-image: url("../img/welcome-texture.png")
+    width: inherit
+    height: 100vh
+    position: absolute
+
+.welcome-header
+    @extend %flex-center
+    justify-content: space-between
+    padding: 8px 80px 0 74px
+    z-index: 1
+
+.welcome__logo
+    width: 10.3%
+
+.nav-list
+    display: inline-block
+
+.nav-list__item
+
+    display: inline-block
+    color: white
+
+    &::before
+        content: "\2022"
+    &:first-child::before
+        content: ""
+
+
+.nav__link
+    // font-size: 13px
+    font-size: $viewport-width*0.01181818
+    display: inline-block
+    padding: 11px 11px 11px 16px
+    // height: 100%
+    // width: 100%
+    cursor: pointer
+    color: white
+    text-transform: uppercase
+
+
+.button__buy
+    // font-size: 13px
+    font-size: $viewport-width*0.01181818
+    transition: 0.2s
+    padding: 10px 16px 11px 15px
+
+    background-color: $button__buy
+    border-radius: 5px
+    font-family: Ubuntu-Medium, monospace
+    &:hover
+        $button__buy: #c1401e
+        background-color: $button__buy
+
+
+.welcome-content
+    @extend %flex-center
+    flex-wrap: wrap
+    @extend %absolute-center
+    width: $viewport-width
+    // height: 650px
+
+
+.welcome-content__burger
+    // display: inline-block
+    // max-width: 650px
+    width: 41%
+    margin: -80px 0 0 -18px
+
+
+.welcome-content__text
+    width: 40%
+    @extend %flex-center
+    flex-wrap: wrap
+    padding: 0 0 0 13px
+    margin: -12px 0 0 0
+
+.welcome-content__text-orange, .welcome-content__text-white
+    display: block
+    width: 100%
+
+.welcome-content__text-white
+    color: #fff
+    font-family: Lifehack
+    font-size: 4.64rem
+    font-size: 0.059 * $viewport-width
+    line-height: 4.3rem
+    line-height: 0.055 * $viewport-width
+    letter-spacing: -1.63px
+
+
+.welcome-content__text-orange
+    color: $orange
+    font-family: Gagalin
+    font-size: 5.14rem
+    font-size: 0.0657 * $viewport-width
+    // line-height: 9.3rem
+    margin-bottom: 23px
+
+
+
+
+
+
+.page-arrow__link
+    position: absolute
+    bottom: 6%
+    left: 50%
+    transform: translateX(-50%)
