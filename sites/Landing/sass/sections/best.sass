@@ -1,59 +1,85 @@
 
 .best
-
     background-image: url("../img/best/best-bg.jpg")
     background-repeat: no-repeat
     background-position: top
     background-size: cover
     position: relative
-    padding-top: 59px
 
-
-.best__title
-    font-family: Gagalin, monospace
-    text-align: center
-    font-size: 5.14rem
-    font-size: $viewport-width*0.0655
-
-
+.best__container
+    padding: 54px
+    .section__title
+        color: $color__grey-title
 
 .best__choice-list
     @extend %absolute-center
     @extend %flex-center
-    width: $viewport-width * 0.97272727
-
+    justify-content: space-between
+    align-items: baseline
+    // width: $viewport-width * 0.97272727
 
 .best__choice-item
+    position: relative
+    width: 300px
+    margin: 182px 11px 0px 8px
     text-align: center
-    width: 28%
-    margin: 42px 1% 0 1%
+    color: lighten($dark, 25%)
 
 
 .choice__logo
-    margin-bottom: 25px
-    width: 26%
-
-.choice__logo--up
-    margin-top: -21px
-    width: 33%
-
-
-
+    @extend %absolute-center
+    top: -77px
 
 .choice__title
-    font-family: Lifehack, monospace
-    font-size: 1.714rem
-    font-size: $viewport-width*0.023
-    margin-bottom: 16px
-    // line-height: 28.11px
-    // line-height:
-    letter-spacing: -0.6px
-
+    font-family: 'Lifehack'
+    font-size: 22px
+    width: 80%
+    // text-align: center
+    letter-spacing: 1px
+    margin: 0 auto
+    line-height: 1.24
 
 
 .choice__desc
-    font-family: Ubuntu-Light, monospace
-    // font-size: 1rem
-    font-size: $viewport-width*0.01272727
-    line-height: 24px
-    line-height: $viewport-width*0.021818
+    // @extend %absolute-center
+    width: 100%
+    // bottom: 20px
+    font-family: 'Ubuntu'
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.8
+//
+// .best__choice-item
+//     text-align: center
+//     width: 28%
+//     margin: 42px 1% 0 1%
+//
+//
+// .choice__logo
+//     margin-bottom: 25px
+//     width: 26%
+//
+// .choice__logo--up
+//     margin-top: -21px
+//     width: 33%
+//
+//
+//
+//
+// .choice__title
+//     font-family: Lifehack, monospace
+//     font-size: 1.714rem
+//     font-size: $viewport-width*0.023
+//     margin-bottom: 16px
+//     // line-height: 28.11px
+//     // line-height:
+//     letter-spacing: -0.6px
+//
+//
+//
+// .choice__desc
+//     font-family: Ubuntu-Light, monospace
+//     // font-size: 1rem
+//     font-size: $viewport-width*0.01272727
+//     line-height: 24px
+//     line-height: $viewport-width*0.021818

@@ -1,4 +1,4 @@
-.container, .welcome-header, .welcome-content, .welcome-content__text, .best__choice-list, .comments__list {
+.container, .welcome-header, .welcome__content, .best__choice-list, .comments__list {
   display: -webkit-flex;
   display: -ms-flex;
   display: -webkit-box;
@@ -13,7 +13,7 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.welcome-content, .best__choice-list, .comment__img {
+.welcome__content, .best__choice-list, .choice__logo, .comment__img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,12 +65,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-* *::before, * *::after {
+* {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-
-*:active, *:focus, *:hover {
-  outline: none; }
+  * *::before, * *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  *:active, *:focus, *:hover {
+    outline: none; }
 
 body, html {
   height: 100%; }
@@ -142,7 +144,7 @@ body {
 
 .section {
   width: 1100px;
-  height: 650px;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px; }
@@ -152,11 +154,10 @@ body {
   font-size: 72px;
   font-weight: 400;
   line-height: 1.42;
-  margin: 0;
-  padding-top: 60px; }
+  margin: 0; }
 
 .order-link {
-  padding: 7px 17px;
+  padding: 10px 16px 7px 17px;
   border-radius: 5px;
   background-color: #e45028;
   color: #fff;
@@ -236,10 +237,15 @@ body {
   padding-top: 4px; }
 
 .header__logo {
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 8px;
+  margin-left: -2px; }
+  .header__logo .logo__img {
+    width: 93%; }
 
 .nav {
-  margin-right: 0.9375rem; }
+  margin-right: 0.9375rem;
+  margin-top: -3px; }
 
 .nav__list {
   margin: 0;
@@ -252,7 +258,7 @@ body {
   color: white; }
   .nav__item::after {
     content: "\2022";
-    margin: 0 12px; }
+    margin: 0 11px; }
   .nav__item:last-child::after {
     content: "";
     display: none; }
@@ -271,47 +277,68 @@ body {
   -o-transition: .5s;
   transition: .5s; }
 
-.welcome-content {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 1100px; }
+.header__btn {
+  margin-top: -2px; }
 
-.welcome-content__burger {
-  width: 41%;
-  margin: -80px 0 0 -18px; }
+.welcome__content {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  width: 100%;
+  margin-left: 10px; }
 
-.welcome-content__text {
-  width: 40%;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0 0 0 13px;
-  margin: -12px 0 0 0; }
+.welcome__img, .welcome__description {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
-.welcome-content__text-orange, .welcome-content__text-white {
-  display: block;
-  width: 100%; }
+.welcome__img {
+  padding-bottom: 80px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 13px; }
 
-.welcome-content__text-white {
+.welcome__description {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .welcome__description .section__title {
+    color: #f9b43b;
+    margin-top: -18px; }
+
+.welcome__description-text {
   color: #fff;
   font-family: 'Lifehack';
-  font-size: 4.64rem;
-  font-size: 64.9px;
-  line-height: 4.3rem;
-  line-height: 60.5px;
-  letter-spacing: -1.63px; }
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 0.93;
+  padding-top: 9px;
+  padding-left: 1px;
+  letter-spacing: -2px; }
 
-.welcome-content__text-orange {
-  color: #f9b43b;
-  font-family: 'Gagalin';
-  font-size: 5.14rem;
-  font-size: 72.27px;
-  margin-bottom: 23px; }
-
-.page-arrow__link {
+.page__arrow {
   position: absolute;
-  bottom: 6%;
+  bottom: 2.1875rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -322,43 +349,47 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  position: relative;
-  padding-top: 59px; }
+  position: relative; }
 
-.best__title {
-  font-family: Gagalin, monospace;
-  text-align: center;
-  font-size: 5.14rem;
-  font-size: 72.05px; }
+.best__container {
+  padding: 54px; }
+  .best__container .section__title {
+    color: #2f3234; }
 
 .best__choice-list {
-  width: 1070.0px; }
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
 
 .best__choice-item {
+  position: relative;
+  width: 300px;
+  margin: 182px 11px 0px 8px;
   text-align: center;
-  width: 28%;
-  margin: 42px 1% 0 1%; }
+  color: #404040; }
 
 .choice__logo {
-  margin-bottom: 25px;
-  width: 26%; }
-
-.choice__logo--up {
-  margin-top: -21px;
-  width: 33%; }
+  top: -77px; }
 
 .choice__title {
-  font-family: Lifehack, monospace;
-  font-size: 1.714rem;
-  font-size: 25.3px;
-  margin-bottom: 16px;
-  letter-spacing: -0.6px; }
+  font-family: 'Lifehack';
+  font-size: 22px;
+  width: 80%;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  line-height: 1.24; }
 
 .choice__desc {
-  font-family: Ubuntu-Light, monospace;
-  font-size: 14.0px;
-  line-height: 24px;
-  line-height: 23.9998px; }
+  width: 100%;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8; }
 
 .comments__list {
   -webkit-flex-wrap: wrap;
@@ -367,7 +398,7 @@ body {
 
 .comment {
   width: 25%;
-  height: 325px;
+  height: 50vh;
   position: relative;
   overflow: hidden; }
   .comment:hover .comment__text {
