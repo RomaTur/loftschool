@@ -1,0 +1,61 @@
+
+html
+    font-size: 16px
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif
+    font-weight: 500
+
+
+body
+    margin: auto
+    width: $viewport-width
+    background-color: #000
+
+.wrapper
+    width: 100%
+    height: 100%
+    position: relative
+
+
+.maincontent
+    height: 100%
+    min-height: 650px
+
+
+.container
+    width: 940px
+    margin: 0 auto
+    @extend %flex-center
+    flex-direction: column
+
+
+.section
+    width: $viewport-width
+    height: $viewport-height
+    background-color: rgba(0,0,0,0.31)
+    min-width: 940px
+    min-height: 650px
+
+
+.section__title
+  font-family: 'Gagalin'
+  font-size: 72px
+  font-weight: 400
+  line-height: 1.42
+  margin: 0
+  padding-top: 60px
+
+
+.order-link
+    // min-width: rem(98px)
+    padding: 7px 17px
+    border-radius: 5px
+    background-color: $color-order
+    color: #fff
+    text-decoration: none
+    font-size: 13px
+    font-weight: 500
+    line-height: 1.42
+    text-transform: uppercase
+    transition: .5s
+    &:hover
+        background-color: darken($color-order, 7%)

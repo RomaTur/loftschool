@@ -1,67 +1,53 @@
 
 .welcome
-
-    // background-color: #999
     background-image: url("../img/welcome/welcome-bg.jpg")
     background-repeat: no-repeat
     background-position: center
     background-size: cover
     position: relative
 
-.welcome__texture
-    // background-image: url("../img/welcome-texture.png")
-    width: inherit
-    height: 100vh
-    position: absolute
-
 .welcome-header
+    width: 100%
     @extend %flex-center
     justify-content: space-between
-    padding: 8px 80px 0 74px
-    z-index: 1
+    padding-top: 4px
 
-.welcome__logo
-    width: 10.3%
+.header__logo
+    margin-right: auto
 
-.nav-list
+
+.nav
+    margin-right: rem(15px)
+
+
+.nav__list
+    margin: 0
+    padding: 0
+
+.nav__item
     display: inline-block
-
-.nav-list__item
-
-    display: inline-block
+    vertical-align: middle
+    white-space: nowrap
     color: white
-
-    &::before
+    &::after
         content: "\2022"
-    &:first-child::before
+        margin: 0 12px
+    &:last-child::after
         content: ""
-
+        display: none
 
 .nav__link
-    // font-size: 13px
-    font-size: $viewport-width*0.01181818
+    font-size: rem(13px)
+    font-family: 'Ubuntu'
+    font-weight: 700
+    line-height: 1.42
     display: inline-block
-    padding: 11px 11px 11px 16px
-    // height: 100%
-    // width: 100%
+    vertical-align: middle
+    // padding: 11px 11px 11px 16px
     cursor: pointer
-    color: white
+    color: #fff
     text-transform: uppercase
-
-
-.button__buy
-    // font-size: 13px
-    font-size: $viewport-width*0.01181818
-    transition: 0.2s
-    padding: 10px 16px 11px 15px
-
-    background-color: $button__buy
-    border-radius: 5px
-    font-family: Ubuntu-Medium, monospace
-    &:hover
-        $button__buy: #c1401e
-        background-color: $button__buy
-
+    transition: .5s
 
 .welcome-content
     @extend %flex-center
@@ -91,7 +77,7 @@
 
 .welcome-content__text-white
     color: #fff
-    font-family: Lifehack
+    font-family: 'Lifehack'
     font-size: 4.64rem
     font-size: 0.059 * $viewport-width
     line-height: 4.3rem
@@ -101,7 +87,7 @@
 
 .welcome-content__text-orange
     color: $orange
-    font-family: Gagalin
+    font-family: 'Gagalin'
     font-size: 5.14rem
     font-size: 0.0657 * $viewport-width
     // line-height: 9.3rem

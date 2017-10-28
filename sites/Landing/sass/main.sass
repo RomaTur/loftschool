@@ -1,75 +1,25 @@
 
-@import "layout/basic.sass"
 
-@font-face
-    font-family: Ubuntu-Medium
-    src: url("../fonts/Ubuntu/Ubuntu-Medium.ttf")
+// config
+@import "config/variables"
+@import "config/mixins"
+@import "config/extend"
 
-@font-face
-    font-family: Ubuntu-Light
-    src: url("../fonts/Ubuntu/Ubuntu-Light.ttf")
+// base
+@import "layout/fonts"
+@import "layout/base"
+@import "layout/adjustment"
 
-
-@font-face
-    font-family: lifehack
-    src: url("../fonts/Lifehack-Medium.otf")
-
-@font-face
-    font-family: Gagalin
-    src: url("../fonts/Gagalin-Regular.otf")
+//section
+@import "sections/page-nav"
+@import "sections/welcome"
+@import "sections/best"
+@import "sections/comments"
 
 
-$viewport-height: 650px
-// $viewport-height: 100vh
-$viewport-width: 1100px
-// $viewport-width: 100vw
 
 
-$button__buy: #e45028
-$orange: #f9b43b
 
-
-html
-    font-size: 14px
-    font-family: Ubuntu-Medium, monospace
-
-
-body
-    margin: auto
-    width: $viewport-width
-    background-color: #000
-
-.section
-    width: $viewport-width
-    height: $viewport-height
-    min-height: 650px
-
-
-@import "config/extend.sass"
-
-///////////////////////////////////////
-//////////НАВИГАЦИЯ ПО СТРАНИЦЕ////////
-///////////////////////////////////////
-
-@import "sections/page-nav.sass"
-
-/////////////////////////////////
-///////////ПРИВЕТСТВИЕ///////////
-/////////////////////////////////
-
-@import "sections/welcome.sass"
-
-/////////////////////////////////
-///////////МЫ ЛУЧШИЕ/////////////
-/////////////////////////////////
-
-@import "sections/best.sass"
-
-/////////////////////////////////
-///////////ОТЗЫВЫ////////////////
-/////////////////////////////////
-
-@import "sections/comments.sass"
 
 ////////////////////////////
 ////////////////////////////

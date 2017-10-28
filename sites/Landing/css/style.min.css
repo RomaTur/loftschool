@@ -1,81 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-  *:active, *:focus, *:hover {
-    outline: none; }
-
-html, body {
-  width: 100%;
-  height: 100%; }
-
-html {
-  font-family: sans-serif;
-  cursor: default; }
-
-body {
-  -webkit-font-smoothing: antialiased; }
-
-ol, ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  border: none; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: inherit;
-  background: transparent;
-  display: block; }
-
-@font-face {
-  font-family: Ubuntu-Medium;
-  src: url("../fonts/Ubuntu/Ubuntu-Medium.ttf"); }
-
-@font-face {
-  font-family: Ubuntu-Light;
-  src: url("../fonts/Ubuntu/Ubuntu-Light.ttf"); }
-
-@font-face {
-  font-family: lifehack;
-  src: url("../fonts/Lifehack-Medium.otf"); }
-
-@font-face {
-  font-family: Gagalin;
-  src: url("../fonts/Gagalin-Regular.otf"); }
-
-html {
-  font-size: 14px;
-  font-family: Ubuntu-Medium, monospace; }
-
-body {
-  margin: auto;
-  width: 1100px;
-  background-color: #000; }
-
-.section {
-  width: 1100px;
-  height: 650px;
-  min-height: 650px; }
-
-.welcome-header, .welcome-content, .welcome-content__text, .best__choice-list, .comments__list {
+.container, .welcome-header, .welcome-content, .welcome-content__text, .best__choice-list, .comments__list {
   display: -webkit-flex;
   display: -ms-flex;
   display: -webkit-box;
@@ -97,6 +20,156 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.42;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+* *::before, * *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:active, *:focus, *:hover {
+  outline: none; }
+
+body, html {
+  height: 100%; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+  display: block; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+html {
+  font-size: 16px;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-weight: 500; }
+
+body {
+  margin: auto;
+  width: 1100px;
+  background-color: #000; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.maincontent {
+  height: 100%;
+  min-height: 650px; }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.section {
+  width: 1100px;
+  height: 650px;
+  background-color: rgba(0, 0, 0, 0.31);
+  min-width: 940px;
+  min-height: 650px; }
+
+.section__title {
+  font-family: 'Gagalin';
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 60px; }
+
+.order-link {
+  padding: 7px 17px;
+  border-radius: 5px;
+  background-color: #e45028;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .order-link:hover {
+    background-color: #ce401a; }
 
 .page-nav {
   position: fixed;
@@ -154,52 +227,49 @@ body {
   background-size: cover;
   position: relative; }
 
-.welcome__texture {
-  width: inherit;
-  height: 100vh;
-  position: absolute; }
-
 .welcome-header {
+  width: 100%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 8px 80px 0 74px;
-  z-index: 1; }
+  padding-top: 4px; }
 
-.welcome__logo {
-  width: 10.3%; }
+.header__logo {
+  margin-right: auto; }
 
-.nav-list {
-  display: inline-block; }
+.nav {
+  margin-right: 0.9375rem; }
 
-.nav-list__item {
+.nav__list {
+  margin: 0;
+  padding: 0; }
+
+.nav__item {
   display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
   color: white; }
-  .nav-list__item::before {
-    content: "\2022"; }
-  .nav-list__item:first-child::before {
-    content: ""; }
+  .nav__item::after {
+    content: "\2022";
+    margin: 0 12px; }
+  .nav__item:last-child::after {
+    content: "";
+    display: none; }
 
 .nav__link {
-  font-size: 13.0px;
+  font-size: 0.8125rem;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  line-height: 1.42;
   display: inline-block;
-  padding: 11px 11px 11px 16px;
+  vertical-align: middle;
   cursor: pointer;
-  color: white;
-  text-transform: uppercase; }
-
-.button__buy {
-  font-size: 13.0px;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  padding: 10px 16px 11px 15px;
-  background-color: #e45028;
-  border-radius: 5px;
-  font-family: Ubuntu-Medium, monospace; }
-  .button__buy:hover {
-    background-color: #c1401e; }
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .welcome-content {
   -webkit-flex-wrap: wrap;
@@ -225,7 +295,7 @@ body {
 
 .welcome-content__text-white {
   color: #fff;
-  font-family: Lifehack;
+  font-family: 'Lifehack';
   font-size: 4.64rem;
   font-size: 64.9px;
   line-height: 4.3rem;
@@ -234,7 +304,7 @@ body {
 
 .welcome-content__text-orange {
   color: #f9b43b;
-  font-family: Gagalin;
+  font-family: 'Gagalin';
   font-size: 5.14rem;
   font-size: 72.27px;
   margin-bottom: 23px; }
@@ -333,13 +403,17 @@ body {
   font-size: 14.0px; }
 
 .comment__text-desc {
-  font-family: Ubuntu-Light, monospace;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
   line-height: 24.0px;
   margin-bottom: 13.0px;
   font-size: 14.0px; }
 
 .comment__text-more {
-  font-family: Ubuntu-Medium, monospace;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
   font-size: 13.0px;
   text-transform: uppercase;
   background-color: #333;
