@@ -1,5 +1,7 @@
 
-.comments
+.comments__container
+    width: 100%
+    display: block
 
 
 .comments__list
@@ -14,10 +16,6 @@
     &:hover
         .comment__text
             opacity: 1
-
-
-
-
 
 .comment__img
     filter: grayscale(100)
@@ -38,7 +36,7 @@
     background-color: fade-out(#000, 0.3)
     color: #fff
     // padding: 41px 20px 0 20px
-    padding:  $viewport-width*0.03727272727 $viewport-width*0.01818181818 0 $viewport-width*0.01818181818
+    padding:  41px 20px 0px 20px
     transition: 0.4s
     opacity: 0
 
@@ -46,31 +44,31 @@
     font-family: Gagalin, monospace
     text-transform: uppercase
     line-height: 28px
-    margin-bottom: $viewport-width*0.012727272727
-    font-size: $viewport-width*0.012727272727
+    margin-bottom: 14px
+    font-size: 14px
 
 
 .comment__text-desc
     font-family: 'Ubuntu'
     font-weight: 300
     font-style: normal
-    line-height: $viewport-width*0.02181818182
-    margin-bottom: $viewport-width*0.01181818182
-    font-size: $viewport-width*0.012727272727
+    line-height: 1.75
+    margin-bottom: 13px
+    font-size: 14px
 
 
 .comment__text-more
     font-family: 'Ubuntu'
     font-weight: 500
     font-style: normal
-    font-size: $viewport-width*0.01181818182
+    font-size: 13px
     text-transform: uppercase
-    background-color: #333
+    background-color: lighten($dark, 20%)
     // padding: 10px 15px 9px 15px
-    padding: $viewport-width*0.009090909091 $viewport-width*0.01363636364 $viewport-width*0.008181818182 $viewport-width*0.01363636364
-    width: 47%
+    padding: 9px 2px 8px 0
+    width: 110px
     border-radius: 6px
     text-align: center
     transition: 0.2s
     &:hover
-        background-color: #222
+        background-color: lighten($dark, 12%)

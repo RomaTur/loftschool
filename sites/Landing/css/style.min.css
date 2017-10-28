@@ -117,11 +117,12 @@ a {
 html {
   font-size: 16px;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  cursor: default; }
 
 body {
   margin: auto;
-  width: 1100px;
+  width: 100vw;
   background-color: #000; }
 
 .wrapper {
@@ -143,7 +144,7 @@ body {
   flex-direction: column; }
 
 .section {
-  width: 1100px;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
@@ -174,22 +175,22 @@ body {
 
 .page-nav {
   position: fixed;
-  top: 95.0px;
-  right: 54.0px; }
+  top: 8.63636vw;
+  right: 4.90909vw; }
 
 .page-nav__list {
   list-style: none; }
 
 .page-nav__point {
   position: relative;
-  width: 5.99995px;
-  height: 5.99995px;
+  width: 0.54545vw;
+  height: 0.54545vw;
   border-radius: 50%;
   background-color: #fff;
-  margin-bottom: 15.0px; }
+  margin-bottom: 1.36364vw; }
   .page-nav__point:hover .page-nav__link {
-    width: 16.995px;
-    height: 16.995px; }
+    width: 1.545vw;
+    height: 1.545vw; }
 
 .page-nav__link {
   -webkit-transition: 0.2s;
@@ -213,13 +214,13 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 18.0px;
-    height: 18.0px;
+    width: 1.63636vw;
+    height: 1.63636vw;
     border-radius: 50%; }
 
 .page-nav__link--active {
-  width: 16.995px;
-  height: 16.995px; }
+  width: 1.545vw;
+  height: 1.545vw; }
 
 .welcome {
   background-image: url("../img/welcome/welcome-bg.jpg");
@@ -327,6 +328,7 @@ body {
     margin-top: -18px; }
 
 .welcome__description-text {
+  width: 50%;
   color: #fff;
   font-family: 'Lifehack';
   font-size: 65px;
@@ -391,6 +393,10 @@ body {
   font-weight: 300;
   line-height: 1.8; }
 
+.comments__container {
+  width: 100%;
+  display: block; }
+
 .comments__list {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -420,7 +426,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  padding: 41.0px 20.0px 0 20.0px;
+  padding: 41px 20px 0px 20px;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -430,32 +436,32 @@ body {
   font-family: Gagalin, monospace;
   text-transform: uppercase;
   line-height: 28px;
-  margin-bottom: 14.0px;
-  font-size: 14.0px; }
+  margin-bottom: 14px;
+  font-size: 14px; }
 
 .comment__text-desc {
   font-family: 'Ubuntu';
   font-weight: 300;
   font-style: normal;
-  line-height: 24.0px;
-  margin-bottom: 13.0px;
-  font-size: 14.0px; }
+  line-height: 1.75;
+  margin-bottom: 13px;
+  font-size: 14px; }
 
 .comment__text-more {
   font-family: 'Ubuntu';
   font-weight: 500;
   font-style: normal;
-  font-size: 13.0px;
+  font-size: 13px;
   text-transform: uppercase;
-  background-color: #333;
-  padding: 10.0px 15.0px 9.0px 15.0px;
-  width: 47%;
+  background-color: #333333;
+  padding: 9px 2px 8px 0;
+  width: 110px;
   border-radius: 6px;
   text-align: center;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s; }
   .comment__text-more:hover {
-    background-color: #222; }
+    background-color: #1f1f1f; }
 
 /*# sourceMappingURL=style.min.css.map */
