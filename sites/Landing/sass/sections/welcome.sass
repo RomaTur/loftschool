@@ -1,142 +1,89 @@
 
 .welcome
-    background-image: url("../img/welcome/welcome-bg.jpg")
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
-    position: relative
-
-.welcome-header
-    width: 100%
-    @extend %flex-center
-    justify-content: space-between
-    padding-top: 4px
+    @include bg-img("../img/welcome/welcome-bg.jpg")
+    @extend %bg-config
+    &-header
+        width: 100%
+        @extend %flex-center
+        justify-content: space-between
+        padding-top: 4px
 
 .header__logo
-
     margin-right: auto
     margin-top: 8px
     margin-left: -2px
     .logo__img
         width: 93%
 
+.header__btn
+    margin-top: -2px
 
 .nav
     margin-right: rem(15px)
     margin-top: -3px
-
-
-.nav__list
-    margin: 0
-    padding: 0
-
-.nav__item
-    display: inline-block
-    vertical-align: middle
-    white-space: nowrap
-    color: white
-    &::after
-        content: "\2022"
-        margin: 0 11px
-    &:last-child::after
-        content: ""
-        display: none
-
-.nav__link
-    font-size: rem(13px)
-    font-family: 'Ubuntu'
-    font-weight: 700
-    line-height: 1.42
-    display: inline-block
-    vertical-align: middle
-    // padding: 11px 11px 11px 16px
-    cursor: pointer
-    color: #fff
-    text-transform: uppercase
-    transition: .5s
-
-.header__btn
-    margin-top: -2px
-
-.welcome__content
-    @extend %flex-center
-    flex-wrap: nowrap
-    // justify-content: flex-start
-    flex-grow: 1
-    flex-basis: 50%
-
-    @extend %absolute-center
-    width: 100%
-    margin-left: 10px
-    // height: 650px
-
-
-.welcome__img, .welcome__description
-    flex-basis: 40%
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-
-.welcome__img
-    padding-bottom: 80px
-    // min-width: 420px
-    // min-height: 420px
-    justify-content: flex-end
-    // align-items: center
-    padding-right: 13px
+    &__list
+        margin: 0
+        padding: 0
+    &__item
+        display: inline-block
+        vertical-align: middle
+        white-space: nowrap
+        color: white
+        &::after
+            content: "\2022"
+            margin: 0 11px
+        &:last-child::after
+            content: ""
+            display: none
+    &__link
+        font-size: rem(13px)
+        font-family: 'Ubuntu'
+        font-weight: 700
+        line-height: 1.42
+        display: inline-block
+        vertical-align: middle
+        // padding: 11px 11px 11px 16px
+        cursor: pointer
+        color: #fff
+        text-transform: uppercase
+        transition: .5s
 
 
 
-.welcome__description
-    flex-direction: column
-    justify-content: center
-    .section__title
-        color: $color__orange-title
-        margin-top: -18px
+.welcome
 
-.welcome__description-text
-    width: 50%
-    color: #fff
-    font-family: 'Lifehack'
-    font-size: 65px
-    font-weight: 500
-    line-height: 0.93
-    padding-top: 9px
-    padding-left: 1px
-    letter-spacing: -2px
-
-
-
-//
-// .welcome-content__text-orange, .welcome-content__text-white
-//     display: block
-//     width: 100%
-//
-// .welcome-content__text-white
-//     color: #fff
-//     font-family: 'Lifehack'
-//     font-size: 4.64rem
-//     font-size: 0.059 * $viewport-width
-//     line-height: 4.3rem
-//     line-height: 0.055 * $viewport-width
-//     letter-spacing: -1.63px
-//
-//
-// .welcome-content__text-orange
-//     color: $orange
-//     font-family: 'Gagalin'
-//     font-size: 5.14rem
-//     font-size: 0.0657 * $viewport-width
-//     // line-height: 9.3rem
-//     margin-bottom: 23px
-
-
-
-
-
-
-.page__arrow
-    position: absolute
-    bottom: rem(35px)
-    left: 50%
-    transform: translateX(-50%)
+    &__content
+        @extend %flex-center
+        flex-wrap: nowrap
+        flex-grow: 1
+        @extend %absolute-center
+        width: 100%
+        margin-left: 10px
+    &__img, &__description
+        flex-basis: 50%
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+    &__img
+        padding-bottom: 80px
+        // min-width: 420px
+        // min-height: 420px
+        justify-content: flex-end
+        // align-items: center
+        padding-right: 13px
+    &__description
+        flex-direction: column
+        // justify-content: center
+        .section__title
+            color: $color__orange-title
+            margin-top: -18px
+        &-text
+            width: 50%
+            color: #fff
+            font-family: 'Lifehack'
+            font-size: 65px
+            font-weight: 500
+            line-height: 0.93
+            padding-top: 9px
+            padding-left: 1px
+            letter-spacing: -2px

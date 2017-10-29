@@ -1,48 +1,46 @@
-
-.page-nav
-    position: fixed
-    top: $viewport-width*0.08636363636
-    right: $viewport-width*0.04909090909
-
-.page-nav__list
-    list-style: none
-
-.page-nav__point
-
-    position: relative
-    width: $viewport-width*0.0054545
-    height: $viewport-width*0.0054545
-    border-radius: 50%
-    background-color: #fff
-    margin-bottom: $viewport-width*0.01363636364
-    &:hover
-        .page-nav__link
-            width: $viewport-width*0.01545
-            height: $viewport-width*0.01545
-
-
-.page-nav__link
-    &::after
-        content: ""
+.page
+    &__arrow
         position: absolute
-        top: 50%
+        bottom: rem(35px)
         left: 50%
-        transform: translate(-50%, -50%)
-        width: $viewport-width*0.016363636
-        height: $viewport-width*0.016363636
-        border-radius: 50%
-    transition: 0.2s
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 0
-    height: 0
-    border: 1px solid #fff
-    border-radius: 50%
-    // background-color: #fff
-    // margin: 10px
+        transform: translateX(-50%)
 
-.page-nav__link--active
-    width: $viewport-width*0.01545
-    height: $viewport-width*0.01545
+    &-nav
+        position: fixed
+        top: 96px
+        right: 53px
+        &__list
+            list-style: none
+        &__point
+            position: relative
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            background-color: #fff
+            margin-bottom: 15px
+            &:hover
+                .page-nav__link
+                    width: 18px
+                    height: 18px
+        &__link
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 16px
+                height: 16px
+                border-radius: 50%
+            transition: 0.2s
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 0
+            height: 0
+            border: 1px solid #fff
+            border-radius: 50%
+        &__link--active
+            width: 16px
+            height: 16px

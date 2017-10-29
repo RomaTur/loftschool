@@ -1,75 +1,63 @@
-
-.comments__container
-    width: 100%
-    display: block
-
-
-.comments__list
-    @extend %flex-center
-    flex-wrap: wrap
-    // flex-basis: 25%
+.comments
+    &__container
+        width: 100%
+        display: block
+    &__list
+        @extend %flex-center
+        flex-wrap: wrap
 
 .comment
     width: 25%
     height: $viewport-height/2
+    min-height: 325px
     position: relative
     overflow: hidden
     &:hover
         .comment__text
             opacity: 1
-
-.comment__img
-    filter: grayscale(100)
-    min-width: 101%
-    min-height: 101%
-    object-fit: cover
-    @extend %absolute-center
-
-
-
-
-.comment__text
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: fade-out(#000, 0.3)
-    color: #fff
-    // padding: 41px 20px 0 20px
-    padding:  41px 20px 0px 20px
-    transition: 0.4s
-    opacity: 0
-
-.comment__text-name
-    font-family: Gagalin, monospace
-    text-transform: uppercase
-    line-height: 28px
-    margin-bottom: 14px
-    font-size: 14px
-
-
-.comment__text-desc
-    font-family: 'Ubuntu'
-    font-weight: 300
-    font-style: normal
-    line-height: 1.75
-    margin-bottom: 13px
-    font-size: 14px
-
-
-.comment__text-more
-    font-family: 'Ubuntu'
-    font-weight: 500
-    font-style: normal
-    font-size: 13px
-    text-transform: uppercase
-    background-color: lighten($dark, 20%)
-    // padding: 10px 15px 9px 15px
-    padding: 9px 2px 8px 0
-    width: 110px
-    border-radius: 6px
-    text-align: center
-    transition: 0.2s
-    &:hover
-        background-color: lighten($dark, 12%)
+    &__img
+        filter: grayscale(100)
+        min-width: 101%
+        min-height: 101%
+        object-fit: cover
+        @extend %absolute-center
+    &__text
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: fade-out(#000, 0.3)
+        color: #fff
+        // padding: 41px 20px 0 20px
+        padding:  41px 20px 0px 20px
+        transition: 0.4s
+        opacity: 0
+        &-name
+            font-family: 'Gagalin', monospace
+            text-transform: uppercase
+            line-height: 28px
+            margin-bottom: 14px
+            font-size: 14px
+        &-desc
+            font-family: 'Ubuntu'
+            font-weight: 300
+            font-style: normal
+            line-height: 1.75
+            margin-bottom: 13px
+            font-size: 14px
+        &-more
+            font-family: 'Ubuntu'
+            font-weight: 500
+            font-style: normal
+            font-size: 13px
+            text-transform: uppercase
+            background-color: lighten($dark, 20%)
+            // padding: 10px 15px 9px 15px
+            padding: 9px 2px 8px 0
+            width: 110px
+            border-radius: 6px
+            text-align: center
+            transition: 0.2s
+            &:hover
+                background-color: lighten($dark, 12%)
