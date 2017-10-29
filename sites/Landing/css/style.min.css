@@ -59,9 +59,21 @@
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("../fonts/lifehack_medium-webfont.woff") format("woff"), url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  *:active, *:focus, *:hover {
+    outline: none; }
+
+body, html {
+  height: 100%; }
 
 body {
   margin: 0;
@@ -71,18 +83,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  * *::before, * *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-  *:active, *:focus, *:hover {
-    outline: none; }
-
-body, html {
-  height: 100%; }
-
 ul, ol {
   margin: 0;
   padding: 0;
@@ -91,6 +91,11 @@ ul, ol {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
