@@ -6,21 +6,21 @@
         width: 100%
         @extend %flex-center
         justify-content: space-between
-        padding-top: 4px
+        padding-top: rem(4px)
 
 .header__logo
     margin-right: auto
-    margin-top: 8px
-    margin-left: -2px
+    margin-top: rem(8px)
+    margin-left: rem(-2px)
     .logo__img
         width: 93%
 
 .header__btn
-    margin-top: -2px
+    margin-top: rem(-2px)
 
 .nav
     margin-right: rem(15px)
-    margin-top: -3px
+    margin-top: rem(-3px)
     &__list
         margin: 0
         padding: 0
@@ -31,7 +31,7 @@
         color: white
         &::after
             content: "\2022"
-            margin: 0 11px
+            margin: rem(0px) rem(11px)
         &:last-child::after
             content: ""
             display: none
@@ -58,32 +58,32 @@
         flex-grow: 1
         @extend %absolute-center
         width: 100%
-        margin-left: 10px
+        margin-left: rem(10px)
     &__img, &__description
         flex-basis: 50%
         display: -webkit-flex
         display: -ms-flex
         display: flex
     &__img
-        padding-bottom: 80px
+        padding-bottom: rem(80px)
         // min-width: 420px
         // min-height: 420px
         justify-content: flex-end
         // align-items: center
-        padding-right: 13px
+        padding-right: rem(13px)
     &__description
         flex-direction: column
         // justify-content: center
         .section__title
             color: $color__orange-title
-            margin-top: -18px
+            margin-top: rem(-18px)
         &-text
             width: 50%
             color: #fff
             font-family: 'Lifehack'
-            font-size: 65px
+            font-size: rem(65px)
             font-weight: 500
             line-height: 0.93
-            padding-top: 9px
-            padding-left: 1px
-            letter-spacing: -2px
+            padding-top: rem(9px)
+            padding-left: rem(1px)
+            letter-spacing: rem(-2px)

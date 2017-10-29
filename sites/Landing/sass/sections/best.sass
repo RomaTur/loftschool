@@ -3,7 +3,7 @@
     @include bg-img("../img/best/best-bg.jpg")
     @extend %bg-config
     &__container
-        padding: 54px
+        padding: rem(54px)
         .section__title
             color: $color__grey-title
 
@@ -15,16 +15,16 @@
         align-items: baseline
     &__item
         position: relative
-        width: 300px
-        margin: 182px 11px 0px 8px
+        width: rem(300px)
+        margin: rem(182px) rem(11px) rem(0px) rem(8px)
         text-align: center
         color: lighten($dark, 25%)
     &__logo
         @extend %absolute-center
-        top: -77px
+        top: rem(-77px)
     &__title
         font-family: 'Lifehack'
-        font-size: 22px
+        font-size: rem(22px)
         width: 80%
         letter-spacing: 1px
         margin: 0 auto
@@ -32,6 +32,6 @@
     &__desc
         width: 100%
         font-family: 'Ubuntu'
-        font-size: 14px
+        font-size: rem(14px)
         font-weight: 300
         line-height: 1.8
