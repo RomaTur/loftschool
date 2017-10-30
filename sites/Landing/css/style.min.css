@@ -149,7 +149,7 @@ body {
 
 .section {
   width: 100vw;
-  height: 650px;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px; }
@@ -490,7 +490,7 @@ body {
 
 .comment {
   width: 25%;
-  height: 325px;
+  height: 50vh;
   min-height: 325px;
   position: relative;
   overflow: hidden; }
