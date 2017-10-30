@@ -7,16 +7,15 @@
         @extend %flex-center
         justify-content: space-between
         padding-top: rem(4px)
+        &__logo
+            margin-right: auto
+            margin-top: rem(8px)
+            margin-left: rem(-2px)
+            .logo__img
+                width: 93%
+        &__btn
+            margin-top: rem(-2px)
 
-.header__logo
-    margin-right: auto
-    margin-top: rem(8px)
-    margin-left: rem(-2px)
-    .logo__img
-        width: 93%
-
-.header__btn
-    margin-top: rem(-2px)
 
 .nav
     margin-right: rem(15px)
@@ -35,6 +34,7 @@
         &:last-child::after
             content: ""
             display: none
+
     &__link
         font-size: rem(13px)
         font-family: 'Ubuntu'
@@ -46,7 +46,10 @@
         cursor: pointer
         color: #fff
         text-transform: uppercase
-        transition: .5s
+        transition: 0.5s
+        &:hover
+            text-decoration: underline
+
 
 
 

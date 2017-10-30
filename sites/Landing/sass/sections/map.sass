@@ -1,0 +1,42 @@
+.map
+    &__container
+        width: $viewport-width
+        height: $viewport-height
+    &-inner
+        width: 100%
+        height: 100%
+        position: relative
+        &__frame
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+
+
+.footer
+    background-color: $color-dark
+    @extend %flex-center
+    justify-content: space-between
+    height: rem(60px)
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: rem(6px) rem(80px)
+
+.contact
+    height: 100%
+    color: $color-white
+    line-height: rem(24px)
+    font-size: rem(14px)
+    font-family: 'Ubuntu'
+    font-weight: 300
+
+    &__tel
+        &-img
+            margin-right: rem(10px)
+        &-text
+            color: $color-order
+            font-weight: 700
+.social
+    height: 100%
+    color: $color-white

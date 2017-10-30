@@ -8,16 +8,16 @@
         height: 100%
         position: absolute
         top: 0
-        right: -10px
+        right: rem(-10px)
         background-color: fade-out(lighten(saturate(adjust-hue($color-dark, 204), 5.05), 19.41), $fade-amount/3.1)
-        padding: 65px 80px 0 80px
+        padding: rem(65px) 0 0 rem(80px)
     .section__title
         color: $color__orange-title
-        margin-bottom: 54px
+        margin-bottom: rem(54px)
     &__accordeon
 
     &__person
-        margin-bottom: 22px
+        margin-bottom: rem(22px)
         &:hover
             .person
                 &-desc
@@ -39,21 +39,21 @@
     &-triangle
         width: 0
         height: 0
-        border: 4px solid transparent
-        border-top: 6px solid $color__orange-title
-        margin-top: -4px
+        border: rem(4px) solid transparent
+        border-top: rem(6px) solid $color__orange-title
+        margin-top: rem(-4px)
         transform: translateY(50%)
         transition: 0.4s
         // transform: rotate(180deg)
     &-name
         color: $color-white
         font-family: 'Gagalin'
-        font-size: 14px
-        margin-left: 10px
+        font-size: rem(14px)
+        margin-left: rem(10px)
 
 
     &-desc
-        height: 100px
+        height: rem(100px)
         opacity: 0
         overflow: hidden
         height: 0
@@ -61,39 +61,38 @@
 
 
     &-portret
-        width: 100px
-        height: 100px
+        width: rem(100px)
+        height: rem(100px)
         border-radius: 50%
-        background-color: $color__orange-title
         overflow: hidden
         text-align: center
         display: inline-block
-        margin-top: 10px
-        margin-left: 17px
-        margin-bottom: 13px
+        margin-top: rem(10px)
+        margin-left: rem(17px)
+        margin-bottom: rem(13px)
         vertical-align: top
         position: relative
         &__img
-            height: 100px
+            height: rem(100px)
             max-width: none
             @extend %absolute-center
 
 
     &-about
-        width: 208px
-        height: 100px
-        line-height: 24px
-        font-size: 14px
+        width: rem(208px)
+        height: rem(100px)
+        line-height: rem(24px)
+        font-size: rem(14px)
         color: $color-white
         display: inline-block
         vertical-align: top
-        margin-left: 17px
-        margin-top: 4px
+        margin-left: rem(17px)
+        margin-top: rem(4px)
         &__job
             font-weight: 700
         &__text
             font-weight: 300
-            margin-top: 10px
+            margin-top: rem(10px)
 
 
 

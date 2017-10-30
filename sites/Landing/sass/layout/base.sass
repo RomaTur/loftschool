@@ -5,9 +5,12 @@
         box-sizing: border-box
     &:active, &:focus, &:hover
         outline: none
-
 body, html
-  height: 100%
+    @if ($PixelPerfect-mode == 0)
+        height: 100%
+    @else
+        height: auto
+
 
 body
   margin: 0
