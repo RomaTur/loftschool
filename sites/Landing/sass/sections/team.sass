@@ -1,0 +1,109 @@
+
+.team
+    @include bg-img("../img/team/team-bg.jpg")
+    @extend %bg-config
+    &__container
+        display: block
+        width: 50%
+        height: 100%
+        position: absolute
+        top: 0
+        right: -10px
+        background-color: fade-out(lighten(saturate(adjust-hue($color-dark, 204), 5.05), 19.41), $fade-amount/3.1)
+        padding: 65px 80px 0 80px
+    .section__title
+        color: $color__orange-title
+        margin-bottom: 54px
+    &__accordeon
+
+    &__person
+        margin-bottom: 22px
+        &:hover
+            .person
+                &-desc
+                    opacity: 1
+                    height: auto
+                &-triangle
+                    transform: rotate(180deg)
+                &-name
+                    color: $color__orange-title
+
+
+
+.person
+    &-title
+        @extend %flex-center
+        justify-content: flex-start
+        line-height: rem(28.11px)
+        cursor: pointer
+    &-triangle
+        width: 0
+        height: 0
+        border: 4px solid transparent
+        border-top: 6px solid $color__orange-title
+        margin-top: -4px
+        transform: translateY(50%)
+        transition: 0.4s
+        // transform: rotate(180deg)
+    &-name
+        color: $color-white
+        font-family: 'Gagalin'
+        font-size: 14px
+        margin-left: 10px
+
+
+    &-desc
+        height: 100px
+        opacity: 0
+        overflow: hidden
+        height: 0
+        transition: 0.3s
+
+
+    &-portret
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        background-color: $color__orange-title
+        overflow: hidden
+        text-align: center
+        display: inline-block
+        margin-top: 10px
+        margin-left: 17px
+        margin-bottom: 13px
+        vertical-align: top
+        position: relative
+        &__img
+            height: 100px
+            max-width: none
+            @extend %absolute-center
+
+
+    &-about
+        width: 208px
+        height: 100px
+        line-height: 24px
+        font-size: 14px
+        color: $color-white
+        display: inline-block
+        vertical-align: top
+        margin-left: 17px
+        margin-top: 4px
+        &__job
+            font-weight: 700
+        &__text
+            font-weight: 300
+            margin-top: 10px
+
+
+
+.team__person--active
+
+    .person
+        &-desc
+            opacity: 1
+            height: auto
+        &-triangle
+            transform: rotate(180deg)
+        &-name
+            color: $color__orange-title
