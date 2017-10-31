@@ -14,14 +14,15 @@
 
 
 .footer
-    background-color: $color-dark
+    @include bg-img("../img/map/footer-texture.jpg")
+    @extend %bg-config
     @extend %flex-center
     justify-content: space-between
-    height: rem(60px)
+    // height: rem(60px)
     position: absolute
     bottom: 0
     width: 100%
-    padding: rem(6px) rem(80px)
+    padding: rem(4px) rem(80px) rem(6px) rem(80px)
 
 .contact
     height: 100%
@@ -33,10 +34,33 @@
 
     &__tel
         &-img
-            margin-right: rem(10px)
+            margin-right: rem(4px)
+            fill: $color-order
+            width: rem(13px)
+            height: rem(11px)
+            display: inline-block
+
         &-text
             color: $color-order
-            font-weight: 700
+            font-weight: 900
+            display: inline-block
+            &:hover
+                color: darken($color-order, 7%)
 .social
     height: 100%
     color: $color-white
+    &__item
+        width: rem(20px)
+        height: rem(20px)
+        display: inline-block
+        vertical-align: middle
+        margin-left: rem(16px)
+    &__link
+        &-img
+            fill: fade-out($color-white, $fade-amount*2)
+            width: rem(20px)
+            height: rem(20px)
+            transition: 0.3s
+        &:hover
+            .social__link-img
+                fill: $color-white

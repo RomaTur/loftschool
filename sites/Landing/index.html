@@ -10,6 +10,10 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/svg4everybody.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        svg4everybody();
+    </script>
 </head>
 
 <body>
@@ -136,7 +140,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="team__person">
+                                <li class="team__person team__person--active">
                                     <div class="person-title">
                                         <span class="person-triangle"></span>
                                         <h3 class="person-name">Ричард Джеймс</h3>
@@ -305,11 +309,36 @@
                             Санкт-Петербург, ул.Бабушкина, д.12/1, 15 
                         </div>
                         <div class="contact__tel">
-                            <img src="img/icons/phone.svg" alt="phone" class="contact__tel-img"><span class="contact__tel-text">+7 (812) 377-13-77</span>
+                            <svg class="contact__tel-img">
+                                <use xlink:href="img/icons/sprite.svg#phone"></use>
+                            </svg>
+                            <!-- <img src="img/icons/phone.svg" alt="phone" class="contact__tel-img"> -->
+                            <a href="tel:+78123771377" class="contact__tel-text">+7 (812) 377-13-77</a>
                         </div>
                     </div>
                     <div class="social">
-                        vk
+                        <ul class="social__list">
+                            <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__link-img">
+                                        <use xlink:href="img/icons/sprite.svg#vk"></use>
+                                    </svg>
+                                </a></li>
+                            <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__link-img">
+                                        <use xlink:href="img/icons/sprite.svg#fb"></use>
+                                    </svg>
+                                </a></li>
+                            <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__link-img">
+                                        <use xlink:href="img/icons/sprite.svg#inst"></use>
+                                    </svg>
+                                </a></li>
+                            <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__link-img">
+                                        <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                                    </svg>
+                                </a></li>
+                        </ul>
                     </div>
                 </footer>
 
