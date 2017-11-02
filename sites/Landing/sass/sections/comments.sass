@@ -9,14 +9,15 @@
 .comment
     width: 25%
     height: $viewport-height/2
-    min-height: 325px
     position: relative
     overflow: hidden
+    @extend %bg-config
+    filter: grayscale(100)
     &:hover
         .comment__text
             opacity: 1
     &__img
-        filter: grayscale(100)
+        opacity: 0
         min-width: 101%
         min-height: 101%
         object-fit: cover

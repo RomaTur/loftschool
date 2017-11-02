@@ -32,7 +32,6 @@
             width: 100%
             background-color: fade-out(lighten(saturate(adjust-hue($color-dark, 204), 5.05), 10.41), $fade-amount*1.3)
             z-index: 2
-            // position: relative
             display: -webkit-flex
             display: -ms-flex
             display: flex
@@ -67,10 +66,14 @@
     text-align: center
     position: absolute
     transform: rotate(-90deg) translate(-50%, -50%)
-    top: 15%
+    top: 20%
     left: rem(-129px)
+    transition: 0.3s
 
-
+.menu__food
+    &:hover
+        .food-title
+            color: $color__orange-title
 .food-desc
     margin: 0
     padding: rem(63px) rem(35px)

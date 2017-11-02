@@ -21,7 +21,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-.welcome, .best, .team, .menu__container, .form, .map-inner, .footer {
+.welcome, .best, .team, .menu__container, .comment, .form, .map-inner, .footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -553,8 +553,14 @@ body {
   -webkit-transform: rotate(-90deg) translate(-50%, -50%);
   -ms-transform: rotate(-90deg) translate(-50%, -50%);
   transform: rotate(-90deg) translate(-50%, -50%);
-  top: 15%;
-  left: -8.0625rem; }
+  top: 20%;
+  left: -8.0625rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.menu__food:hover .food-title {
+  color: #f9b43b; }
 
 .food-desc {
   margin: 0;
@@ -581,14 +587,14 @@ body {
 .comment {
   width: 25%;
   height: 50vh;
-  min-height: 325px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-filter: grayscale(100);
+  filter: grayscale(100); }
   .comment:hover .comment__text {
     opacity: 1; }
   .comment__img {
-    -webkit-filter: grayscale(100);
-    filter: grayscale(100);
+    opacity: 0;
     min-width: 101%;
     min-height: 101%;
     -o-object-fit: cover;
@@ -865,5 +871,73 @@ body {
     transition: 0.3s; }
   .social__link:hover .social__link-img {
     fill: #fff; }
+
+@media (min-width: 1264px) {
+  html {
+    font-size: 16px; } }
+
+@media (min-width: 1343px) {
+  html {
+    font-size: 17px; } }
+
+@media (min-width: 1422px) {
+  html {
+    font-size: 18px; } }
+
+@media (min-width: 1501px) {
+  html {
+    font-size: 19px; } }
+
+@media (min-width: 1580px) {
+  html {
+    font-size: 20px; } }
+
+@media (min-width: 1659px) {
+  html {
+    font-size: 21px; } }
+
+@media (min-width: 1738px) {
+  html {
+    font-size: 22px; } }
+
+@media (min-width: 1817px) {
+  html {
+    font-size: 23px; } }
+
+@media (min-width: 1896px) {
+  html {
+    font-size: 24px; } }
+
+@media (min-width: 1975px) {
+  html {
+    font-size: 25px; } }
+
+@media (min-width: 2054px) {
+  html {
+    font-size: 26px; } }
+
+@media (min-width: 2133px) {
+  html {
+    font-size: 27px; } }
+
+@media (min-width: 2212px) {
+  html {
+    font-size: 28px; } }
+
+@media (min-width: 2291px) {
+  html {
+    font-size: 29px; } }
+
+@media (min-width: 2370px) {
+  html {
+    font-size: 30px; } }
+
+@media (min-width: 2449px) {
+  html {
+    font-size: 31px; } }
+
+@media (min-width: 2528px) {
+  html {
+    font-size: 32px; } }
 
 /*# sourceMappingURL=style.min.css.map */

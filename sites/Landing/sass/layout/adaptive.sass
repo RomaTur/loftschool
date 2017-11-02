@@ -1,0 +1,8 @@
+
+$fsmin: 16px // min laptop font-size
+$fsmax: 32px // max laptop font-size
+
+@for $fs from $fsmin through $fsmax
+    @media (min-width:round($fs*79))
+        html
+            font-size: $fs
