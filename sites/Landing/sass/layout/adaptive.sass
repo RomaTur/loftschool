@@ -1,8 +1,52 @@
 
-$fsmin: 16px // min laptop font-size
+
+///////////desktop//////////
+$fsmin: 15px // min laptop font-size
 $fsmax: 32px // max laptop font-size
 
 @for $fs from $fsmin through $fsmax
-    @media (min-width:round($fs*79))
+    @media (min-width:round($fs*68.3333333))
         html
             font-size: $fs
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+    .container
+        width: 100vw
+    .section
+        min-width: 768px
+        min-height: 768px
+    .welcome
+        &__content
+            flex-direction: column
+            width: 60%
+            margin: 0
+            top: 47%
+            @media (orientation:landscape)
+                flex-direction: row
+                width: 88%
+        &__burger
+            padding: 0
+            margin-bottom: 36px
+            
+        &__description
+            align-items: center
+            text-align: center
+            &-text
+                padding-left: 0
+                letter-spacing: rem(-1px)
+    .best
+        &__container
+            padding: rem(100px)
+    .choice
+        &__list
+            top: 55.9%
+            @media (orientation:landscape)
+                top: 65%
+        &__item
+            margin: 0 11px 0 11px
+            width: 226px
+        &__title
+            margin: 0
+            width: 100%
+        &__desc
+            line-height: 24px

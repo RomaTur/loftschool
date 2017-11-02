@@ -11,6 +11,7 @@
             margin-right: auto
             margin-top: rem(8px)
             margin-left: rem(-2px)
+            width: rem(99px)
             .logo__img
                 width: 93%
         &__btn
@@ -60,20 +61,28 @@
         flex-wrap: nowrap
         flex-grow: 1
         @extend %absolute-center
-        width: 100%
+        width: 90%
         margin-left: rem(10px)
-    &__img, &__description
+    &__burger, &__description
         flex-basis: 50%
         display: -webkit-flex
         display: -ms-flex
         display: flex
-    &__img
+    &__burger
         padding-bottom: rem(80px)
         // min-width: 420px
         // min-height: 420px
         justify-content: flex-end
         // align-items: center
         padding-right: rem(13px)
+        // display: inline-block
+        // vertical-align: middle
+        // text-align: right
+        &-img
+            max-width: none
+            max-height: none
+            min-height: rem(400px)
+
     &__description
         flex-direction: column
         // justify-content: center
@@ -81,7 +90,7 @@
             color: $color__orange-title
             margin-top: rem(-18px)
         &-text
-            width: 50%
+            // width: 50%
             color: #fff
             font-family: 'Lifehack'
             font-size: rem(65px)
