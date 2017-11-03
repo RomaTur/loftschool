@@ -2,11 +2,17 @@
 .welcome
     @include bg-img("../img/welcome/welcome-bg.jpg")
     @extend %bg-config
+    @include tablet
+
     &-header
         width: 100%
-        @extend %flex-center
         justify-content: space-between
         padding-top: rem(4px)
+        @extend %flex-center
+        @include tablet
+            padding: 4px 25px
+
+
         &__logo
             margin-right: auto
             margin-top: rem(8px)
@@ -21,9 +27,12 @@
 .nav
     margin-right: rem(15px)
     margin-top: rem(-3px)
+
     &__list
         margin: 0
         padding: 0
+        @include tablet
+            display: none
     &__item
         display: inline-block
         vertical-align: middle
@@ -51,7 +60,20 @@
         &:hover
             text-decoration: underline
 
+.nav-burger
+    margin-left: 25px
+    display: none
+    @include tablet
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
 
+    &__row
+        width: 25px
+        height: 4px
+        margin: 5px
+        background: $color-white
+        border-radius: 5px
 
 
 .welcome
@@ -60,9 +82,13 @@
         @extend %flex-center
         flex-wrap: nowrap
         flex-grow: 1
+        @include tablet
+            flex-direction: column
         @extend %absolute-center
         width: 90%
         margin-left: rem(10px)
+        @include tablet
+            margin: 0
     &__burger, &__description
         flex-basis: 50%
         display: -webkit-flex
@@ -78,6 +104,9 @@
         // display: inline-block
         // vertical-align: middle
         // text-align: right
+        @include tablet
+            padding: 0
+            margin-bottom: 37px
         &-img
             max-width: none
             max-height: none
@@ -85,6 +114,10 @@
 
     &__description
         flex-direction: column
+        @include tablet
+            text-align: center
+            width: 90%
+            margin-bottom: 64px
         // justify-content: center
         .section__title
             color: $color__orange-title

@@ -5,6 +5,15 @@ html
     font-weight: 500
     cursor: default
 
+///////////desktop//////////
+$fsmin: 15px // min laptop font-size
+$fsmax: 32px // max laptop font-size
+
+@for $fs from $fsmin through $fsmax
+    @media (min-width:round($fs*68.3333333))
+        html
+            font-size: $fs
+
 
 body
     margin: auto
@@ -25,6 +34,8 @@ body
 
 .container
     width: rem(940px)
+    @include tablet
+        width: 100%
     margin: 0 auto
     @extend %flex-center
     flex-direction: column
@@ -36,6 +47,8 @@ body
     background-color: rgba(0,0,0,0.31)
     min-width: 940px
     min-height: 650px
+    @include tablet
+        min-width: 0
 
 
 .section__title
