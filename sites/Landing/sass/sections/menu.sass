@@ -118,7 +118,8 @@
         padding-top: 74px
 
 .food-close
-    display: none
+    opacity: 0
+    transition: 0.4s
     &::before
         content: ""
         position: absolute
@@ -129,6 +130,7 @@
         border-radius: 4px
         transform: rotate(45deg) translate(-50%, -50%)
         background: $color-white
+
     &::after
         content: ""
         position: absolute
@@ -144,8 +146,13 @@
     &:hover
         .food-title
             color: $color__orange-title
-        .food-close
-            display: block
+        @include tablet
+            width: 67vw
+            .food-close
+                opacity: 1
+        @include phone
+            width: 100000vw
+
 
 
 
@@ -154,11 +161,12 @@
 
     @include tablet
         width: 67vw
+        .food-close
+            opacity: 1
     @include phone
         width: 100000vw
     .food-title
         color: $color__orange-title
-    .food-close
-        display: block
+
     .menu__food-img
         transform: translate(-60%, -50%)
