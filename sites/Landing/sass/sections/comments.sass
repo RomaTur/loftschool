@@ -11,6 +11,10 @@
     height: $viewport-height/2
     position: relative
     overflow: hidden
+    @include tablet
+        width: 50%
+        height: $viewport-height/4
+
     @extend %bg-config
     filter: grayscale(100)
     &:hover
@@ -34,12 +38,17 @@
         padding:  rem(41px) rem(20px) rem(0px) rem(20px)
         transition: 0.4s
         opacity: 0
+        @include tablet
+            text-align: center
+            padding: 2.5vh 6vw
         &-name
             font-family: 'Gagalin', monospace
             text-transform: uppercase
             line-height: rem(28px)
             margin-bottom: rem(14px)
             font-size: rem(14px)
+            @include tablet
+                margin: 0
         &-desc
             font-family: 'Ubuntu'
             font-weight: 300
@@ -47,6 +56,9 @@
             line-height: 1.75
             margin-bottom: rem(13px)
             font-size: rem(14px)
+            @include tablet
+                margin: 4px 0 2.4vh 0
+                font-size: 1.83vw
         &-more
             font-family: 'Ubuntu'
             font-weight: 500
@@ -60,5 +72,9 @@
             border-radius: 6px
             text-align: center
             transition: 0.2s
+            @include tablet
+                font-size: 1.8vw
+                margin: auto
+                padding: 0.7vh 1vw
             &:hover
                 background-color: lighten($color-dark, 12%)

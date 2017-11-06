@@ -4,11 +4,15 @@
         bottom: rem(35px)
         left: 50%
         transform: translateX(-50%)
+        @include phone
+            bottom: 3vh
 
     &-nav
         position: fixed
         top: rem(96px)
         right: rem(53px)
+        @include tablet
+            display: none
         &__list
             list-style: none
         &__point

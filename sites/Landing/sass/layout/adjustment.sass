@@ -4,7 +4,8 @@ html
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif
     font-weight: 500
     cursor: default
-
+    @include phone
+        font-size: 14px
 ///////////desktop//////////
 $fsmin: 15px // min laptop font-size
 $fsmax: 32px // max laptop font-size
@@ -13,6 +14,7 @@ $fsmax: 32px // max laptop font-size
     @media (min-width:round($fs*68.3333333))
         html
             font-size: $fs
+
 
 
 body
@@ -49,6 +51,8 @@ body
     min-height: 650px
     @include tablet
         min-width: 0
+    @include phone
+        min-height: 560px
 
 
 .section__title
@@ -70,5 +74,9 @@ body
     line-height: 1.42
     text-transform: uppercase
     transition: .5s
+    @include phone
+        font-size: rem(14px*$cof__font-size)
+        padding: rem(8px*$cof__font-size) rem(13px*$cof__font-size)
+
     &:hover
         background-color: darken($color-order, 7%)

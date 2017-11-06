@@ -11,6 +11,8 @@
         @extend %flex-center
         @include tablet
             padding: 4px 25px
+        @include phone
+            padding: 4px 15px
 
 
         &__logo
@@ -18,8 +20,12 @@
             margin-top: rem(8px)
             margin-left: rem(-2px)
             width: rem(99px)
+            @include phone
+                width: rem(100px*$cof__font-size)
+                margin-left: rem(3px*$cof__font-size)
             .logo__img
                 width: 93%
+
         &__btn
             margin-top: rem(-2px)
 
@@ -107,10 +113,18 @@
         @include tablet
             padding: 0
             margin-bottom: 37px
+            @include phone
+                display: block
+                width: 84%
+                margin-top: 8vh
+                margin-bottom: 5vh
         &-img
             max-width: none
             max-height: none
             min-height: rem(400px)
+            @include phone
+                max-width: 100%
+                min-height: initial
 
     &__description
         flex-direction: column
@@ -122,6 +136,8 @@
         .section__title
             color: $color__orange-title
             margin-top: rem(-18px)
+            @include phone
+                font-size: 13.3vw
         &-text
             // width: 50%
             color: #fff
@@ -132,3 +148,8 @@
             padding-top: rem(9px)
             padding-left: rem(1px)
             letter-spacing: rem(-2px)
+            @include phone
+                padding: 0
+                margin-top: -7px
+                line-height: 1.04
+                font-size: 11.5vw

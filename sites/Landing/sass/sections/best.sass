@@ -4,8 +4,15 @@
     @extend %bg-config
     &__container
         padding: rem(54px)
+        @include tablet
+            padding: 0
         .section__title
             color: $color__grey-title
+            @include tablet
+                margin-top: 13%
+            @include phone
+                font-size: 10.5vw
+                margin-top: 9%
 
 .choice
     &__list
@@ -13,17 +20,38 @@
         @extend %flex-center
         justify-content: space-between
         align-items: baseline
+        @include tablet
+            width: 97%
+        @include phone
+            flex-direction: column
+            align-items: flex-end
     &__item
         position: relative
         width: rem(300px)
         margin: rem(182px) rem(11px) rem(0px) rem(8px)
         text-align: center
         color: lighten($color-dark, 25%)
+        @include tablet
+            width: 33%
+            margin: 0
+            margin-top: 100px
+        @include phone
+            width: 69%
+            margin-top: 4vh
+            text-align: left
+            &:first-child
+                margin-top: 1vh
+
     &__logo
         @extend %absolute-center
         top: rem(-77px)
         // width: 88px
         height: rem(74px)
+        @include phone
+            top: 5vh
+            left: -24%
+            height: 11vh
+
     &__img
         height: 100%
     &__title
@@ -33,9 +61,20 @@
         letter-spacing: 1px
         margin: 0 auto
         line-height: 1.24
+        @include tablet
+            width: 100%
+        @include phone
+            font-size: 21px
     &__desc
         width: 100%
         font-family: 'Ubuntu'
         font-size: rem(14px)
         font-weight: 300
         line-height: 1.8
+        @include phone
+            line-height: 2
+        &-text
+            @include phone
+                margin: 1vh 0
+                font-size: 14px
+                line-height: 3.6vh

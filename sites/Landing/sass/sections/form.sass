@@ -12,6 +12,8 @@
             top: 18%
             width: 100%
             text-align: center
+            @include tablet
+                top: 14.5%
     &__order
         // width: 100%
         // height: 100%
@@ -21,18 +23,24 @@
         padding-top: rem(66px)
         width: 87.5%
         max-width: rem(1100px)
+        @include tablet
+            padding: 0
+            margin-top: 0.5vh
 
 
     &__inner
         @extend %flex-center
         align-items: baseline
         // @extend %absolute-center
-
+        @include tablet
+            flex-direction: column
 
     &__column
         width: 50%
         padding: rem(10px)
-
+        @include tablet
+            width: 100%
+            padding: 0 13vw
 
     &__row
         @extend %flex-center
@@ -40,10 +48,13 @@
         width: 100%
         margin: rem(5px) 0
 
+
     &__block
         flex: 1
         margin-right: rem(18px)
         position: relative
+        @include tablet
+            margin-right: 24px
         &:last-child
             margin-right: 0
 
@@ -77,6 +88,9 @@
 
     &__comment
         flex: 1
+        .form__inner-title
+            @include tablet
+                margin-top: 0.7vh
         .form__inner-input
             height: rem(112px)
 
@@ -167,11 +181,14 @@
 .submit
     justify-content: flex-start
     margin: rem(15px) 0
+    @include tablet
+        margin-top: 3.5vh
 .form
 
     &__submit
         -webkit-appearance: none
         margin-right: rem(20px)
+
     &__clear
         &-link
             @extend .form__inner-title
