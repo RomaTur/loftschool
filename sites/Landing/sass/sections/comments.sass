@@ -49,6 +49,10 @@
             font-size: rem(14px)
             @include tablet
                 margin: 0
+            @include phone
+                margin: 3.3vh 0 0 0
+                font-size: 3vh
+                line-height: 27px
         &-desc
             font-family: 'Ubuntu'
             font-weight: 300
@@ -59,6 +63,8 @@
             @include tablet
                 margin: 4px 0 2.4vh 0
                 font-size: 1.83vw
+            @include phone
+                display: none
         &-more
             font-family: 'Ubuntu'
             font-weight: 500
@@ -72,9 +78,22 @@
             border-radius: 6px
             text-align: center
             transition: 0.2s
+
             @include tablet
                 font-size: 1.8vw
                 margin: auto
                 padding: 0.7vh 1vw
+            @include phone
+                font-size: 1.66vh
+                width: 26.5vw
+                margin-top: 3vh
+                padding: 1.2vh 0
             &:hover
                 background-color: lighten($color-dark, 12%)
+.text__get-more
+    @include phone
+        display: none
+.text__read-more
+    display: none
+    @include phone
+        display: initial
