@@ -1,0 +1,213 @@
+.burgers
+    &__container
+        width: 100%
+        height: 100%
+        @extend %flex-center
+        flex-wrap: nowrap
+        justify-content: space-between
+        flex-direction: row
+        padding: 7.5% 3%
+    &__list
+
+
+    &__slide
+        height: rem(30px)
+        &-img
+            width: rem(30px)
+            height: rem(20px)
+        &--left
+            transform: rotate(90deg)
+        &--right
+            transform: rotate(-90deg)
+
+.burger
+    @extend %flex-center
+    height: 100%
+    align-items: center
+    position: relative
+    &__column
+        width: 50%
+        max-width: rem(600px)
+        @extend %flex-center
+        flex-direction: column
+        margin-right: rem(22px)
+        &:last-child
+            margin-right: 0
+    &__img
+        width: 100%
+    &__title
+        @extend .section__title
+        color: $color-white
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        line-height: 0.9
+        margin-bottom: rem(23px)
+    &__desc
+        width: 93%
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-self: flex-start
+        font-family: 'Ubuntu'
+        font-weight: 300
+        font-size: rem(14px)
+        color: $color-white
+        margin-bottom: rem(21px)
+        line-height: 1.75
+
+
+
+    &__order
+        width: 100%
+        margin-bottom: rem(129px)
+        @extend %flex-center
+        justify-content: flex-start
+        align-items: flex-end
+        // flex-basis: 50%
+.price
+    color: $color-order
+    @extend .section__title
+    line-height: 1
+    margin-right: rem(25px)
+    &__number
+
+    &__text
+        font-size: rem(30px)
+
+.burger
+    &__compos
+        position: absolute
+        top: rem(6px)
+        left: rem(17px)
+        width: rem(90px)
+        height: rem(90px)
+        background: fade-out($color-order, $fade-amount)
+        border-radius: rem(5px)
+
+        &:hover
+            background: $color-order
+            .composition__list
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+        .container
+            width: 100%
+            height: 100%
+            position: relative
+
+
+    &__energy
+        position: absolute
+        bottom: 0
+        left: rem(17px)
+        width: rem(60px)
+        height: rem(80px)
+        opacity: 0.5
+        .container
+            width: 100%
+            height: 100%
+            position: relative
+
+
+.composition
+    &__img
+        width: rem(45px)
+        height: rem(45px)
+        fill: $color-white
+        @extend %absolute-center
+        top: rem(36px)
+    &__title
+        @extend .section__title
+        font-size: rem(14px)
+        @extend %absolute-center
+        color: $color-white
+        top: rem(72px)
+
+
+    &__list
+        position: absolute
+        top: 0
+        left: rem(90px)
+        width: rem(270px)
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        display: none
+        background-color: fade-out($color-white, $fade-amount)
+        border-radius: rem(5px)
+        flex-direction: column
+        padding: rem(19px) rem(21px)
+    &__item
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-items: center
+        margin-bottom: rem(7px)
+        &:last-child
+            margin-bottom: 0
+
+        &-img
+            width: rem(43px)
+            height: rem(43px)
+            margin-right: rem(27px)
+            text-align: center
+        &-title
+            flex-grow: 2
+            font-family: 'Ubuntu'
+            font-weight: 500
+            font-size: rem(14px)
+            line-height: rem(24px)
+        &-weight
+            font-family: 'Ubuntu'
+            font-weight: 300
+            font-size: rem(14px)
+            line-height: rem(24px)
+
+
+.energy
+
+    &__img
+        @extend %absolute-center
+        top: rem(29px)
+        width: rem(60px)
+        height: rem(60px)
+        fill: $color-white
+    &__number
+        @extend %absolute-center
+        top: rem(38px)
+        @extend .section__title
+        color: $color-white
+        font-size: rem(20px)
+    &__text
+        @extend %absolute-center
+        top: rem(69px)
+        @extend .section__title
+        color: $color-white
+        font-size: rem(14px)
+
+
+
+
+
+
+
+
+
+
+.burgers__gradient
+    background-color: #f2a03a
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZjliNDNiIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNlYjhjMzgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjZjliNDNiIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=)
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(249, 180, 59)),color-stop(0.5, rgb(235, 140, 56)),color-stop(1, rgb(249, 180, 59)))
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(top,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+    /* IE10+ */
+    background-image: linear-gradient(to bottom,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+    background-image: -ms-linear-gradient(top,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+
+
+/* IE8- CSS hack */
+@media \0screen\,screen\9
+    .gradient
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff9b43b",endColorstr="#fff9b43b",GradientType=0)

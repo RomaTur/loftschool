@@ -7,13 +7,17 @@ html
     @include phone
         font-size: 14px
 ///////////desktop//////////
-$fsmin: 15px // min laptop font-size
-$fsmax: 32px // max laptop font-size
+// $fsmin: 15px // min laptop font-size
+// $fsmax: 32px // max laptop font-size
+@media (min-width:769px)
+    html
+        font-size: 1.45vw
 
-@for $fs from $fsmin through $fsmax
-    @media (min-width:round($fs*68.3333333))
-        html
-            font-size: $fs
+// @for $fs from $fsmin through $fsmax
+//     @media (min-width:round($fs*68.3333333))
+//         html
+//             font-size: $fs
+
 
 
 
@@ -47,7 +51,7 @@ body
     width: $viewport-width
     height: $viewport-height
     background-color: rgba(0,0,0,0.31)
-    min-width: 940px
+    // min-width: 940px
     min-height: 650px
     @include tablet
         min-width: 0
