@@ -173,11 +173,51 @@ result = evenNumbers(numbers);
 
 
 
+////// 2 курс 3 неделя среда ///////
+
+// 1. Создать переменные, содержащие необходимые для работы узлы DOM
+// (инпут с числом блоков, инпут с цветом блоков, и контейнер для будущих блоков)
+// 2. "Повесить" обработчик события на изменение поля ввода с кол-вом блоков
+// (событие input)
+// 3. Внутри обработчика получить значение с этого поля ввода
+// 4. Сформировать DOM узлы будущих блоков в цикле (создать DOM узел можно при
+// помощи метода document.createElement())
+// 5. Повесить обработчик события на изменение инпута с цветом (событие change)
 
 
+let numberInput = document.getElementById('numberInput');
+let colorInput = document.getElementById('colorInput');
+let content = document.getElementById('content');
+let blocks;
+let color = '#fff';
+// console.log(numberInput, colorInput, content);
 
+numberInput.addEventListener('input', function(elem){
+    // console.log(elem.target);
+    let value = elem.target.value;
+    // console.log(value);
+    blocks = '';
+    for (var i = 0; i < value; i++) {
+        let block = document.createElement('div');
 
+        block.className = 'block';
+        block.innerText = i+1;
+        block.style.background = color;
 
+        blocks += block.outerHTML;
+    }
+    content.innerHTML = blocks;
+});
+
+colorInput.addEventListener('input', function(elem){
+    color = elem.target.value;
+    let contentBlocks = content.children;
+
+    for (var i = 0; i < contentBlocks.length; i++) {
+        let currentElem = contentBlocks[i];
+        currentElem.style.background = color;
+    }
+});
 
 
 
