@@ -1,15 +1,21 @@
 
 ////////////ФУНКЦИОНАЛ/////////
 //headerMenuFullScreen
-let welcomeNavOpen = document.getElementById('welcomeNavOpen');
-let welcomeNavClose = document.getElementById('welcomeNavClose');
-let welcomeNavList = document.querySelector('.nav-burger__list');
+var welcomeNavOpen = document.querySelector('#welcomeNavOpen');
+var welcomeNavClose = document.querySelector('#welcomeNavClose');
+var welcomeNavList = document.querySelector('.nav-burger__list');
 
 
-welcomeNavOpen.addEventListener('click', function(){
+welcomeNavOpen.addEventListener('click', function(elem){
     welcomeNavList.classList.add('nav-burger__list--active');
 });
+// welcomeNavOpen.addEventListener('touchend', function(){
+//     welcomeNavList.classList.add('nav-burger__list--active');
+// });
 
 welcomeNavClose.addEventListener('click', function(){
-    welcomeNavList.classList.remove('nav-burger__list--active')
+    welcomeNavList.classList.remove('nav-burger__list--active');
 });
+// welcomeNavClose.addEventListener('touchend', function(){
+//     welcomeNavList.classList.remove('nav-burger__list--active');
+// });
