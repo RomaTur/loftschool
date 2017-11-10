@@ -40,7 +40,7 @@
         @include phone
             width: 16.6666vw
             transition: 0.3s
-
+        
         &-text
             width: 100%
             background-color: fade-out(lighten(saturate(adjust-hue($color-dark, 204), 5.05), 10.41), $fade-amount*1.3)
@@ -57,16 +57,16 @@
             @extend %absolute-center
             transform: translate(-60%, -50%)
             transition: 0.6s
-        &:hover
-            width: rem(627px)
-            @include tablet
-                width: 67vw
-            @include phone
-                width: 100000vw
-            .menu__food-img
-                transform: translate(-50%, -50%)
-                @include phone
-                    transform: translate(-60%, -50%)
+        // &:hover
+        //     width: rem(627px)
+        //     @include tablet
+        //         width: 67vw
+        //     @include phone
+        //         width: 100000vw
+        //     .menu__food-img
+        //         transform: translate(-50%, -50%)
+        //         @include phone
+        //             transform: translate(-60%, -50%)
 
 
 
@@ -143,15 +143,15 @@
         background: $color-white
 
 .menu__food
-    &:hover
-        .food-title
-            color: $color__orange-title
-        @include tablet
-            width: 67vw
-            .food-close
-                opacity: 1
-        @include phone
-            width: 100000vw
+    // &:hover
+    //     .food-title
+    //         color: $color__orange-title
+    //     @include tablet
+    //         width: 67vw
+    //         .food-close
+    //             opacity: 1
+    //     @include phone
+    //         width: 100000vw
 
 
 

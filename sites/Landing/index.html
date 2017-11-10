@@ -26,7 +26,7 @@
             <section class="section welcome">
                 <div class="container welcome__container">
                     <header class="welcome-header">
-                        <div class="welcome-header__logo"><a class="logo" href="#"><img class="logo__img" src="img/icons/logo.svg" alt="logo"></a></div>
+                        <div class="welcome-header__logo"><a class="logo" href="#"><img class="logo__img" id="logo__img" src="img/icons/logo.svg" alt="logo"></a></div>
                         <div class="welcome-header__menu">
                             <nav class="nav">
                                 <ul class="nav__list">
@@ -52,6 +52,22 @@
                                 <div class="nav-burger__row"></div>
                                 <div class="nav-burger__row"></div>
                             </a>
+                            <ul class="nav-burger__list">
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="1">Почему мы</a>
+                                </li>
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="2">меню</a>
+                                </li>
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="3">советы</a>
+                                </li>
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="4">кто мы</a>
+                                </li>
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="5">свяжитесь с нами</a>
+                                </li>
+                                <li class="nav-burger__item"><a class="nav__link" href="" data-goto="7">контакты</a>
+                                </li>
+                            </ul>
+
+                                <div class="nav-close"></div>
 
                         </nav>
                     </header>
@@ -64,7 +80,7 @@
                     </div>
                     <div class="page__arrow">
                         <a href="#" class="page__arrow-link">
-                            <!-- <img src="img/icons/arrow-scroll.svg" alt="" class="page-arrow__img"> -->
+
                             <svg class="page__arrow-img">
                                 <use xlink:href="img/icons/sprite.svg#arrow"></use>
                             </svg>
@@ -328,9 +344,10 @@
                     <h2 class="section__title">МЕНЮ</h2>
 
                     <ul class="menu__accordeon">
-                        <li class="menu__food ">
+                        <li class="menu__food">
                             <img src="img/menu/menu-meet.jpg" alt="meet" class="menu__food-img">
                             <div class="menu__food-text ">
+
                                 <h3 class="food-title">для мясоедов</h3>
                                 <p class="food-desc">
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
@@ -621,7 +638,7 @@
 
 
     </div>
-
+    <script src="js/app.js" charset="utf-8"></script>
 </body>
 <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 

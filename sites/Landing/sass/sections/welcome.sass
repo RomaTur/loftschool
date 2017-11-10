@@ -44,12 +44,20 @@
         vertical-align: middle
         white-space: nowrap
         color: white
+
         &::after
             content: "\2022"
             margin: rem(0px) rem(11px)
         &:last-child::after
             content: ""
             display: none
+        @include tablet
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            flex-direction: column
+            align-items: center
+
 
     &__link
         font-size: rem(13px)
@@ -66,6 +74,37 @@
         &:hover
             text-decoration: underline
 
+.nav-close
+    display: none
+    z-index: 3
+    width: 30px
+    height: 30px
+    &::before
+        content: ""
+        position: absolute
+        top: 53px
+        right: 23px
+        width: 25px
+        height: 4px
+        border-radius: 4px
+        transform: rotate(45deg) translate(-50%, -50%)
+        background: $color-white
+
+    &::after
+        content: ""
+        position: absolute
+        top: 35px
+        right: 20px
+        width: 25px
+        height: 4px
+        border-radius: 4px
+        transform: rotate(-45deg) translate(-50%, -50%)
+        background: $color-white
+        opacity: 1
+        display: block
+
+
+
 .nav-burger
     margin-left: 25px
     display: none
@@ -80,6 +119,45 @@
         margin: 5px
         background: $color-white
         border-radius: 5px
+    &__list
+        display: none
+        @include tablet
+            justify-content: flex-start
+            flex-direction: column
+            align-items: center
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: fade-out($color__grey-title, 0.01)
+            z-index: 2
+            padding-top: 30%
+            display: none
+            &--active
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+                & + .nav-close
+                    display: block
+    &__item
+        white-space: nowrap
+        color: white
+        .nav__link
+            font-size: 24px
+            font-weight: 500
+        &::after
+            content: "\2022"
+            margin: 10px 0
+        &:last-child::after
+            content: ""
+            display: none
+        @include tablet
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            flex-direction: column
+            align-items: center
 
 
 .welcome
