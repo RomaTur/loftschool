@@ -250,7 +250,8 @@ body {
       margin-right: auto;
       margin-top: 0.5rem;
       margin-left: -0.125rem;
-      width: 6.1875rem; }
+      width: 6.1875rem;
+      z-index: 3; }
       @media (max-width: 480px) {
         .welcome-header__logo {
           width: 7.14286rem;

@@ -1,0 +1,28 @@
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+
+}
+.inputs{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+}
+.input{
+    margin: 20px;
+}
+.coontent{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.block{
+    width: 50px;
+    height: 50px;
+}
