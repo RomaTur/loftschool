@@ -317,6 +317,9 @@ body {
     border-radius: 4px;
     transform: rotate(45deg) translate(-50%, -50%);
     background: #fff; }
+    @media (max-width: 480px) {
+      .nav-close::before {
+        right: 12px; } }
   .nav-close::after {
     content: "";
     position: absolute;
@@ -329,6 +332,9 @@ body {
     background: #fff;
     opacity: 1;
     display: block; }
+    @media (max-width: 480px) {
+      .nav-close::after {
+        right: 10px; } }
 
 .nav-burger {
   margin-left: 25px;
@@ -385,6 +391,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center; } }
+
+#welcomeNavOpen {
+  z-index: 1; }
 
 .welcome__content {
   flex-wrap: nowrap;
