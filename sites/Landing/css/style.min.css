@@ -559,28 +559,29 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: row;
-  padding: 7.5% 3%; }
+  padding: 7.5% 3%;
+  position: relative; }
   @media (max-width: 768px) {
     .burgers__container {
       padding: 7.5% 4%; } }
   @media (max-width: 480px) {
     .burgers__container {
-      padding: 0 0 7.3% 0;
-      position: relative; } }
+      padding: 0 0 7.3% 0; } }
 
-@media (max-width: 768px) {
-  .burgers__list {
-    width: 90%;
-    margin-top: 53px;
-    margin-right: 10px; } }
-
-@media (max-width: 480px) {
-  .burgers__list {
-    position: absolute;
-    top: 48.2%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; } }
+.burgers__list {
+  position: absolute; }
+  @media (max-width: 768px) {
+    .burgers__list {
+      width: 90%;
+      margin-top: 53px;
+      margin-right: 10px; } }
+  @media (max-width: 480px) {
+    .burgers__list {
+      position: absolute;
+      top: 48.2%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%; } }
 
 .burgers__slide {
   height: 1.875rem; }
@@ -930,7 +931,7 @@ body {
   opacity: 0;
   overflow: hidden;
   height: 0;
-  transition: 0.3s; }
+  transition: 0.5s; }
 
 .person-portret {
   width: 6.25rem;
