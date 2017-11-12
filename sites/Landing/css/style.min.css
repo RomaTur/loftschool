@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.welcome, .best, .team, .menu__container, .comment, .form, .map-inner, .footer {
+.welcome, .best, .team, .person-portret, .menu__container, .comment, .form, .map-inner, .footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -380,7 +380,10 @@ body {
       font-weight: 500; }
     .nav-burger__item::after {
       content: "\2022";
-      margin: 10px 0; }
+      margin: 1vh 0; }
+      @media (max-width: 480px) {
+        .nav-burger__item::after {
+          margin: 0.1vh 0; } }
     .nav-burger__item:last-child::after {
       content: "";
       display: none; }
@@ -584,6 +587,10 @@ body {
     transform: translate(-50%, -50%);
     width: 100%; } }
 
+@media (max-height: 560px) {
+  .burgers__list {
+    top: 40%; } }
+
 .burgers__slide {
   height: 1.875rem; }
   .burgers__slide-img {
@@ -715,9 +722,12 @@ body {
       height: 90px;
       top: -11.9vh;
       left: 2vw; } }
-  .burger__compos:hover {
+  @media (max-height: 560px) {
+    .burger__compos {
+      top: -6vh; } }
+  .burger__compos--active {
     background: #e45028; }
-    .burger__compos:hover .composition__list {
+    .burger__compos--active .composition__list {
       display: -webkit-flex;
       display: -ms-flex;
       display: flex; }
@@ -745,6 +755,9 @@ body {
       height: 80px;
       top: -11.9vh;
       right: 2vw; } }
+  @media (max-height: 560px) {
+    .burger__energy {
+      top: -6vh; } }
   .burger__energy .container {
     width: 100%;
     height: 100%;
@@ -952,7 +965,8 @@ body {
       margin: 0 auto 2vh auto; } }
   .person-portret__img {
     height: 6.25rem;
-    max-width: none; }
+    max-width: none;
+    display: none; }
     @media (max-width: 480px) {
       .person-portret__img {
         height: auto; } }

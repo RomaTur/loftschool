@@ -153,7 +153,9 @@
             font-weight: 500
         &::after
             content: "\2022"
-            margin: 10px 0
+            margin: 1vh 0
+            @include phone
+                margin: 0.1vh 0
         &:last-child::after
             content: ""
             display: none

@@ -25,6 +25,8 @@
             left: 50%
             transform: translate(-50%, -50%)
             width: 100%
+        @media (max-height:560px)
+            top: 40%
 
     &__slide
         height: rem(30px)
@@ -155,8 +157,9 @@
             height: 90px
             top: -11.9vh
             left: 2vw
-
-        &:hover
+        @media (max-height:560px)
+            top: -6vh
+        &--active
             background: $color-order
             .composition__list
                 display: -webkit-flex
@@ -166,7 +169,6 @@
             width: 100%
             height: 100%
             position: relative
-
 
     &__energy
         position: absolute
@@ -185,7 +187,9 @@
             height: 80px
             top: -11.9vh
             right: 2vw
-
+        @media (max-height:560px)
+            top: -6vh
+            
         .container
             width: 100%
             height: 100%
@@ -230,6 +234,7 @@
         @include phone
             left: 90px
             width: 223px
+
     &__item
         display: -webkit-flex
         display: -ms-flex

@@ -21,6 +21,18 @@ welcomeNavClose.addEventListener('click', function(){
 
 
 
+//slider-composition
+var deviceWidth = $(document).width();
+
+if(deviceWidth<=768){
+    $('.burger__compos').on('click', function(){
+        $(this).toggleClass('burger__compos--active');
+    });
+}
+
+
+
+
 //accordeon
 
 // var teamPersons = document.querySelectorAll('.team__person');
