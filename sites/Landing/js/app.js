@@ -47,31 +47,23 @@ for (var i = 0; i < teamPersons.length; i++) {
 
 
 //функция разрешения/запрета скролла//
+var prevDef = function(event){
+    event.preventDefault();
+}
 function isScroll(bool){
     document.onmousewheel=document.onwheel=function(){
-        if(bool==false) {
-            return false;
-        }
-    	else {
-    	    return true;
-    	}
-    };
+return (!bool) ? false : true;    };
+    if(bool==false) {
+        document.addEventListener('touchmove', prevDef, false);
+    }
+    else {
+        document.removeEventListener('touchmove', prevDef, false);
+    }
     document.addEventListener("MozMousePixelScroll",function(){
-        if(bool==false){
-            return false;
-        }
-        else {
-            return true;
-        }
-    },false);
+        return (!bool) ? false : true;    },false);
     document.onkeydown=function(e) {
     	if (e.keyCode>=33&&e.keyCode<=40){
-            if (bool==false){
-                return false;
-            }
-            else {
-                return true;
-            }
+            return (!bool) ? false : true;
         }
     }
 };
