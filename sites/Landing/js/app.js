@@ -23,18 +23,32 @@ welcomeNavClose.addEventListener('click', function(){
 
 //accordeon
 
-var teamPersons = document.querySelectorAll('.team__person');
+// var teamPersons = document.querySelectorAll('.team__person');
+//
+// for (var i = 0; i < teamPersons.length; i++) {
+//     teamPersons[i].addEventListener('click', function(event){
+//         for (var i = 0; i < teamPersons.length; i++) {
+//             teamPersons[i].classList.remove('team__person--active');
+//         }
+//         if(event.target.parentNode.parentNode.classList.contains('team__person')){
+//             event.target.parentNode.parentNode.classList.add('team__person--active');
+//         }
+//     });
+// }
 
-for (var i = 0; i < teamPersons.length; i++) {
-    teamPersons[i].addEventListener('click', function(event){
-        for (var i = 0; i < teamPersons.length; i++) {
-            teamPersons[i].classList.remove('team__person--active');
-        }
-        if(event.target.parentNode.parentNode.classList.contains('team__person')){
-            event.target.parentNode.parentNode.classList.add('team__person--active');
+
+    $('.person-name').click(function() {
+        if (!$(this).parent().parent().hasClass('team__person--active')) {
+            $('.team__person').removeClass('team__person--active').children('.person-desc').slideUp(400).fadeOut(400);
+
+            $(this).parent().next('.person-desc').slideDown(400).fadeIn(400);
+
+            $(this).parent().parent().addClass('team__person--active');
+        } else {
+            $(this).parent().parent().removeClass('team__person--active').children('.person-desc').slideUp(400).fadeOut(400);
         }
     });
-}
+
 
 //menu
 

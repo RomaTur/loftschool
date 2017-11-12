@@ -24,17 +24,17 @@
             margin-bottom: 13.7%
         @include phone
             font-size: rem(50px*$cof__font-size)
-            margin-top: 11vh
+            margin-top: 10.6vh
             margin-bottom: 14.8vh
             line-height: 0
     &__accordeon
 
     &__person
-        margin-bottom: rem(22px)
-        @include tablet
-            margin-bottom: 30px
-        @include phone
-            margin-bottom: 4.5vh
+        // margin-bottom: rem(22px)
+        // @include tablet
+        //     margin-bottom: 30px
+        // @include phone
+        //     margin-bottom: 4.5vh
 
 
 
@@ -45,8 +45,12 @@
         justify-content: flex-start
         line-height: rem(28.11px)
         cursor: pointer
+        margin-bottom: rem(22px)
         @include tablet
             justify-content: center
+            margin-bottom: 30px
+        @include phone
+            margin-bottom: 4.5vh
 
     &-triangle
         width: 0
@@ -72,11 +76,13 @@
 
 
     &-desc
-        height: rem(100px)
-        opacity: 0
+        display: none
+        margin-top: -20px
+        // height: rem(100px)
+        // opacity: 0
         overflow: hidden
-        height: 0
-        transition: 0.5s
+        // height: 0
+        // transition: 0.5s
 
 
 
@@ -89,16 +95,16 @@
         display: inline-block
         margin-top: rem(10px)
         margin-left: rem(17px)
-        margin-bottom: rem(13px)
+        margin-bottom: rem(35px)
         vertical-align: top
         position: relative
         @include tablet
             display: block
-            margin: 14px auto
+            margin: 2px auto 14px auto
         @include phone
             width: 100px
             height: 100px
-            margin: 2vh auto
+            margin: 0 auto 2vh auto
         &__img
             height: rem(100px)
             max-width: none
@@ -120,7 +126,7 @@
         margin-top: rem(6px)
 
         @include tablet
-            width: 50%
+            width: 51%
             display: block
             margin: 0 auto
         @include phone
@@ -149,8 +155,8 @@
         margin-bottom: 2.8vh
     .person
         &-desc
-            opacity: 1
-            height: auto
+            // opacity: 1
+            // height: auto
         &-triangle
             transform: rotate(180deg)
         &-name
