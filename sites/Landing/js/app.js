@@ -24,51 +24,27 @@ welcomeNavClose.addEventListener('click', function(){
 // slider-composition
 var deviceWidth = $(document).width();
 
-if(deviceWidth<=768){
-    $('.burger__compos').on('click', function(){
-        $(this).toggleClass('burger__compos--active');
-    });
-}
-else{
-    $('.burger__compos').hover(
-    function(){
-        $(this).addClass('burger__compos--active');
-    },
-    function(){
-        $(this).removeClass('burger__compos--active');
-    });
-}
+activeOnTap(768, '.burger__compos')
 
 
 
 
-//accordeon
+//vertical-accordeon
 
-// var teamPersons = document.querySelectorAll('.team__person');
-//
-// for (var i = 0; i < teamPersons.length; i++) {
-//     teamPersons[i].addEventListener('click', function(event){
-//         for (var i = 0; i < teamPersons.length; i++) {
-//             teamPersons[i].classList.remove('team__person--active');
-//         }
-//         if(event.target.parentNode.parentNode.classList.contains('team__person')){
-//             event.target.parentNode.parentNode.classList.add('team__person--active');
-//         }
-//     });
-// }
+var accordeonItem = 'team__person';
+var accordeonItemContent = 'person-desc';
 
+$('.'+accordeonItem).click(function(event) {
+    var targetItem = $(event.target).parents('.'+accordeonItem);
+    if (!targetItem.hasClass(accordeonItem + '--active')) {
+        $('.'+accordeonItem).removeClass(accordeonItem+'--active').children('.'+accordeonItemContent).slideUp(400);
 
-    $('.person-name').click(function() {
-        if (!$(this).parent().parent().hasClass('team__person--active')) {
-            $('.team__person').removeClass('team__person--active').children('.person-desc').slideUp(400).fadeOut(400);
+        targetItem.addClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideDown(400);
 
-            $(this).parent().next('.person-desc').slideDown(400).fadeIn(400);
-
-            $(this).parent().parent().addClass('team__person--active');
-        } else {
-            $(this).parent().parent().removeClass('team__person--active').children('.person-desc').slideUp(400).fadeOut(400);
-        }
-    });
+    } else {
+        targetItem.removeClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideUp(400);
+    }
+});
 
 
 //menu
@@ -77,7 +53,24 @@ else{
 
 
 
-
+//функция при который на элемент навешивается класс .--active на мобильных по тапу, на компах по ковру
+//передается (критичный размер экрана, название элемента без . или #' и '.' или '#' в зависимости от того класс или id)
+function activeOnTap(critWidth, elem){
+    if(deviceWidth<=critWidth){
+        $(elem).on('click', function(){
+            $(this).toggleClass(elem.slice(1,elem.length) + '--active');
+        });
+    }
+    else{
+        $(elem).hover(
+        function(){
+            $(this).addClass(elem.slice(1,elem.length) + '--active');
+        },
+        function(){
+            $(this).removeClass(elem.slice(1,elem.length) + '--active');
+        });
+    }
+}
 
 
 
