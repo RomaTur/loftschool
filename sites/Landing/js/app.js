@@ -21,12 +21,21 @@ welcomeNavClose.addEventListener('click', function(){
 
 
 
-//slider-composition
+// slider-composition
 var deviceWidth = $(document).width();
 
 if(deviceWidth<=768){
     $('.burger__compos').on('click', function(){
         $(this).toggleClass('burger__compos--active');
+    });
+}
+else{
+    $('.burger__compos').hover(
+    function(){
+        $(this).addClass('burger__compos--active');
+    },
+    function(){
+        $(this).removeClass('burger__compos--active');
     });
 }
 
