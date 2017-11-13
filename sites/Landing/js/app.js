@@ -1,17 +1,14 @@
 
 ////////////ФУНКЦИОНАЛ/////////
 //headerMenuFullScreen
-var welcomeNavOpen = document.querySelector('#welcomeNavOpen');
-var welcomeNavClose = document.querySelector('#welcomeNavClose');
-var welcomeNavList = document.querySelector('.nav-burger__list');
 
-
-welcomeNavOpen.addEventListener('click', function(elem){
-    welcomeNavList.classList.add('nav-burger__list--active');
+$('#welcomeNavOpen').on('click', function(){
+    $('.nav-burger__list').addClass('nav-burger__list--active');
     isScroll(false);
 });
-welcomeNavClose.addEventListener('click', function(){
-    welcomeNavList.classList.remove('nav-burger__list--active');
+
+$('#welcomeNavClose').on('click', function(){
+    $('.nav-burger__list').removeClass('nav-burger__list--active');
     isScroll(true);
 });
 
@@ -21,10 +18,19 @@ welcomeNavClose.addEventListener('click', function(){
 
 
 
-// slider-composition
-var deviceWidth = $(document).width();
 
-activeOnTap(768, '.burger__compos')
+var deviceWidth;
+deviceWidth = $(document).width();//размер экрана
+activeOnTap(768, '.burger__compos')//slider-composition
+activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
+
+
+$(window).on('resize',function(){
+    deviceWidth = $(document).width();//размер экрана
+    console.log(deviceWidth);
+    activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
+});
+
 
 
 
@@ -47,29 +53,36 @@ $('.'+accordeonItem).click(function(event) {
 });
 
 
-//menu
-
-
-
-
+//функции полезные всякие//
 
 //функция при который на элемент навешивается класс .--active на мобильных по тапу, на компах по ковру
-//передается (критичный размер экрана, название элемента без . или #' и '.' или '#' в зависимости от того класс или id)
-function activeOnTap(critWidth, elem){
+//передается (критичный размер экрана:меньше которого начинает работать тап, название элемента:класс, название кнопки закрытия:класс если нужна, нужно ли закрывать остальные соседние элементы:тогда true) - всего 4 аргумента
+
+function activeOnTap(critWidth, elemTarget, closeButton, multiply){
+    critWidth = critWidth || 8000;
+    closeButton = closeButton || '';
+    multiply = multiply || false;
     if(deviceWidth<=critWidth){
-        $(elem).on('click', function(){
-            $(this).toggleClass(elem.slice(1,elem.length) + '--active');
+        $(elemTarget).on('click', function(event){
+            if(multiply){
+                $(elemTarget).removeClass(elemTarget.slice(1,elemTarget.length) + '--active');
+            }
+            $(this).toggleClass(elemTarget.slice(1,elemTarget.length) + '--active');
+            if($(event.target).hasClass(closeButton.slice(1,elemTarget.length))){
+                $(elemTarget).removeClass(elemTarget.slice(1,elemTarget.length) + '--active');
+            }
         });
     }
     else{
-        $(elem).hover(
+        $(elemTarget).hover(
         function(){
-            $(this).addClass(elem.slice(1,elem.length) + '--active');
+            $(this).addClass(elemTarget.slice(1,elemTarget.length) + '--active');
         },
         function(){
-            $(this).removeClass(elem.slice(1,elem.length) + '--active');
+            $(this).removeClass(elemTarget.slice(1,elemTarget.length) + '--active');
         });
     }
+
 }
 
 
@@ -81,14 +94,14 @@ var prevDef = function(event){
 function isScroll(bool){
     document.onmousewheel=document.onwheel=function(){
 return (!bool) ? false : true;    };
-    if(bool==false) {
+    if(!bool) {
         document.addEventListener('touchmove', prevDef, false);
     }
     else {
         document.removeEventListener('touchmove', prevDef, false);
     }
     document.addEventListener("MozMousePixelScroll",function(){
-        return (!bool) ? false : true;    },false);
+        return (!bool) ? false : true;},false);
     document.onkeydown=function(e) {
     	if (e.keyCode>=33&&e.keyCode<=40){
             return (!bool) ? false : true;
