@@ -175,13 +175,12 @@
         @extend %flex-center
         flex-wrap: nowrap
         flex-grow: 1
-        @include tablet
-            flex-direction: column
         @extend %absolute-center
-        width: 90%
+        width: rem(1100px)
         margin-left: rem(10px)
         @include tablet
             margin: 0
+            flex-direction: column
     &__burger, &__description
         flex-basis: 50%
         display: -webkit-flex

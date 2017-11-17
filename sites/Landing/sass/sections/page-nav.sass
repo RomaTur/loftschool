@@ -1,3 +1,4 @@
+
 .page
     &__arrow
         position: absolute
@@ -12,7 +13,7 @@
             height: 20px
 
     &-nav
-        position: fixed
+        position: absolute
         top: rem(96px)
         right: rem(53px)
         @include tablet
@@ -52,3 +53,66 @@
         &__link--active
             width: rem(16px)
             height: rem(16px)
+
+.onepage-pagination
+      position: absolute
+      top: rem(96px)
+      right: rem(53px)
+      z-index: 5
+      list-style: none
+      margin: 0
+      padding: 0
+
+.onepage-pagination li
+      padding: 0
+      // text-align: center
+      width: rem(6px)
+      height: rem(6px)
+      border-radius: 50%
+      background-color: #fff
+      margin-bottom: rem(15px)
+
+.onepage-pagination li a
+      padding: 10px
+      width: 6px
+      height: 6px
+      display: block
+
+.onepage-pagination li a:before
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      background: #fff
+      border-radius: 10px
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+
+
+.onepage-pagination li a.active:before
+      width: 10px
+      height: 10px
+      background: none
+      border: 1px solid #fff
+      margin-top: -4px
+      left: 8px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////

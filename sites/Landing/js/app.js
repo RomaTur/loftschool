@@ -14,11 +14,31 @@ $('#welcomeNavClose').on('click', function(){
 
 
 //slider
+// Initialize the slider
+
+$(document).ready(function(){
+
+
+    $('.burgers__list').bxSlider({
+        pager:false,
+        nextSelector:$('.burgers__slide--right'),
+        prevSelector:$('.burgers__slide--left'),
+        nextText:'',
+        prevText:''
+    });
+});
 
 
 
 
 
+
+
+
+
+
+
+///////////////////////////////////////////////
 var deviceWidth;
 deviceWidth = $(document).width();//размер экрана
 activeOnTap(768, '.burger__compos')//slider-composition
@@ -28,7 +48,16 @@ activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
 $(window).on('resize',function(){
     deviceWidth = $(document).width();//размер экрана
     console.log(deviceWidth);
+
     activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
+
+    $('.burgers__list').bxSlider({
+        pager:false,
+        nextSelector:$('.burgers__slide--right'),
+        prevSelector:$('.burgers__slide--left'),
+        nextText:'',
+        prevText:''
+    });
 });
 
 
@@ -51,6 +80,48 @@ $('.'+accordeonItem).click(function(event) {
         targetItem.removeClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideUp(400);
     }
 });
+
+
+
+//modal comments//
+
+$(document).ready(function(){
+    var commentMoreButton = $('.comment__text-more');
+
+    commentMoreButton.bind('click', function(event){
+        event.preventDefault();
+        var currentComment = $(event.currentTarget).parents('.comment');
+        var currentCommentModal = currentComment.children('.comment__modal');
+
+        currentCommentModal.bPopup({
+            closeClass:'comment-close',
+            scrollBar:false,
+            onOpen:function(){
+                // isScroll(false);
+            },
+            onClose: function(){
+                // isScroll(true);
+                currentCommentModal.appendTo(currentComment);
+            }
+        });
+
+
+    });
+
+
+});
+
+//onepage-scroll
+
+$('.maincontent').onepage_scroll({
+    sectionContainer: ".section",
+    easing: "ease-in-out",
+    animationTime: 500,
+    loop: false
+});
+$('.maincontent').moveTo(1);
+
+
 
 
 //функции полезные всякие//
