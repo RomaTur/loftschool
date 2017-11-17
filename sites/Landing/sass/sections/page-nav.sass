@@ -12,90 +12,53 @@
             width: 30px
             height: 20px
 
-    &-nav
-        position: absolute
-        top: rem(96px)
-        right: rem(53px)
-        @include tablet
-            display: none
-        &__list
-            list-style: none
-        &__point
-            position: relative
+.onepage-pagination
+    position: absolute
+    top: rem(96px)
+    right: rem(53px)
+    z-index: 5
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+        padding: 0
+        width: rem(6px)
+        height: rem(6px)
+        border-radius: 50%
+        background-color: #fff
+        margin-bottom: rem(15px)
+        text-align: center
+        a
+            padding: rem(9px)
             width: rem(6px)
             height: rem(6px)
-            border-radius: 50%
-            background-color: #fff
-            margin-bottom: rem(15px)
-            &:hover
-                .page-nav__link
-                    width: rem(18px)
-                    height: rem(18px)
-        &__link
-            &::after
-                content: ""
+            display: block
+            margin-left: rem(-7px)
+            position: relative
+            top: rem(-9px)
+            left: rem(-2px)
+
+            &:before
+                content: ''
                 position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%)
+                width: rem(6px)
+                height: rem(6px)
+                background: #fff
+                border-radius: 50%
+            &:hover::before
+                width: rem(12px)
+                height: rem(12px)
+                background: none
+                border: 1px solid #fff
+                margin-top: rem(-3px)
+                left: rem(6px)
+            &.active:before
                 width: rem(16px)
                 height: rem(16px)
-                border-radius: 50%
-            transition: 0.2s
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            width: 0
-            height: 0
-            border: rem(1px) solid #fff
-            border-radius: 50%
-        &__link--active
-            width: rem(16px)
-            height: rem(16px)
-
-.onepage-pagination
-      position: absolute
-      top: rem(96px)
-      right: rem(53px)
-      z-index: 5
-      list-style: none
-      margin: 0
-      padding: 0
-
-.onepage-pagination li
-      padding: 0
-      // text-align: center
-      width: rem(6px)
-      height: rem(6px)
-      border-radius: 50%
-      background-color: #fff
-      margin-bottom: rem(15px)
-
-.onepage-pagination li a
-      padding: 10px
-      width: 6px
-      height: 6px
-      display: block
-
-.onepage-pagination li a:before
-      content: ''
-      position: absolute
-      width: 6px
-      height: 6px
-      background: #fff
-      border-radius: 10px
-      -webkit-border-radius: 10px
-      -moz-border-radius: 10px
-
-
-.onepage-pagination li a.active:before
-      width: 10px
-      height: 10px
-      background: none
-      border: 1px solid #fff
-      margin-top: -4px
-      left: 8px
+                background: none
+                border: 1px solid #fff
+                margin-top: rem(-5px)
+                left: rem(4px)
 
 
 

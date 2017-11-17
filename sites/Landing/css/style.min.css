@@ -203,48 +203,6 @@ body {
     width: 30px;
     height: 20px; }
 
-.page-nav {
-  position: absolute;
-  top: 6rem;
-  right: 3.3125rem; }
-  @media (max-width: 768px) {
-    .page-nav {
-      display: none; } }
-  .page-nav__list {
-    list-style: none; }
-  .page-nav__point {
-    position: relative;
-    width: 0.375rem;
-    height: 0.375rem;
-    border-radius: 50%;
-    background-color: #fff;
-    margin-bottom: 0.9375rem; }
-    .page-nav__point:hover .page-nav__link {
-      width: 1.125rem;
-      height: 1.125rem; }
-  .page-nav__link {
-    transition: 0.2s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border: 0.0625rem solid #fff;
-    border-radius: 50%; }
-    .page-nav__link::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%; }
-  .page-nav__link--active {
-    width: 1rem;
-    height: 1rem; }
-
 .onepage-pagination {
   position: absolute;
   top: 6rem;
@@ -253,38 +211,44 @@ body {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-.onepage-pagination li {
-  padding: 0;
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background-color: #fff;
-  margin-bottom: 0.9375rem; }
-
-.onepage-pagination li a {
-  padding: 10px;
-  width: 6px;
-  height: 6px;
-  display: block; }
-
-.onepage-pagination li a:before {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px; }
-
-.onepage-pagination li a.active:before {
-  width: 10px;
-  height: 10px;
-  background: none;
-  border: 1px solid #fff;
-  margin-top: -4px;
-  left: 8px; }
+  .onepage-pagination li {
+    padding: 0;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 0.9375rem;
+    text-align: center; }
+    .onepage-pagination li a {
+      padding: 0.5625rem;
+      width: 0.375rem;
+      height: 0.375rem;
+      display: block;
+      margin-left: -0.4375rem;
+      position: relative;
+      top: -0.5625rem;
+      left: -0.125rem; }
+      .onepage-pagination li a:before {
+        content: '';
+        position: absolute;
+        width: 0.375rem;
+        height: 0.375rem;
+        background: #fff;
+        border-radius: 50%; }
+      .onepage-pagination li a:hover::before {
+        width: 0.75rem;
+        height: 0.75rem;
+        background: none;
+        border: 1px solid #fff;
+        margin-top: -0.1875rem;
+        left: 0.375rem; }
+      .onepage-pagination li a.active:before {
+        width: 1rem;
+        height: 1rem;
+        background: none;
+        border: 1px solid #fff;
+        margin-top: -0.3125rem;
+        left: 0.25rem; }
 
 .welcome {
   background-image: url("../img/welcome/welcome-bg.jpg"); }
