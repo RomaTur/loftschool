@@ -143,8 +143,7 @@ body {
   overflow-x: hidden; }
 
 .maincontent {
-  height: 100%;
-  min-height: 650px; }
+  height: 100%; }
 
 .container {
   width: 58.75rem;
@@ -157,8 +156,7 @@ body {
 .section {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.31);
-  min-height: 650px; }
+  background-color: rgba(0, 0, 0, 0.31); }
   @media (max-width: 768px) {
     .section {
       min-width: 0; } }
@@ -211,6 +209,9 @@ body {
   list-style: none;
   margin: 0;
   padding: 0; }
+  @media (max-width: 768px) {
+    .onepage-pagination {
+      display: none; } }
   .onepage-pagination li {
     padding: 0;
     width: 0.375rem;
@@ -421,6 +422,7 @@ body {
   margin-left: 0.625rem; }
   @media (max-width: 768px) {
     .welcome__content {
+      width: 90%;
       margin: 0;
       flex-direction: column; } }
 
