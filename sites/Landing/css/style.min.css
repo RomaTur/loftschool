@@ -1,4 +1,4 @@
-.container, .welcome-header, .welcome__content, .choice__list, .burgers__container, .burger__wrapper, .burger__column, .burger__order, .person-title, .menu__accordeon, .comments__list, .form__order, .form__inner, .form__row, .order-money, .footer {
+.container, .welcome-header, .welcome__content, .choice__list, .burgers, .burger__wrapper, .burger__column, .burger__order, .person-title, .menu__accordeon, .comments__list, .form__order, .form__inner, .form__row, .order-money, .footer {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -574,59 +574,79 @@ body {
       font-size: 14px;
       line-height: 3.6vh; } }
 
-.burgers__container {
+.burgers {
   width: 100%;
   height: 100%;
   flex-wrap: nowrap;
-  flex-direction: row;
   position: relative; }
-  @media (max-width: 768px) {
-    .burgers__container {
-      padding: 7.5% 4%; } }
-  @media (max-width: 480px) {
-    .burgers__container {
-      padding: 0 0 7.3% 0; } }
-
-.burgers__list {
-  position: absolute;
-  transform: translate(0, -50%);
-  top: 50%;
-  white-space: nowrap; }
-  @media (max-width: 768px) {
-    .burgers__list {
-      width: 90%;
-      margin-top: 53px;
-      margin-right: 10px; } }
-  @media (max-width: 480px) {
-    .burgers__list {
-      position: absolute;
-      top: 48.2%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%; } }
-  @media (max-height: 560px) {
-    .burgers__list {
-      top: 40%; } }
-
-.burgers__slide {
-  height: 1.875rem;
-  z-index: 3;
-  position: relative; }
-  .burgers__slide-img {
-    width: 1.875rem;
-    height: 1.25rem; }
-  .burgers__slide--left {
-    transform: rotate(90deg); }
-  .burgers__slide--right {
-    transform: rotate(-90deg); }
+  .burgers__container {
+    width: 100%;
+    max-width: 68.75rem;
+    height: 100%;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row; }
+    @media (max-width: 480px) {
+      .burgers__container {
+        width: auto; } }
+  .burgers__slider {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden; }
+    @media (max-width: 768px) {
+      .burgers__slider {
+        width: 90vw; } }
+    @media (max-width: 480px) {
+      .burgers__slider {
+        width: 100vw; } }
+  .burgers__list {
+    width: 100%;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    white-space: nowrap;
+    font-size: 0; }
+    @media (max-width: 480px) {
+      .burgers__list {
+        position: absolute;
+        top: 50%;
+        width: 100%; } }
+  .burgers__slide {
+    height: 10%;
+    z-index: 3;
+    position: relative; }
+    @media (max-width: 768px) {
+      .burgers__slide {
+        height: 12vw; } }
+    @media (max-width: 480px) {
+      .burgers__slide {
+        height: 77px;
+        top: -2.3%; } }
+    .burgers__slide-img {
+      width: 1.875rem;
+      height: 1.25rem; }
+    .burgers__slide--left {
+      transform: rotate(90deg); }
+    .burgers__slide--right {
+      transform: rotate(-90deg); }
 
 .burger {
-  width: 62.5rem;
   display: inline-block;
+  vertical-align: middle;
   font-size: 0;
   white-space: normal;
-  position: relative;
-  top: 50%; }
+  overflow: hidden; }
+  @media (max-width: 768px) {
+    .burger {
+      width: 100%;
+      overflow: initial; } }
+  @media (max-width: 480px) {
+    .burger {
+      margin-top: 13%; } }
+  @media (max-height: 560px) {
+    .burger {
+      margin-top: 0; } }
   .burger__wrapper {
     font-size: 1rem;
     height: 100%;
@@ -636,11 +656,6 @@ body {
     @media (max-width: 768px) {
       .burger__wrapper {
         flex-direction: column; } }
-  .burger__slider {
-    width: 62.5rem;
-    height: 100%;
-    position: relative;
-    overflow-x: hidden; }
   .burger__column {
     width: 48%;
     max-width: 37.5rem;
@@ -753,11 +768,12 @@ body {
     .burger__compos {
       width: 90px;
       height: 90px;
-      top: -11.9vh;
-      left: 2vw; } }
+      top: 50%;
+      left: 50%;
+      transform: translate(-48vw, -48vh); } }
   @media (max-height: 560px) {
     .burger__compos {
-      top: -6vh; } }
+      transform: translate(-48vw, -40vh); } }
   .burger__compos--active {
     background: #e45028; }
     .burger__compos--active .composition__list {
@@ -786,11 +802,9 @@ body {
     .burger__energy {
       width: 60px;
       height: 80px;
-      top: -11.9vh;
-      right: 2vw; } }
-  @media (max-height: 560px) {
-    .burger__energy {
-      top: -6vh; } }
+      top: 50%;
+      right: 50%;
+      transform: translate(48vw, -40vh); } }
   .burger__energy .container {
     width: 100%;
     height: 100%;

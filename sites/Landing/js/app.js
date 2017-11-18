@@ -2,7 +2,6 @@
 ////////////ФУНКЦИОНАЛ/////////
 
 $(document).ready(function(event){
-    console.log(window);
 });
 
 
@@ -31,17 +30,55 @@ $(document).ready(function(){
     //     nextSelector:$('.burgers__slide--right'),
     //     prevSelector:$('.burgers__slide--left'),
     //     nextText:'',
-    //     prevText:''
+    //     prevText:'',
+    //     easing:'ease-in-out',
+    //     responsive: false
     // });
+    // $('.bx-viewport').css('height', '100%');
+
+    var moveSlide = function(container,slideNum){
+        var items = container.find('.burger'),
+            activeSlide = items.filter('.burger--active'),
+            reqItem = items.eq(slideNum),
+            reqIndex = reqItem.index(),
+            list = container.find('.burgers__list'),
+            duration = 500;
+        if(reqItem.length){
+            list.animate({
+                'left' : -reqIndex * 100 + '%'
+            },
+            duration,
+            function(){
+                activeSlide.removeClass('burger--active');
+                reqItem.addClass('burger--active');
+            });
+        }
+    };
+
+
+    $('.burgers__slide').on('click', function(event){
+        event.preventDefault();
+        var $this = $(this),
+            container = $this.closest('.burgers__container'),
+            items = $('.burger', container),
+            activeItem = items.filter('.burger--active'),
+            exictedItem, edgeItem, reqItem;
+
+        if ($this.hasClass('burgers__slide--right')) {
+            exictedItem = activeItem.next();
+            edgeItem = items.first();
+        }
+        else if ($this.hasClass('burgers__slide--left')) {
+            exictedItem = activeItem.prev();
+            edgeItem = items.last();
+        }
+
+        reqItem = exictedItem.length ? exictedItem.index() : edgeItem.index();
+
+        moveSlide(container, reqItem);
+
+    });
 });
-
-
-
-
-
-
-
-
 
 
 
@@ -86,12 +123,12 @@ var accordeonItemContent = 'person-desc';
 $('.'+accordeonItem).click(function(event) {
     var targetItem = $(event.target).parents('.'+accordeonItem);
     if (!targetItem.hasClass(accordeonItem + '--active')) {
-        $('.'+accordeonItem).removeClass(accordeonItem+'--active').children('.'+accordeonItemContent).slideUp(400);
+        $('.'+accordeonItem).removeClass(accordeonItem+'--active').children('.'+accordeonItemContent).slideUp();
 
-        targetItem.addClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideDown(400);
+        targetItem.addClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideDown();
 
     } else {
-        targetItem.removeClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideUp(400);
+        targetItem.removeClass(accordeonItem + '--active').children('.'+accordeonItemContent).slideUp();
     }
 });
 
