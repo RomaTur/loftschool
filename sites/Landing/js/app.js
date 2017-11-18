@@ -1,5 +1,12 @@
 
 ////////////ФУНКЦИОНАЛ/////////
+
+$(document).ready(function(event){
+    console.log(window);
+});
+
+
+
 //headerMenuFullScreen
 $(document).ready(function(){
     $('#welcomeNavOpen').on('click', function(){
@@ -124,11 +131,12 @@ mainContent.onepage_scroll({
 });
 mainContent.moveTo(1);
 
-gotoButtonParent = ['.burgers__list', '.welcome-header'];
+gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
 for (var i = 0; i < gotoButtonParent.length; i++) {
     $(gotoButtonParent[i]).on('click', function(event){
         event.preventDefault();
         let currentTarget = $(event.target);
+        console.log(currentTarget);
         let targetPage = currentTarget.attr('data-goto');
         if(targetPage){
         mainContent.moveTo(targetPage);
