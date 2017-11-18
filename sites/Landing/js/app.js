@@ -25,14 +25,14 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-
-    $('.burgers__list').bxSlider({
-        pager:false,
-        nextSelector:$('.burgers__slide--right'),
-        prevSelector:$('.burgers__slide--left'),
-        nextText:'',
-        prevText:''
-    });
+    //
+    // $('.burgers__list').bxSlider({
+    //     pager:false,
+    //     nextSelector:$('.burgers__slide--right'),
+    //     prevSelector:$('.burgers__slide--left'),
+    //     nextText:'',
+    //     prevText:''
+    // });
 });
 
 
@@ -62,14 +62,14 @@ $(window).on('resize',function(){
     console.log(deviceWidth);
 
     activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
-
-    $('.burgers__list').bxSlider({
-        pager:false,
-        nextSelector:$('.burgers__slide--right'),
-        prevSelector:$('.burgers__slide--left'),
-        nextText:'',
-        prevText:''
-    });
+    //
+    // $('.burgers__list').bxSlider({
+    //     pager:false,
+    //     nextSelector:$('.burgers__slide--right'),
+    //     prevSelector:$('.burgers__slide--left'),
+    //     nextText:'',
+    //     prevText:''
+    // });
 
     // $('.section').css('height', deviceHeight + 'px');
 });
@@ -120,29 +120,29 @@ $(document).ready(function(){
 //onepage-scroll
 var mainContent = $('.maincontent');
 
-mainContent.onepage_scroll({
-    sectionContainer: ".section",
-    easing: "ease-in-out",
-    animationTime: 700,
-    loop: false,
-    afterMove: function() {
-        $('.nav-burger__list').removeClass('nav-burger__list--active');
-    }
-});
-mainContent.moveTo(1);
-
-gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
-for (var i = 0; i < gotoButtonParent.length; i++) {
-    $(gotoButtonParent[i]).on('click', function(event){
-        event.preventDefault();
-        let currentTarget = $(event.target);
-        console.log(currentTarget);
-        let targetPage = currentTarget.attr('data-goto');
-        if(targetPage){
-        mainContent.moveTo(targetPage);
-        }
-    });
-}
+// mainContent.onepage_scroll({
+//     sectionContainer: ".section",
+//     easing: "ease-in-out",
+//     animationTime: 700,
+//     loop: false,
+//     afterMove: function() {
+//         $('.nav-burger__list').removeClass('nav-burger__list--active');
+//     }
+// });
+// mainContent.moveTo(1);
+//
+// gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
+// for (var i = 0; i < gotoButtonParent.length; i++) {
+//     $(gotoButtonParent[i]).on('click', function(event){
+//         event.preventDefault();
+//         let currentTarget = $(event.target);
+//         console.log(currentTarget);
+//         let targetPage = currentTarget.attr('data-goto');
+//         if(targetPage){
+//         mainContent.moveTo(targetPage);
+//         }
+//     });
+// }
 
 
 //form
