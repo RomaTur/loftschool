@@ -22,6 +22,8 @@
     &:hover
         .comment__text
             opacity: 1
+            @include tablet
+                // opacity: 0
     &__img
         opacity: 0
         min-width: 101%
@@ -39,10 +41,20 @@
         // padding: 41px 20px 0 20px
         padding:  rem(41px) rem(20px) rem(0px) rem(20px)
         transition: 0.4s
+        // display: none
         opacity: 0
         @include tablet
+            // transition: 0s
+            // display: none
             text-align: center
             padding: 2.5vh 6vw
+        @include phone
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
         &-name
             font-family: 'Gagalin', monospace
             text-transform: uppercase
@@ -100,6 +112,20 @@
         padding: 20px
         position: relative
         z-index: 10
+        @include tablet
+            width: 60vw
+            .comment__text-desc
+                font-size: rem(14px)
+        @include phone
+            width: 95vw
+            padding: 22px
+            .comment__text-name
+                font-size: rem(14px*$cof__font-size)
+                margin-top: 0
+                margin-bottom: 14px
+            .comment__text-desc
+                display: block
+                font-size: rem(14px*$cof__font-size)
     &-close
         @extend .food-close
         opacity: 1
@@ -107,6 +133,8 @@
         top: 20px
         right: 20px
         cursor: pointer
+        @include phone
+            transform: scale(0.8)
         &::after,&::before
             background-color: fade-out($color-order, 0.5)
 

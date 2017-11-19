@@ -134,6 +134,26 @@ $('.'+accordeonItem).click(function(event) {
 });
 
 
+//comments
+$(function(){
+    $('.comments__list').on('click', function(event){
+
+        var comment = $(event.target);
+
+        var currentText = comment.next('.comment__text');
+        console.log(currentText);
+        //
+        // $('.comment__text').animate({
+        //     'opacity':'0'
+        // },300);
+
+        // currentText.animate({
+        //     'opacity':'1'
+        //
+        // },300);
+
+    });
+})
 
 //modal comments//
 
@@ -176,7 +196,6 @@ for (var i = 0; i < gotoButtonParent.length; i++) {
     $(gotoButtonParent[i]).on('click', function(event){
         event.preventDefault();
         let currentTarget = $(event.target);
-        console.log(currentTarget);
         let targetPage = currentTarget.attr('data-goto');
         if(targetPage){
         mainContent.moveTo(targetPage);

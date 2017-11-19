@@ -112,6 +112,12 @@ html {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-weight: 500;
   cursor: default; }
+  @media (min-width: 769px) {
+    html {
+      font-size: 11px; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 16px; } }
   @media (min-width: 1300px) {
     html {
       font-size: 17px; } }
@@ -127,9 +133,15 @@ html {
   @media (min-width: 2560px) {
     html {
       font-size: 25px; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 12px; } }
   @media (max-width: 480px) {
     html {
       font-size: 14px; } }
+  @media (max-height: 600px) {
+    html {
+      font-size: 10px; } }
 
 body {
   margin: 0;
@@ -1284,6 +1296,14 @@ body {
       .comment__text {
         text-align: center;
         padding: 2.5vh 6vw; } }
+    @media (max-width: 480px) {
+      .comment__text {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; } }
     .comment__text-name {
       font-family: 'Gagalin', monospace;
       text-transform: uppercase;
@@ -1345,12 +1365,31 @@ body {
     padding: 20px;
     position: relative;
     z-index: 10; }
+    @media (max-width: 768px) {
+      .comment__modal {
+        width: 60vw; }
+        .comment__modal .comment__text-desc {
+          font-size: 0.875rem; } }
+    @media (max-width: 480px) {
+      .comment__modal {
+        width: 95vw;
+        padding: 22px; }
+        .comment__modal .comment__text-name {
+          font-size: 1rem;
+          margin-top: 0;
+          margin-bottom: 14px; }
+        .comment__modal .comment__text-desc {
+          display: block;
+          font-size: 1rem; } }
   .comment-close {
     opacity: 1;
     display: block;
     top: 20px;
     right: 20px;
     cursor: pointer; }
+    @media (max-width: 480px) {
+      .comment-close {
+        transform: scale(0.8); } }
     .comment-close::after, .comment-close::before {
       background-color: rgba(228, 80, 40, 0.5); }
 
