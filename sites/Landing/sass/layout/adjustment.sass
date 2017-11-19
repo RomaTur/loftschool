@@ -26,20 +26,28 @@ html
 
 
 body
-    margin: auto
+    margin: 0
     width: $viewport-width
     background-color: #000
 
 .wrapper
     width: 100%
-    height: 100%
-    position: relative
-    overflow-x: hidden
+    height: 100% !important
+    // position: relative
+    margin: 0 auto
+    overflow: hidden
 
 
 .maincontent
-    height: 100%
+    // height: 100%
+    // position: relative
     // min-height: 650px
+    float: left
+    width: 100%
+    margin: 0 auto
+
+.clear 
+  width: auto
 
 
 .container
@@ -52,15 +60,16 @@ body
 
 
 .section
-    width: $viewport-width
-    height: $viewport-height
-    background-color: rgba(0,0,0,0.31)
-    // min-width: 940px
-    // min-height: 650px
-    @include tablet
-        min-width: 0
-    @include phone
-        min-height: 0
+    // width: $viewport-width
+    // height: $viewport-height
+    // background-color: rgba(0,0,0,0.31)
+    // // min-width: 940px
+    // // min-height: 650px
+    // // position: absolute
+    // @include tablet
+    //     min-width: 0
+    // @include phone
+    //     min-height: 100%
 
 
 .section__title

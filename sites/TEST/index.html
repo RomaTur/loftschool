@@ -9,9 +9,86 @@
     <!-- //////////////////////// -->
     <!-- <link rel="stylesheet" href="course2week3/main.css"> -->
     <!-- //////////////////////// -->
-</head>
+    <script type="text/javascript" src="onepagescroll/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="onepagescroll/jquery.onepage-scroll.js"></script>
+    <link href='onepagescroll/onepage-scroll.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        background: #E2E4E7;
+        padding: 0;
+        text-align: center;
+        font-family: 'open sans';
+        position: relative;
+        margin: 0;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+      }
 
-<body>
+      .wrapper {
+      	height: 100% !important;
+      	height: 100%;
+      	margin: 0 auto;
+      	overflow: hidden;
+      }
+
+
+      .main {
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+
+      .clear {
+        width: auto;
+      }
+
+      .main section.page1 {
+        background:rgb(230, 217, 200);
+      }
+
+      .main section.page2 {
+        background: #555557;
+      }
+
+      .main section.page3 {
+        background: #000;
+      }
+
+  	</style>
+  	<script>
+  	  $(document).ready(function(){
+        $(".main").onepage_scroll({
+          sectionContainer: "section",
+          responsiveFallback: 600,
+          loop: true
+        });
+  		});
+
+  	</script>
+  </head>
+  <body>
+    <div class="wrapper">
+  	  <div class="main">
+
+        <section class="page1">
+
+        </section>
+
+  	    <section class="page2">
+
+        </section>
+
+  	    <section class="page3">
+
+        </section>
+      </div>
+
+    </div>
 
 <!-- //////////////////////// -->
 <!-- //////////////////////// -->
@@ -60,7 +137,7 @@
 <!-- //////////////////////// -->
 <!-- //////////////////////// -->
 <!-- //////////////////////// -->
-
+<!--
 <style media="screen">
     .person-desc{
         display: none;
@@ -92,7 +169,7 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fugit laborum harum corporis in modi voluptate doloribus ab impedit ea ducimus, aspernatur ullam suscipit explicabo voluptatem nobis officia, autem facilis.
     </div>
   </li>
-</ul>
+</ul> -->
 <script src="training.js" charset="utf-8"></script>
 
 

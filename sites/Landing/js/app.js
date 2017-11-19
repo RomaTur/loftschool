@@ -2,6 +2,7 @@
 ////////////ФУНКЦИОНАЛ/////////
 
 $(document).ready(function(event){
+    console.log(window);
 });
 
 
@@ -158,29 +159,92 @@ $(document).ready(function(){
 var mainContent = $('.maincontent');
 
 // mainContent.onepage_scroll({
-//     sectionContainer: ".section",
-//     easing: "ease-in-out",
-//     animationTime: 700,
-//     loop: false,
+//     sectionContainer: "section",
+//     // easing: "ease-in-out",
+//     responsiveFallback: 600,
+//     // animationTime: 700,
+//     // loop: false,
+//     responsiveFallback: 600,
 //     afterMove: function() {
 //         $('.nav-burger__list').removeClass('nav-burger__list--active');
 //     }
 // });
 // mainContent.moveTo(1);
 //
-// gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
-// for (var i = 0; i < gotoButtonParent.length; i++) {
-//     $(gotoButtonParent[i]).on('click', function(event){
-//         event.preventDefault();
-//         let currentTarget = $(event.target);
-//         console.log(currentTarget);
-//         let targetPage = currentTarget.attr('data-goto');
-//         if(targetPage){
-//         mainContent.moveTo(targetPage);
-//         }
-//     });
-// }
+gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
+for (var i = 0; i < gotoButtonParent.length; i++) {
+    $(gotoButtonParent[i]).on('click', function(event){
+        event.preventDefault();
+        let currentTarget = $(event.target);
+        console.log(currentTarget);
+        let targetPage = currentTarget.attr('data-goto');
+        if(targetPage){
+        mainContent.moveTo(targetPage);
+        }
+    });
+}
 
+$(document).ready(function(){
+
+    //
+    // $('.burgers__list').bxSlider({
+    //     pager:false,
+    //     nextSelector:$('.burgers__slide--right'),
+    //     prevSelector:$('.burgers__slide--left'),
+    //     nextText:'',
+    //     prevText:'',
+    //     easing:'ease-in-out',
+    //     responsive: false
+    // });
+    // $('.bx-viewport').css('height', '100%');
+
+
+
+
+
+    // var smoveSlide = function(scontainer,sslideNum){
+    //     var sitems = scontainer.find('.section'),
+    //         sactiveSlide = sitems.filter('.section--active'),
+    //         sreqItem = sitems.eq(sslideNum),
+    //         sreqIndex = sreqItem.index(),
+    //         slist = scontainer.find('.maincontent'),
+    //         sduration = 500;
+    //     if(sreqItem.length){
+    //         slist.animate({
+    //             'top' : -sreqIndex * 100 + '%'
+    //         },
+    //         sduration,
+    //         function(){
+    //             sactiveSlide.removeClass('section--active');
+    //             sreqItem.addClass('section--active');
+    //         });
+    //     }
+    // };
+
+
+    // $('.maincontent').on('touchmove', function(event){
+    //     event.preventDefault();
+    //     var s$this = $(this),
+    //         scontainer = s$this.closest('.wrapper'),
+    //         sitems = $('.section', scontainer),
+    //         sactiveItem = sitems.filter('.section--active'),
+    //         sexictedItem, sedgeItem, sreqItem;
+    //
+    //     if (s$this.hasClass('maincontent')) {
+    //         sexictedItem = sactiveItem.next();
+    //         sedgeItem = sitems.first();
+    //     }
+    //     else if (s$this.hasClass('burgers__slide--left')) {
+    //         sexictedItem = sactiveItem.prev();
+    //         sedgeItem = sitems.last();
+    //     }
+    //
+    //     sreqItem = sexictedItem.length ? sexictedItem.index() : sedgeItem.index();
+    //
+    //     smoveSlide(scontainer, sreqItem);
+    //
+    // });
+});
 
 //form
 
