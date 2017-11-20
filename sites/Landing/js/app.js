@@ -21,21 +21,8 @@ $(document).ready(function(){
 
 
 //slider
-// Initialize the slider
 
 $(document).ready(function(){
-
-    //
-    // $('.burgers__list').bxSlider({
-    //     pager:false,
-    //     nextSelector:$('.burgers__slide--right'),
-    //     prevSelector:$('.burgers__slide--left'),
-    //     nextText:'',
-    //     prevText:'',
-    //     easing:'ease-in-out',
-    //     responsive: false
-    // });
-    // $('.bx-viewport').css('height', '100%');
 
     var moveSlide = function(container,slideNum){
         var items = container.find('.burger'),
@@ -87,8 +74,7 @@ $(document).ready(function(){
 
 var deviceWidth = $(document).width();//ширина экрана
 deviceHeight = $(document).outerHeight();//высота экрана
-// $('.section').css('height', deviceHeight + 'px');
-// $('.maincontent').css('height', deviceHeight + 'px');
+
 
 activeOnTap(768, '.burger__compos')//slider-composition
 activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
@@ -100,16 +86,7 @@ $(window).on('resize',function(){
     console.log(deviceWidth);
 
     activeOnTap(768, '.menu__food', '.food-close' ,true);//menu
-    //
-    // $('.burgers__list').bxSlider({
-    //     pager:false,
-    //     nextSelector:$('.burgers__slide--right'),
-    //     prevSelector:$('.burgers__slide--left'),
-    //     nextText:'',
-    //     prevText:''
-    // });
 
-    // $('.section').css('height', deviceHeight + 'px');
 });
 
 
@@ -135,25 +112,16 @@ $('.'+accordeonItem).click(function(event) {
 
 
 //comments
-$(function(){
-    $('.comments__list').on('click', function(event){
-
-        var comment = $(event.target);
-
-        var currentText = comment.next('.comment__text');
-        console.log(currentText);
-        //
-        // $('.comment__text').animate({
-        //     'opacity':'0'
-        // },300);
-
-        // currentText.animate({
-        //     'opacity':'1'
-        //
-        // },300);
-
-    });
-})
+// $(function(){
+//     $('.comments__list').on('click', function(event){
+//
+//         var comment = $(event.target);
+//
+//         var currentText = comment.next('.comment__text');
+//         console.log(currentText);
+//
+//     });
+// })
 
 //modal comments//
 
@@ -176,94 +144,24 @@ $(document).ready(function(){
 });
 
 //onepage-scroll
-var mainContent = $('.maincontent');
-
-// mainContent.onepage_scroll({
-//     sectionContainer: "section",
-//     // easing: "ease-in-out",
-//     responsiveFallback: 600,
-//     // animationTime: 700,
-//     // loop: false,
-//     responsiveFallback: 600,
-//     afterMove: function() {
-//         $('.nav-burger__list').removeClass('nav-burger__list--active');
-//     }
-// });
-// mainContent.moveTo(1);
-//
-gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
-for (var i = 0; i < gotoButtonParent.length; i++) {
-    $(gotoButtonParent[i]).on('click', function(event){
-        event.preventDefault();
-        let currentTarget = $(event.target);
-        let targetPage = currentTarget.attr('data-goto');
-        if(targetPage){
-        mainContent.moveTo(targetPage);
-        }
-    });
-}
-
 $(document).ready(function(){
 
-    //
-    // $('.burgers__list').bxSlider({
-    //     pager:false,
-    //     nextSelector:$('.burgers__slide--right'),
-    //     prevSelector:$('.burgers__slide--left'),
-    //     nextText:'',
-    //     prevText:'',
-    //     easing:'ease-in-out',
-    //     responsive: false
-    // });
-    // $('.bx-viewport').css('height', '100%');
+    var mainContent = $('.maincontent');
 
+    gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
+    for (var i = 0; i < gotoButtonParent.length; i++) {
+        $(gotoButtonParent[i]).on('click', function(event){
+            event.preventDefault();
+            let currentTarget = $(event.target);
+            let targetPage = currentTarget.attr('data-goto');
+            if(targetPage){
+            mainContent.moveTo(targetPage);
+            }
+        });
+    }
 
-
-
-
-    // var smoveSlide = function(scontainer,sslideNum){
-    //     var sitems = scontainer.find('.section'),
-    //         sactiveSlide = sitems.filter('.section--active'),
-    //         sreqItem = sitems.eq(sslideNum),
-    //         sreqIndex = sreqItem.index(),
-    //         slist = scontainer.find('.maincontent'),
-    //         sduration = 500;
-    //     if(sreqItem.length){
-    //         slist.animate({
-    //             'top' : -sreqIndex * 100 + '%'
-    //         },
-    //         sduration,
-    //         function(){
-    //             sactiveSlide.removeClass('section--active');
-    //             sreqItem.addClass('section--active');
-    //         });
-    //     }
-    // };
-
-
-    // $('.maincontent').on('touchmove', function(event){
-    //     event.preventDefault();
-    //     var s$this = $(this),
-    //         scontainer = s$this.closest('.wrapper'),
-    //         sitems = $('.section', scontainer),
-    //         sactiveItem = sitems.filter('.section--active'),
-    //         sexictedItem, sedgeItem, sreqItem;
-    //
-    //     if (s$this.hasClass('maincontent')) {
-    //         sexictedItem = sactiveItem.next();
-    //         sedgeItem = sitems.first();
-    //     }
-    //     else if (s$this.hasClass('burgers__slide--left')) {
-    //         sexictedItem = sactiveItem.prev();
-    //         sedgeItem = sitems.last();
-    //     }
-    //
-    //     sreqItem = sexictedItem.length ? sexictedItem.index() : sedgeItem.index();
-    //
-    //     smoveSlide(scontainer, sreqItem);
-    //
-    // });
 });
+
 
 //form
 
@@ -291,8 +189,60 @@ $(document).ready(function(){
 });
 
 
+//maps
+ymaps.ready(initMap);
 
 
+function initMap(){
+
+    var myMap = new ymaps.Map("map", {
+        center: [59.939095, 30.315868],
+        zoom: 12
+    },{
+        searchControlProvider: 'yandex#search'
+    });
+    myMap.controls.remove('fullscreenControl');
+    myMap.behaviors.disable('scrollZoom');
+
+//59.889780, 30.311479 // московские ворота
+//59.944392, 30.380479 // чернышевская
+//59.916865, 30.492144 // проспект большевиков
+//59.973531, 30.311213 // петроградская
+
+    myMap.geoObjects
+        .add(mapMarkerConstructor([59.889780, 30.311479],'м.Московские ворота'))
+        .add(mapMarkerConstructor([59.944392, 30.380479],'м.Чернышевская'))
+        .add(mapMarkerConstructor([59.916865, 30.492144],'м.Проспект Большевиков'))
+        .add(mapMarkerConstructor([59.973531, 30.311213],'м.Петроградская'));
+
+
+
+
+
+    function mapMarkerConstructor(xy,desc){
+
+        var placeMark = new ymaps.Placemark(xy, {
+            hintContent: 'MrBurger',
+            balloonContent: desc || 'Какой-то адрес'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/icons/map-marker.svg',
+            // Размеры метки.
+            iconImageSize: [46, 57],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-23, -57],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>')
+        });
+        return placeMark;
+    }
+}
 
 
 //функции полезные всякие//

@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.welcome, .best, .team, .person-portret, .menu__container, .comment, .form, .map-inner, .footer {
+.welcome, .best, .team, .person-portret, .menu__container, .comment, .form, .footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1648,11 +1648,7 @@ body {
 
 .map-inner {
   width: 100%;
-  height: 100%;
-  position: relative;
-  background-image: url("../img/map/map-bg.jpg");
-  position: absolute;
-  top: 0; }
+  height: 100%; }
 
 .footer {
   background-image: url("../img/map/footer-texture.jpg");
