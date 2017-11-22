@@ -171,10 +171,22 @@ $(document).ready(function(){
         $('#form__order')[0].reset();
     });
 
-    var orderButton = $('.order-link');
+    var submitForm = $('.form__submit');
+    var orderButton = $('.form__submit');
+    var submitModal = $('.submit__modal');
 
     orderButton.bind('click', function(event){
         event.preventDefault();
+        console.log('click');
+
+        submitModal.bPopup({
+            // closeClass:'comment-close',
+            scrollBar:false,
+            onClose: function(){
+                submitModal.appendTo(submitForm);
+            }
+        });
+
         // var currentComment = $(event.currentTarget).parents('.comment');
         // var currentCommentModal = currentComment.children('.comment__modal');
         //
