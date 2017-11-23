@@ -76,7 +76,7 @@ gulp.task('browser-sync', function(){
 // });
 
 gulp.task('watch', ['browser-sync', 'sass'], function(){
-    gulp.watch('sites/Landing/sass/main.sass', ['sass']);
+    gulp.watch('sites/Landing/sass/**/*.sass', ['sass']);
     gulp.watch('sites/Landing/*.html', browserSync.reload);
     gulp.watch('sites/Landing/js/**/*.js', browserSync.reload);
 });

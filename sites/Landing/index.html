@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/onepage-scroll.css">
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
 
     <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
@@ -913,41 +913,41 @@
 
                         <h2 class="section__title">Закажите доставку</h2>
                         <div class="form__order">
-                            <form class="form__inner" action="index.html" method="post" id="form__order">
+                            <form class="form__inner" action="order-form.php" method="post" id="form__order">
 
                                 <div class="form__column">
                                     <div class="form__row">
                                         <div class="form__block">
-                                            <h3 class="form__inner-title form__inner-title--name">Имя</h3><span class="form__another-name">Имя</span>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <h3 class="form__inner-title form__inner-title--name">Имя</h3><span class="form__another-name">Имя*</span>
+                                            <input type="text" id="form__name" name="name" value="" class="form__inner-input" placeholder="Роман">
                                         </div>
                                         <div class="form__block">
-                                            <h3 class="form__inner-title">Телефон</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <div class="form__block">
-                                            <h3 class="form__inner-title">Улица</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <h3 class="form__inner-title">Email*</h3>
+                                            <input type="email" id="form__email" name="email" value="" class="form__inner-input" placeholder="mail@mail.com">
                                         </div>
                                     </div>
                                     <div class="form__row">
                                         <div class="form__block">
-                                            <h3 class="form__inner-title">Дом</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <h3 class="form__inner-title">Улица*</h3>
+                                            <input type="text" id="form__street" name="street" value="" class="form__inner-input" placeholder="Новогодняя">
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__block">
+                                            <h3 class="form__inner-title">Дом*</h3>
+                                            <input type="text" id="form__house" name="house" value="" class="form__inner-input" placeholder="13">
                                         </div>
                                         <div class="form__block">
                                             <h3 class="form__inner-title">Корпус</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <input type="text" id="form__house-part" name="house__part" value="" class="form__inner-input">
                                         </div>
                                         <div class="form__block form__block--nomargin">
-                                            <h3 class="form__inner-title">Квартира</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <h3 class="form__inner-title">Квартира*</h3>
+                                            <input type="text" id="form__flat" name="flat" value="" class="form__inner-input" placeholder="33">
                                         </div>
                                         <div class="form__block form__block--hidden">
                                             <h3 class="form__inner-title">Этаж</h3>
-                                            <input type="text" name="" value="" class="form__inner-input">
+                                            <input type="text" id="form__floor" name="floor" value="" class="form__inner-input">
                                         </div>
                                     </div>
                                 </div>
@@ -955,21 +955,21 @@
                                     <div class="form__row">
                                         <div class="form__comment">
                                             <h3 class="form__inner-title">Комментарий</h3>
-                                            <textarea name="comment" rows="8" cols="80" class="form__inner-input"></textarea>
+                                            <textarea name="comment" id="form__comment" rows="8" cols="80" class="form__inner-input" value=""></textarea>
                                         </div>
 
                                     </div>
                                     <div class="form__row what-money">
-                                        <label for="need" class="order-money">
-                                                <input type="radio" name="money" value="need"
-                                                id="need" class="order-money__radio">
+                                        <label for="pay-cash" class="order-money">
+                                                <input type="radio" name="pay__option" value="наличными"
+                                                id="pay-cash" class="order-money__radio">
                                                 <div class="radio-circle"><span class="radio-circle__inner"></span>
                                                 </div>
                                                 <h3 class="order-money__text">Потребуется сдача</h3>
 
                                             </label>
-                                        <label for="card" class="order-money">
-                                                <input type="radio" name="money" value="card" class="order-money__radio" id="card" checked>
+                                        <label for="pay-card" class="order-money">
+                                                <input type="radio" name="pay__option" value="картой" class="order-money__radio" id="pay-card" checked>
                                                 <div class="radio-circle"><span class="radio-circle__inner"></span>
                                                 </div>
                                                 <h3 class="order-money__text">Оплата по карте</h3>
@@ -977,7 +977,7 @@
                                     </div>
                                     <div class="form__row want-disturb">
                                         <label for="disturb" class="order-disturb">
-                                                <input type="checkbox" name="disturb" value="disturb" class="order-disturb__input" id="disturb">
+                                                <input type="checkbox" name="disturb" value="1" class="order-disturb__input" id="disturb">
                                                 <div class="order-disturb__checkbox">
                                                     <svg class="order-disturb__img">
                                                         <use xlink:href="img/icons/sprite.svg#check"></use>
@@ -987,10 +987,13 @@
                                         </label>
                                     </div>
                                     <div class="form__row submit">
-                                        <div class="form__submit" type="submit"><a class="order-link" href="">Заказать</a></div>
+                                        <div class="form__submit" type="submit"><button class="order-link">Заказать</button></div>
                                         <div class="form__clear"><a class="form__clear-link" href="#">Очистить</a></div>
                                         <div class="submit__modal">
-                                            Спасибо
+                                            <div class="request-msg">
+                                                <div class="request-msg__text">Undefined</div>
+                                                <div class="request-msg__close"><a href="" class="order-link">Закрыть</a></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1066,7 +1069,8 @@
 
     <script src="./js/jquery.bpopup.min.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
+
+    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 </body>
-<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 
 </html>

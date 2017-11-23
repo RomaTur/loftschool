@@ -310,7 +310,8 @@ body {
       .welcome-header__logo .logo__img {
         width: 93%; }
     .welcome-header__btn {
-      margin-top: -0.125rem; }
+      margin-top: -0.125rem;
+      z-index: 1; }
 
 .nav {
   margin-right: 0.9375rem;
@@ -1664,10 +1665,13 @@ body {
       @media (max-width: 768px) {
         .form__container .section__title, .form__container .burger__title, .form__container .price, .form__container .composition__title, .form__container .energy__number, .form__container .energy__text {
           top: 14.5%; } }
+      @media (max-width: 500px) {
+        .form__container .section__title, .form__container .burger__title, .form__container .price, .form__container .composition__title, .form__container .energy__number, .form__container .energy__text {
+          font-size: 3.75rem; } }
       @media (max-width: 480px) {
         .form__container .section__title, .form__container .burger__title, .form__container .price, .form__container .composition__title, .form__container .energy__number, .form__container .energy__text {
           top: 14.3%;
-          font-size: 10.5vw;
+          font-size: 8.6vw;
           width: 80%;
           line-height: 1.2; } }
   .form__order {
@@ -1924,19 +1928,45 @@ body {
   @media (max-width: 480px) {
     .form__submit {
       margin-right: 24px; } }
+  .form__submit .order-link {
+    border: none; }
 
 .form__clear-link {
   margin: 0; }
 
 .submit__modal {
   display: none;
-  padding: 20px;
   background: #fff;
   -webkit-border-radius: 5px;
-          border-radius: 5px;
-  font-style: 'Ubuntu';
-  font-weight: 500;
-  font-size: 24px; }
+          border-radius: 5px; }
+
+.request-msg {
+  padding: 1.25rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .request-msg__text {
+    font-family: 'Ubuntu';
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem; }
+    @media (max-width: 480px) {
+      .request-msg__text {
+        font-size: 1rem; } }
+  .request-msg__close {
+    text-align: center;
+    width: 6.25rem; }
 
 .map__container {
   width: 100vw;

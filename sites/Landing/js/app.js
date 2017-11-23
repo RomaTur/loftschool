@@ -171,33 +171,101 @@ $(document).ready(function(){
         $('#form__order')[0].reset();
     });
 
-    var submitForm = $('.form__submit');
-    var orderButton = $('.form__submit');
+    //ajax
+
     var submitModal = $('.submit__modal');
+    var submitArea = $('.submit');
+    var submitForm = function(event){
 
-    orderButton.bind('click', function(event){
+        console.log('in submitForm');
         event.preventDefault();
-        console.log('click');
 
-        submitModal.bPopup({
-            // closeClass:'comment-close',
-            scrollBar:false,
-            onClose: function(){
-                submitModal.appendTo(submitForm);
-            }
+        var checkForm = true;
+        if( $('#form__name')[0].value=='' ||
+            $('#form__email')[0].value=='' ||
+            $('#form__street')[0].value=='' ||
+            $('#form__house')[0].value=='' ||
+            $('#form__flat')[0].value=='')checkForm=false;
+
+        fillInput(!checkForm);
+        if(!checkForm){
+            return
+        }
+
+
+        if($('#form__house-part').val(''))$('#form__house-part').val('-');
+        if($('#form__floor').val(''))$('#form__floor').val('-');
+        if($('#form__comment').val(''))$('#form__comment').val('-');
+
+
+        var form = $(event.target),
+            data = form.serialize(),
+            url = form.attr('action');
+
+        console.log(form);
+        console.log(data);
+        console.log(url);
+
+        var request = $.ajax({
+            type: 'POST',
+            url: url,
+            data: data
+        });
+        request.done(function(msg){
+            console.log('message sent');
+            $('.request-msg__text').html("Сообщение отправлено");
+            submitModal.bPopup({
+                closeClass:'request-msg__close',
+                scrollBar:false,
+                onClose: function(){
+                    submitModal.appendTo(submitArea);
+                }
+            });
+        });
+        request.fail(function(jqXHR, textStatus){
+            console.log(jqXHR);
+            console.log("Request failed: " + textStatus);
+            $('.request-msg__text').html("Произошла ошибка");
+            submitModal.bPopup({
+                closeClass:'request-msg__close',
+                scrollBar:false,
+                onClose: function(){
+                    submitModal.appendTo(submitArea);
+                }
+            });
         });
 
-        // var currentComment = $(event.currentTarget).parents('.comment');
-        // var currentCommentModal = currentComment.children('.comment__modal');
-        //
-        // currentCommentModal.bPopup({
-        //     closeClass:'comment-close',
-        //     scrollBar:false,
-        //     onClose: function(){
-        //         currentCommentModal.appendTo(currentComment);
-        //     }
-        // });
-    });
+    };
+
+
+    $('.form__inner').on('submit', submitForm);
+
+
+
+    function fillInput(checkForm){
+        var color;
+        if(checkForm){
+            color = '#feeac8';
+            $('.request-msg__text').html("Заполните обязательные поля");
+            submitModal.bPopup({
+                closeClass:'request-msg__close',
+                scrollBar:false,
+                onClose: function(){
+                    submitModal.appendTo(submitArea);
+                }
+            });
+        }
+        else{
+            color = '#ffffff';
+        }
+        $('#form__name').css('background',color);
+        $('#form__email').css('background',color);
+        $('#form__street').css('background',color);
+        $('#form__flat').css('background',color);
+        $('#form__house').css('background',color);
+
+
+    }
 });
 
 

@@ -14,11 +14,14 @@
             text-align: center
             @include tablet
                 top: 14.5%
+            @media (max-width:500px)
+                font-size: rem(60px)
             @include phone
                 top: 14.3%
-                font-size: 10.5vw
+                font-size: 8.6vw
                 width: 80%
                 line-height: 1.2
+            
     &__order
 
         @extend %flex-center
@@ -244,6 +247,8 @@
             margin-right: 0
         @include phone
             margin-right: 24px
+        .order-link
+            border: none
 
     &__clear
         &-link
@@ -253,12 +258,28 @@
 
 .submit__modal
     display: none
-    padding: 20px
+    // padding: 20px
     background: #fff
     border-radius: 5px
-    font-style: 'Ubuntu'
-    font-weight: 500
-    font-size: 24px
+
+.request-msg
+    padding: rem(20px)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__text
+        font-family: 'Ubuntu'
+        font-size: rem(14px)
+        font-weight: 500
+        margin-bottom: rem(20px)
+        @include phone
+            font-size: rem(14px*$cof__font-size)
+    &__close
+        text-align: center
+        width: rem(100px)
+
 
 
 //////////////////////////////
