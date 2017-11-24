@@ -23,13 +23,21 @@ const paths =  {
   build: 'sites/Landing/build/'           // paths.build
 };
 
+function moveFavicon(){
+    return gulp.src(paths.src + 'favicon.ico')
+        .pipe(plumber())
+        .pipe(gulp.dest(paths.build))
+}
+
 function moveImg(){
     return gulp.src(paths.src + 'img/**/*.*')
+        .pipe(plumber())
         .pipe(gulp.dest(paths.build + 'img/'))
 }
 
 function moveFonts(){
     return gulp.src(paths.src + 'fonts/**/*.*')
+        .pipe(plumber())
         .pipe(gulp.dest(paths.build + 'fonts/'))
 }
 
@@ -72,9 +80,9 @@ function styles() {
 function scripts(){
     return gulp.src(paths.src + 'js/*.js')
         .pipe(plumber())
-        .pipe(babel({
-          presets: ['env']
-        }))
+        // .pipe(babel({
+        //   presets: ['env']
+        // }))
         .pipe(uglify())
         // .pipe(concat('app.js'))
         .pipe(gulp.dest(paths.build + 'js/'))
@@ -106,6 +114,7 @@ function serve() {
   browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
 
+exports.moveFavicon = moveFavicon;
 exports.moveFonts = moveFonts;
 exports.moveImg = moveImg;
 exports.moveLibStyles = moveLibStyles;
@@ -117,11 +126,11 @@ exports.watch = watch;
 
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(moveFonts, moveImg, moveLibStyles, styles, scripts, htmls)
+  gulp.parallel(moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls)
 ));
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(moveFonts, moveImg, moveLibStyles, styles, scripts, htmls),
+  gulp.parallel(moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls),
   gulp.parallel(watch, serve)
 ));

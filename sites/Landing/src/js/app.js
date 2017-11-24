@@ -1,4 +1,4 @@
-
+"use strict";
 ////////////ФУНКЦИОНАЛ/////////
 
 $(document).ready(function(event){
@@ -152,8 +152,8 @@ $(document).ready(function(){
     for (var i = 0; i < gotoButtonParent.length; i++) {
         $(gotoButtonParent[i]).on('click', function(event){
             event.preventDefault();
-            let currentTarget = $(event.target);
-            let targetPage = currentTarget.attr('data-goto');
+            var currentTarget = $(event.target);
+            var targetPage = currentTarget.attr('data-goto');
             if(targetPage){
             mainContent.moveTo(targetPage);
             }
@@ -226,7 +226,6 @@ $(document).ready(function(){
         });
 
     };
-
 
     $('.form__inner').on('submit', submitForm);
 
