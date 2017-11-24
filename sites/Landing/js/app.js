@@ -167,6 +167,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+    //clearform
     $('.form__clear-link').on('click', function(){
         $('#form__order')[0].reset();
     });
@@ -177,7 +178,6 @@ $(document).ready(function(){
     var submitArea = $('.submit');
     var submitForm = function(event){
 
-        console.log('in submitForm');
         event.preventDefault();
 
         var checkForm = true;
@@ -192,27 +192,18 @@ $(document).ready(function(){
             return
         }
 
-
-        if($('#form__house-part').val(''))$('#form__house-part').val('-');
-        if($('#form__floor').val(''))$('#form__floor').val('-');
-        if($('#form__comment').val(''))$('#form__comment').val('-');
-
-
-        var form = $(event.target),
-            data = form.serialize(),
+        var form = $(event.target);
+        var data = form.serialize(),
             url = form.attr('action');
 
-        console.log(form);
-        console.log(data);
-        console.log(url);
-
         var request = $.ajax({
-            type: 'POST',
-            url: url,
-            data: data
-        });
-        request.done(function(msg){
-            console.log('message sent');
+                        type: 'POST',
+                        url: url,
+                        data: data
+                    });
+
+        console.log(request);
+        request.done(function(){
             $('.request-msg__text').html("Сообщение отправлено");
             submitModal.bPopup({
                 closeClass:'request-msg__close',
@@ -223,7 +214,6 @@ $(document).ready(function(){
             });
         });
         request.fail(function(jqXHR, textStatus){
-            console.log(jqXHR);
             console.log("Request failed: " + textStatus);
             $('.request-msg__text').html("Произошла ошибка");
             submitModal.bPopup({
@@ -239,6 +229,7 @@ $(document).ready(function(){
 
 
     $('.form__inner').on('submit', submitForm);
+
 
 
 

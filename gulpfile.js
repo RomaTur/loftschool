@@ -7,7 +7,7 @@
 
 var gulp            =   require('gulp'),
     sass            =   require('gulp-sass')
-    browserSync     =   require('browser-sync'),
+    browserSync     =   require('browser-sync').create(),
     concat          =   require('gulp-concat'),
     uglify          =   require('gulp-uglifyjs'),
     cssnano         =   require('gulp-cssnano'),
