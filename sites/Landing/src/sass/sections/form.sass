@@ -1,0 +1,285 @@
+.form
+    @include bg-img("../img/form/form-bg.jpg")
+    @extend %bg-config
+    &__container
+        position: relative
+        width: 100%
+        height: 100%
+
+        .section__title
+            color: $color__orange-title
+            @extend %absolute-center
+            top: 18%
+            width: 100%
+            text-align: center
+            @include tablet
+                top: 14.5%
+            @media (max-width:500px)
+                font-size: rem(60px)
+            @include phone
+                top: 14.3%
+                font-size: 8.6vw
+                width: 80%
+                line-height: 1.2
+            
+    &__order
+
+        @extend %flex-center
+        padding-top: rem(66px)
+        width: 87.5%
+        max-width: rem(1100px)
+        @include tablet
+            padding: 0
+            margin-top: 0.5vh
+        @include phone
+            margin-top: 14.9vh
+            width: 96%
+            max-width: 480px
+
+
+    &__inner
+        @extend %flex-center
+        align-items: baseline
+        // @extend %absolute-center
+        @include tablet
+            flex-direction: column
+
+    &__column
+        width: 50%
+        padding: rem(10px)
+        @include tablet
+            width: 100%
+            padding: 0 13vw
+        @include phone
+            padding: 0
+            margin-bottom: -2px
+
+    &__row
+        @extend %flex-center
+        justify-content: flex-start
+        width: 100%
+        margin: rem(5px) 0
+        @include phone
+            margin: 0.7vh 0
+
+
+    &__block
+        flex: 1
+        margin-right: rem(18px)
+        position: relative
+        &:last-child
+            margin-right: 0
+        @include tablet
+            margin-right: 24px
+        @include phone
+            margin-right: 9px
+        &--nomargin
+            @include phone
+                margin-right: 0
+        &--hidden
+            @include phone
+                display: none
+
+
+
+    &__inner
+        &-title
+            color: $color-white
+            font-family: 'Ubuntu'
+            font-weight: 500
+            line-height: rem(24px)
+            font-size: rem(14px)
+            margin-top: rem(10px)
+            @include phone
+                font-size: 14px
+                margin-bottom: 4px
+            &--name
+                opacity: 0
+
+        &-input
+            width: 100%
+            height: rem(36px)
+            border-radius: rem(6px)
+            resize: none
+            padding: rem(10px)
+            border: rem(2px) solid transparent
+            transition: 0.3s
+            color: $color-dark
+            font-family: 'Ubuntu'
+            font-weight: 300
+            // line-height: 12px
+            font-size: 13px
+            &:focus
+                border: rem(2px) solid $color__orange-title
+            @include phone
+                height: 4.5vh
+                padding-left: 4vw
+    &__another-name
+        @extend .form__inner-title
+        position: absolute
+        top: rem(-10px)
+
+    &__comment
+        flex: 1
+        .form__inner-title
+            @include tablet
+                margin-top: 0.7vh
+        .form__inner-input
+            height: rem(112px)
+            @include phone
+                height: 14vh
+
+.what-money
+    // margin: 8px rem(-1px)
+    margin-top: rem(7px)
+    margin-left: rem(-1px)
+    @include phone
+        margin: 3.6vh 0 3vh 0
+    @include phone
+        justify-content: center
+.order-money
+    @extend %flex-center
+    justify-content: flex-start
+    margin-right: rem(19px)
+    &:last-child
+        margin: 0
+    @include phone
+        margin-right: 4vw
+    &__text
+        display: inline-block
+        vertical-align: middle
+        color: $color-white
+        @extend .form__inner-title
+        line-height: rem(24px)
+        margin: 0
+        margin-left: rem(9px)
+
+    &__radio
+        display: inline-block
+        vertical-align: middle
+        position: absolute
+        left: -9999px
+
+
+
+
+.radio-circle
+    width: rem(14px)
+    height: rem(14px)
+    background-color: $color-white
+    border-radius: 50%
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    @include phone
+        width: 15px
+        height: 15px
+    &__inner
+        transition: 0.2s
+        @extend %absolute-center
+        width: 0px
+        height: 0px
+        background-color: $color-order
+        border-radius: 50%
+        // transform: translate(-60%, -40%)
+
+
+.order-money__radio:checked + .radio-circle
+    .radio-circle__inner
+        width: rem(6px)
+        height: rem(6px)
+.want-disturb
+    margin-top: rem(8px)
+    @include phone
+        justify-content: center
+.order-disturb
+    position: relative
+    margin-top: rem(10px)
+    margin-left: rem(-1px)
+    &__input
+        display: inline-block
+        vertical-align: middle
+        position: absolute
+        left: -9999px
+    &__checkbox
+        display: inline-block
+        vertical-align: middle
+        width: rem(14px)
+        height: rem(15px)
+        background-color: $color-white
+        position: relative
+        margin-top: rem(2px)
+        @include phone
+            margin: 0
+    &__img
+        width: 0px
+        height: 0px
+        fill: $color-order
+        @extend %absolute-center
+        transition: 0.2s
+    &__text
+        display: inline-block
+        vertical-align: middle
+        @extend .form__inner-title
+        margin: 0
+        margin-left: rem(6px)
+
+.order-disturb__input:checked + .order-disturb__checkbox
+    .order-disturb__img
+        width: rem(10px)
+        height: rem(10px)
+
+.submit
+    justify-content: flex-start
+    margin: rem(15px) 0
+    @include tablet
+        margin-top: 3.5vh
+    @include phone
+        justify-content: center
+        margin: 0
+        margin-top: 4.5vh
+.form
+
+    &__submit
+        -webkit-appearance: none
+        margin-right: rem(20px)
+        &:last-child
+            margin-right: 0
+        @include phone
+            margin-right: 24px
+        .order-link
+            border: none
+
+    &__clear
+        &-link
+            @extend .form__inner-title
+            margin: 0
+
+
+.submit__modal
+    display: none
+    // padding: 20px
+    background: #fff
+    border-radius: 5px
+
+.request-msg
+    padding: rem(20px)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__text
+        font-family: 'Ubuntu'
+        font-size: rem(14px)
+        font-weight: 500
+        margin-bottom: rem(20px)
+        @include phone
+            font-size: rem(14px*$cof__font-size)
+    &__close
+        text-align: center
+        width: rem(100px)
+
+
+
+//////////////////////////////

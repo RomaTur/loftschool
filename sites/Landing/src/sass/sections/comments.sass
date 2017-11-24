@@ -1,0 +1,147 @@
+.comments
+    &__container
+        width: 100%
+        display: block
+        height: 100%
+    &__list
+        @extend %flex-center
+        flex-wrap: wrap
+        height: 100%
+
+.comment
+    width: 25%
+    height: $viewport-height/2
+    position: relative
+    overflow: hidden
+    @include tablet
+        width: 50%
+        height: $viewport-height/4
+
+    @extend %bg-config
+    filter: grayscale(100)
+    &:hover
+        .comment__text
+            opacity: 1
+            @include tablet
+                // opacity: 0
+    &__img
+        opacity: 0
+        min-width: 101%
+        min-height: 101%
+        object-fit: cover
+        @extend %absolute-center
+    &__text
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: fade-out($color-dark, $fade-amount)
+        color: #fff
+        // padding: 41px 20px 0 20px
+        padding:  rem(41px) rem(20px) rem(0px) rem(20px)
+        transition: 0.4s
+        // display: none
+        opacity: 0
+        @include tablet
+            // transition: 0s
+            // display: none
+            text-align: center
+            padding: 2.5vh 6vw
+        @include phone
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+        &-name
+            font-family: 'Gagalin', monospace
+            text-transform: uppercase
+            line-height: rem(28px)
+            margin-bottom: rem(14px)
+            font-size: rem(14px)
+            @include tablet
+                margin: 0
+            @include phone
+                margin: 3.3vh 0 0 0
+                font-size: 3vh
+                line-height: 27px
+        &-desc
+            font-family: 'Ubuntu'
+            font-weight: 300
+            font-style: normal
+            line-height: 1.75
+            margin-bottom: rem(13px)
+            font-size: rem(14px)
+            @include tablet
+                margin: 4px 0 2.4vh 0
+                font-size: 1.83vw
+            @include phone
+                display: none
+        &-more
+            font-family: 'Ubuntu'
+            font-weight: 500
+            font-style: normal
+            font-size: rem(13px)
+            text-transform: uppercase
+            background-color: lighten($color-dark, 20%)
+            // padding: 10px 15px 9px 15px
+            padding: rem(9px) rem(2px) rem(8px) rem(0px)
+            width: rem(110px)
+            border-radius: 6px
+            text-align: center
+            transition: 0.2s
+
+            @include tablet
+                font-size: 1.8vw
+                margin: auto
+                padding: 0.7vh 1vw
+            @include phone
+                font-size: 1.66vh
+                width: 26.5vw
+                margin-top: 3vh
+                padding: 1.2vh 0
+            &:hover
+                background-color: lighten($color-dark, 12%)
+    &__modal
+        display: none
+        width: 42vw
+        background: $color-white
+        border-radius: 5px
+        padding: 20px
+        position: relative
+        z-index: 10
+        @include tablet
+            width: 60vw
+            .comment__text-desc
+                font-size: rem(14px)
+        @include phone
+            width: 95vw
+            padding: 22px
+            .comment__text-name
+                font-size: rem(14px*$cof__font-size)
+                margin-top: 0
+                margin-bottom: 14px
+            .comment__text-desc
+                display: block
+                font-size: rem(14px*$cof__font-size)
+    &-close
+        @extend .food-close
+        opacity: 1
+        display: block
+        top: 20px
+        right: 20px
+        cursor: pointer
+        @include phone
+            transform: scale(0.8)
+        &::after,&::before
+            background-color: fade-out($color-order, 0.5)
+
+.text__get-more
+    @include phone
+        display: none
+.text__read-more
+    display: none
+    @include phone
+        display: initial

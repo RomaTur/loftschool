@@ -1,0 +1,390 @@
+.burgers
+    width: 100%
+    height: 100%
+    @extend %flex-center
+    flex-wrap: nowrap
+
+
+    // padding: 7.5% 3%
+    position: relative
+    @include tablet
+        // padding: 7.5% 4%
+    @include phone
+        // padding: 0 0 7.3% 0
+
+    &__container
+        width: 100%
+        max-width: rem(1100px)
+        height: 100%
+        position: relative
+        justify-content: space-between
+        flex-direction: row
+        @include phone
+            width: auto
+    &__slider
+        width: 90%
+        height: 100%
+        position: relative
+        overflow-x: hidden
+        @include tablet
+            width: 90vw
+        @include phone
+            width: 100vw
+
+    &__list
+        width: 100%
+        position: absolute
+        transform: translate(0, -50%)
+        top: 50%
+        white-space: nowrap
+        font-size: 0
+        @include tablet
+            // width: 90vw
+            // margin-top: 53px
+            // margin-right: 10px
+        @include phone
+            position: absolute
+            top: 50%
+            // left: 50%
+            // transform: translate(-50%, -50%)
+            width: 100%
+
+
+    &__slide
+        height: 10%
+        z-index: 3
+        position: relative
+        @include tablet
+            height: 12vw
+        @include phone
+            height: 77px
+            top: -2.3%
+        &-img
+            width: rem(30px)
+            height: rem(20px)
+        &--left
+            transform: rotate(90deg)
+        &--right
+            transform: rotate(-90deg)
+
+
+.burger
+    display: inline-block
+    vertical-align: middle
+    font-size: 0
+    white-space: normal
+    overflow: hidden
+    // position: relative
+    // top: 50%
+    // transform: translate(0, -50%)
+    // padding: rem(60px) 0
+    @include tablet
+        width: 100%
+        overflow: initial
+    @include phone
+        margin-top: 13%
+    @media (max-height:560px)
+        margin-top: 0
+
+    &__wrapper
+        font-size: 1rem
+        @extend %flex-center
+        height: 100%
+        width: 100%
+        align-items: center
+        // @extend %absolute-center
+        position: relative
+        @include tablet
+            flex-direction: column
+
+
+    &__column
+        width: 48%
+        max-width: rem(600px)
+        @extend %flex-center
+        flex-direction: column
+        margin-right: rem(22px)
+        &:last-child
+            margin-right: 0
+        @include tablet
+            width: 100%
+            margin: 0
+            margin-top: 20px
+            &:first-child
+                margin: 0
+        @include phone
+            margin-top: 13px
+            &:last-child
+                margin-right: -10px
+    &__img
+        width: 100%
+        @include tablet
+            width: 80%
+    &__title
+        @extend .section__title
+        color: $color-white
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        line-height: 0.9
+        margin-bottom: rem(23px)
+        @include tablet
+            // align-self: center
+            width: 80%
+            text-align: center
+            margin-bottom: 5px
+            font-size: 9.2vw
+        @include phone
+            font-size: 10.4vw
+            line-height: 1.2
+            margin-right: 10px
+    &__desc
+        width: 93%
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-self: flex-start
+        font-family: 'Ubuntu'
+        font-weight: 300
+        font-size: rem(14px)
+        color: $color-white
+        margin-bottom: rem(21px)
+        line-height: 1.75
+        @include tablet
+            width: 100%
+            margin-left: 5px
+            text-align: center
+            margin-bottom: 30px
+        @include phone
+            padding: 0 4%
+            font-size: 1.75vh
+            margin-left: -5px
+            margin-top: 5px
+            margin-bottom: 10px
+
+
+    &__order
+        width: 100%
+        margin-bottom: rem(129px)
+        @extend %flex-center
+        justify-content: flex-start
+        align-items: flex-end
+        // flex-basis: 50%
+        @include tablet
+            justify-content: center
+            margin-bottom: 0
+.price
+    color: $color-order
+    @extend .section__title
+    line-height: 1
+    margin-right: rem(25px)
+    @include phone
+        margin-right: 30px
+        margin-left: -18px
+        line-height: 0.85
+    &__number
+
+        @include phone
+            font-size: 50px
+    &__text
+        font-size: rem(30px)
+        @include phone
+            font-size: 24px
+            margin-left: 5px
+            // margin-right: 30px
+.burger
+    &__compos
+        position: absolute
+        top: rem(6px)
+        left: rem(30px)
+        width: rem(90px)
+        height: rem(90px)
+        background: fade-out($color-order, $fade-amount)
+        border-radius: rem(5px)
+        @include tablet
+            top: -5.3vh
+            left: 11vw
+        @include phone
+            width: 90px
+            height: 90px
+            top: 50%
+            left: 50%
+            transform: translate(-48vw,-48vh)
+        @media (max-height:560px)
+            transform: translate(-48vw,-40vh)
+
+
+        &--active
+            background: $color-order
+            .composition__list
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+
+        .container
+            width: 100%
+            height: 100%
+            position: relative
+
+    &__energy
+        position: absolute
+        bottom: 0
+        left: rem(30px)
+        width: rem(60px)
+        height: rem(80px)
+        opacity: 0.5
+        @include tablet
+            left: initial
+            bottom: initial
+            top: -5.3vh
+            right: 10vw
+        @include phone
+            width: 60px
+            height: 80px
+            top: 50%
+            right: 50%
+            transform: translate(48vw,-40vh)
+        @media (max-height:560px)
+            // top: -6vh
+
+        .container
+            width: 100%
+            height: 100%
+            position: relative
+
+
+.composition
+    &__img
+        width: rem(45px)
+        height: rem(45px)
+        fill: $color-white
+        @extend %absolute-center
+        top: rem(36px)
+        @include phone
+            width: 47px
+            height: 47px
+            top: 35px
+    &__title
+        @extend .section__title
+        font-size: rem(14px)
+        @extend %absolute-center
+        color: $color-white
+        top: rem(72px)
+        @include phone
+            font-size: 14px
+            top: 73px
+
+
+    &__list
+        position: absolute
+        top: 0
+        left: rem(90px)
+        width: rem(270px)
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        display: none
+        background-color: fade-out($color-white, $fade-amount)
+        border-radius: rem(5px)
+        flex-direction: column
+        padding: rem(19px) rem(21px)
+        @include phone
+            left: 90px
+            width: 223px
+
+    &__item
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-items: center
+        margin-bottom: rem(7px)
+        &:last-child
+            margin-bottom: 0
+
+        &-img
+            width: rem(43px)
+            height: rem(43px)
+            margin-right: rem(27px)
+            text-align: center
+        &-title
+            flex-grow: 2
+            font-family: 'Ubuntu'
+            font-weight: 500
+            font-size: rem(14px)
+            line-height: rem(24px)
+        &-weight
+            font-family: 'Ubuntu'
+            font-weight: 300
+            font-size: rem(14px)
+            line-height: rem(24px)
+
+
+.energy
+
+    &__img
+        @extend %absolute-center
+        top: rem(29px)
+        width: rem(60px)
+        height: rem(60px)
+        fill: $color-white
+        @include phone
+            top: 30px
+            width: 60px
+            height: 60px
+    &__number
+        @extend %absolute-center
+        top: rem(38px)
+        @extend .section__title
+        color: $color-white
+        font-size: rem(20px)
+        @include phone
+            top: 38px
+            font-size: 20px
+    &__text
+        @extend %absolute-center
+        top: rem(69px)
+        @extend .section__title
+        color: $color-white
+        font-size: rem(14px)
+        @include phone
+            top: 69px
+            font-size: 14px
+
+
+.bx-wrapper
+    margin-bottom: 0 !important
+    box-shadow: none !important
+    border: none !important
+    background: transparent !important
+    height: 100%
+.bx-viewport
+    height: auto !important
+    top: 50%
+    transform: translate(0, -50%) !important
+.bx-next, .bx-prev
+    width: rem(30px)
+    height: rem(30px)
+    @extend %absolute-center
+
+
+
+
+
+
+
+.burgers__gradient
+    background-color: #f2a03a
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZjliNDNiIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNlYjhjMzgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjZjliNDNiIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=)
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(249, 180, 59)),color-stop(0.5, rgb(235, 140, 56)),color-stop(1, rgb(249, 180, 59)))
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(top,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+    /* IE10+ */
+    background-image: linear-gradient(to bottom,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+    background-image: -ms-linear-gradient(top,rgb(249, 180, 59) 0%,rgb(235, 140, 56) 50%,rgb(249, 180, 59) 100%)
+
+
+/* IE8- CSS hack */
+@media \0screen\,screen\9
+    .gradient
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff9b43b",endColorstr="#fff9b43b",GradientType=0)
