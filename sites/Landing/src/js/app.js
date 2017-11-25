@@ -148,7 +148,7 @@ $(document).ready(function(){
 
     var mainContent = $('.maincontent');
 
-    gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
+    var gotoButtonParent = ['.burgers__list', '.welcome-header', '.page__arrow-link'];
     for (var i = 0; i < gotoButtonParent.length; i++) {
         $(gotoButtonParent[i]).on('click', function(event){
             event.preventDefault();
@@ -159,7 +159,6 @@ $(document).ready(function(){
             }
         });
     }
-
 });
 
 
@@ -258,7 +257,6 @@ $(document).ready(function(){
     }
 });
 
-
 //maps
 ymaps.ready(initMap);
 
@@ -284,10 +282,6 @@ function initMap(){
         .add(mapMarkerConstructor([59.944392, 30.380479],'м.Чернышевская'))
         .add(mapMarkerConstructor([59.916865, 30.492144],'м.Проспект Большевиков'))
         .add(mapMarkerConstructor([59.973531, 30.311213],'м.Петроградская'));
-
-
-
-
 
     function mapMarkerConstructor(xy,desc){
 

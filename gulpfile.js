@@ -23,6 +23,12 @@ const paths =  {
   build: 'sites/Landing/build/'           // paths.build
 };
 
+function movePhp(){
+    return gulp.src(paths.src + 'order-form.php')
+        .pipe(plumber())
+        .pipe(gulp.dest(paths.build))
+}
+
 function moveFavicon(){
     return gulp.src(paths.src + 'favicon.ico')
         .pipe(plumber())
@@ -62,6 +68,7 @@ function styles() {
     // .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(paths.build + 'css/'))
+    .pipe(browserSync.reload({stream: true}))
 }
 
 // function scripts() {
@@ -100,9 +107,9 @@ function clean() {
 }
 
 function watch() {
-  gulp.watch(paths.src + 'sass/*.sass', styles);
-  gulp.watch(paths.src + 'js/*.js', scripts);
-  gulp.watch(paths.src + '*.html', htmls);
+  gulp.watch(paths.src + 'sass/**/*.sass', styles);
+  gulp.watch(paths.src + 'js/**/*.js', browserSync.reload);
+  gulp.watch(paths.src + '**/*.html', browserSync.reload);
 }
 
 function serve() {
@@ -111,9 +118,10 @@ function serve() {
       baseDir: paths.build
     }
   });
-  browserSync.watch(paths.build + '**/*.*', browserSync.reload);
+  // browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
 
+exports.movePhp = movePhp;
 exports.moveFavicon = moveFavicon;
 exports.moveFonts = moveFonts;
 exports.moveImg = moveImg;
@@ -126,11 +134,11 @@ exports.watch = watch;
 
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls)
+  gulp.parallel(movePhp, moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls)
 ));
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls),
+  gulp.parallel(movePhp, moveFavicon, moveFonts, moveImg, moveLibStyles, styles, scripts, htmls),
   gulp.parallel(watch, serve)
 ));
