@@ -384,6 +384,7 @@
 
 
     echo $mail__message;
+    
     $headers = "From: Создатель письма <mr.romatur@gmail.com>\r\n".
     "MIME-Version: 1.0"."\r\n".
     "Content-type: text/html; charset=UTF-8"."\r\n";
