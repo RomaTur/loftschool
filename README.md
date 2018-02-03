@@ -1,9 +1,5 @@
-![logo](img/README/logoReadme.png)  [*Loftschool*][9c9db2ab] - школа онлайн-образования
 
-***
-
-  [9c9db2ab]: http://loftschool.ru "loftschool"
-
+[9c9db2ab]: http://loftschool.ru "loftschool"
 ![Student](img/README/studentReadme.png)
 
 ***
@@ -12,14 +8,11 @@
 
 ***
 
-### В этом репозитории я буду выкладывать свои ДЗ по курсу.
+### В этом репозитории я выложил свои ДЗ и 2 проекта по курсу от loftschool.
 
-
-
-
-
- >Желаю получить обширные знания и развивать свои навыки в ламповой атмосфере.
-
-***
-
-![hands](img/README/handsReadme.png)
+<h3>
+<ul>
+<li><a href='http://romatur.xyz:3001' alt='Landing Page'>Landing Page</a></li>
+<li><a href='http://romatur.xyz:3002' alt='Static Site'>Static Site</a></li>
+</ul>
+</h3>
